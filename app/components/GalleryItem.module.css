@@ -1,0 +1,47 @@
+/* Gallery Item Styles - Matches home page styling */
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.02);
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  background: var(--mantine-color-dark-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--mantine-color-dark-6);
+  transition: all 0.3s ease;
+}
+
+.placeholderImage:hover {
+  background: var(--mantine-color-dark-1);
+}
+
+/* Consistent overlay for all grid items */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}

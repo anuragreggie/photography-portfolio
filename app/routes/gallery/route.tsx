@@ -1,6 +1,7 @@
 import { Container, Title, Text, Grid, Box, Modal } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { GalleryItem } from '../../components';
 import classes from './styles.module.css';
 
 const images = [
@@ -60,29 +61,10 @@ export default function Gallery() {
                 key={image.id} 
                 span={{ base: 12, sm: 6, md: 4 }}
               >
-                <motion.div
-                  variants={fadeInUp}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                <GalleryItem
+                  title={image.title}
                   onClick={() => setSelectedImage(image.id)}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Box className={`${classes.imageCard} ${classes.imageWrapper}`}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" fw={300} ta="center" size="sm">
-                        {image.title}
-                      </Text>
-                    </Box>
-                    <div className={classes.overlay}>
-                      <Text c="dark.0" fw={500} size="md">
-                        {image.title}
-                      </Text>
-                      <Text c="dark.2" size="sm">
-                        {image.category}
-                      </Text>
-                    </div>
-                  </Box>
-                </motion.div>
+                />
               </Grid.Col>
             ))}
           </Grid>

@@ -1,6 +1,7 @@
 import { Container, Title, Text, Grid, Box, Image } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router';
+import { GalleryItem, imageVariants } from '../../components';
 import classes from './styles.module.css';
 
 const fadeInUp = {
@@ -15,12 +16,6 @@ const staggerChildren = {
       staggerChildren: 0.1
     }
   }
-};
-
-const imageVariants = {
-  initial: { opacity: 0, scale: 0.95 },
-  animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.5 }
 };
 
 export default function Home() {
@@ -52,75 +47,27 @@ export default function Home() {
           >
             <Grid gutter="md">
               <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-                <motion.div variants={imageVariants}>
-                  <Box className={classes.imageWrapper}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" ta="center" size="sm" fw={300}>
-                        Portrait Photography
-                      </Text>
-                    </Box>
-                  </Box>
-                </motion.div>
+                <GalleryItem title="Portrait Photography" />
               </Grid.Col>
               
               <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-                <motion.div variants={imageVariants}>
-                  <Box className={classes.imageWrapper}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" ta="center" size="sm" fw={300}>
-                        Landscape Photography
-                      </Text>
-                    </Box>
-                  </Box>
-                </motion.div>
+                <GalleryItem title="Landscape Photography" />
               </Grid.Col>
               
               <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-                <motion.div variants={imageVariants}>
-                  <Box className={classes.imageWrapper}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" ta="center" size="sm" fw={300}>
-                        Street Photography
-                      </Text>
-                    </Box>
-                  </Box>
-                </motion.div>
+                <GalleryItem title="Street Photography" />
               </Grid.Col>
               
               <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-                <motion.div variants={imageVariants}>
-                  <Box className={classes.imageWrapper}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" ta="center" size="sm" fw={300}>
-                        Event Photography
-                      </Text>
-                    </Box>
-                  </Box>
-                </motion.div>
+                <GalleryItem title="Event Photography" />
               </Grid.Col>
               
               <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-                <motion.div variants={imageVariants}>
-                  <Box className={classes.imageWrapper}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" ta="center" size="sm" fw={300}>
-                        Wedding Photography
-                      </Text>
-                    </Box>
-                  </Box>
-                </motion.div>
+                <GalleryItem title="Wedding Photography" />
               </Grid.Col>
               
               <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
-                <motion.div variants={imageVariants}>
-                  <Box className={classes.imageWrapper}>
-                    <Box className={classes.placeholderImage}>
-                      <Text c="dark.0" ta="center" size="sm" fw={300}>
-                        Fine Art Photography
-                      </Text>
-                    </Box>
-                  </Box>
-                </motion.div>
+                <GalleryItem title="Fine Art Photography" />
               </Grid.Col>
             </Grid>
           </motion.div>
