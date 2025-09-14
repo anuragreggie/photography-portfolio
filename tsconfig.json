@@ -22,7 +22,8 @@
   },
   "include": [
     "app",
-    "styles"
+    "styles",
+    "types"
   ],
   "exclude": [
     "node_modules",
