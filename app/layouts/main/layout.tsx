@@ -1,7 +1,8 @@
 import { Outlet } from 'react-router';
-import { AppShell, Group, Text, Button, Stack } from '@mantine/core';
+import { AppShell, Group, Text, Container, ActionIcon } from '@mantine/core';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
+import { IconMail, IconBrandInstagram } from '@tabler/icons-react';
 import classes from './styles.module.css';
 
 export default function MainLayout() {
@@ -55,8 +56,45 @@ export default function MainLayout() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          className={classes.mainContent}
         >
           <Outlet />
+          
+          {/* Footer as scrollable content */}
+          <footer className={classes.footer}>
+            <Container size="xl" className={classes.footerContainer}>
+              <div className={classes.footerContent}>
+                <Text className={classes.footerName}>
+                  ANURAG SURESH
+                </Text>
+                <Text className={classes.footerAddress}>
+                  London, UK
+                </Text>
+                <Group gap="lg" justify="center" className={classes.footerIcons}>
+                  <ActionIcon
+                    component="a"
+                    href="anuragreggie@gmail.com"
+                    variant="subtle"
+                    size="lg"
+                    className={classes.iconButton}
+                  >
+                    <IconMail size={20} />
+                  </ActionIcon>
+                  <ActionIcon
+                    component="a"
+                    href="https://instagram.com/anurag.r_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="subtle"
+                    size="lg"
+                    className={classes.iconButton}
+                  >
+                    <IconBrandInstagram size={20} />
+                  </ActionIcon>
+                </Group>
+              </div>
+            </Container>
+          </footer>
         </motion.div>
       </AppShell.Main>
     </AppShell>

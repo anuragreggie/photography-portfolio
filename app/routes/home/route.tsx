@@ -35,9 +35,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className={classes.headerContent}
           >
-            <Title order={1} className={classes.pageTitle}>
-              PORTFOLIO
-            </Title>
+            <Text className={classes.pageTitle}>
+              Life Through Optics
+            </Text>
           </motion.div>
         </Container>
       </section>
@@ -123,27 +123,6 @@ export default function Home() {
                 </motion.div>
               </Grid.Col>
             </Grid>
-          </motion.div>
-        </Container>
-      </section>
-
-      {/* Footer Section */}
-      <section className={classes.footer}>
-        <Container size="xl">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className={classes.footerContent}
-          >
-            <Title order={2} className={classes.footerName}>
-              ANURAG SURESH
-            </Title>
-            <Text className={classes.footerAddress}>
-              San Francisco, CA<br />
-              (415) 123-4567
-            </Text>
           </motion.div>
         </Container>
       </section>
