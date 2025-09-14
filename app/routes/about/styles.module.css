@@ -1,0 +1,52 @@
+.page {
+  min-height: 100vh;
+  padding-top: 2rem;
+  background: #ffffff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 200;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  color: #212529;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.content {
+  text-align: center;
+}
+
+.description {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  color: #495057;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  letter-spacing: 0.005em;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: 1rem;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+}
