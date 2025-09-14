@@ -71,22 +71,20 @@
 }
 
 .equipmentCard {
-  background: var(--mantine-color-dark-8);
-  border: 1px solid var(--mantine-color-dark-6);
-  border-radius: 16px;
-  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  transition: all 0.3s ease;
-  min-height: 400px;
+  gap: 1rem;
+  min-height: auto;
 }
 
 .equipmentCard:hover {
-  border-color: var(--mantine-color-dark-4);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  transform: none;
+  box-shadow: none;
 }
 
 .equipmentImageWrapper {
@@ -100,8 +98,7 @@
 .equipmentMainImage {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+  border-radius: 0;
 }
 
 /* Make camera image bigger */
@@ -114,9 +111,7 @@
   max-height: 200px;
 }
 
-.equipmentCard:hover .equipmentMainImage {
-  transform: scale(1.05);
-}
+/* Removed image hover scaling */
 
 .imageLabel {
   font-size: 1.2rem;
@@ -173,8 +168,8 @@
   }
   
   .equipmentCard {
-    padding: 1.5rem;
-    min-height: 320px;
+  padding: 0;
+  min-height: auto;
   }
   
   /* Mobile sizing adjustments */
