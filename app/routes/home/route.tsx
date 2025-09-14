@@ -1,7 +1,6 @@
-import { Container, Title, Text, Grid, Box, Image } from '@mantine/core';
+import { Container, Text, Grid, } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { NavLink } from 'react-router';
-import { GalleryItem, imageVariants } from '../../components';
+import { GalleryItem } from '../../components';
 import classes from './styles.module.css';
 
 const fadeInUp = {

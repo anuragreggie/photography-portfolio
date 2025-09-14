@@ -1,10 +1,11 @@
-/* Gallery Item Styles - Matches home page styling */
+/* Gallery Item Styles - Enhanced with book page flip */
 .imageWrapper {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
+  perspective: 1000px;
 }
 
 .imageWrapper:hover {
@@ -26,7 +27,7 @@
   background: var(--mantine-color-dark-1);
 }
 
-/* Consistent overlay for all grid items */
+/* Book page flip overlay animation */
 .overlay {
   position: absolute;
   top: 0;
@@ -38,10 +39,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform-origin: left center;
+  transform: rotateY(-90deg);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backface-visibility: hidden;
 }
 
 .imageWrapper:hover .overlay {
+  transform: rotateY(0deg);
   opacity: 1;
 }
