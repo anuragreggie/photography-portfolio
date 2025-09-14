@@ -1,111 +1,150 @@
-import { Container, Title, Text, Button, Stack, Grid, Image, Box } from '@mantine/core';
+import { Container, Title, Text, Grid, Box, Image } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router';
 import classes from './styles.module.css';
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 60 },
+  initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8, ease: 'easeOut' }
+  transition: { duration: 0.6, ease: 'easeOut' }
 };
 
 const staggerChildren = {
   animate: {
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.1
     }
   }
+};
+
+const imageVariants = {
+  initial: { opacity: 0, scale: 0.95 },
+  animate: { opacity: 1, scale: 1 },
+  transition: { duration: 0.5 }
 };
 
 export default function Home() {
   return (
     <div className={classes.page}>
-      {/* Hero Section */}
-      <section className={classes.hero}>
-        <Container size="xl" className={classes.heroContainer}>
+      {/* Header Section */}
+      <section className={classes.header}>
+        <Container size="xl">
           <motion.div
-            variants={staggerChildren}
-            initial="initial"
-            animate="animate"
-            className={classes.heroContent}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className={classes.headerContent}
           >
-            <motion.div variants={fadeInUp}>
-              <Title order={1} className={classes.heroTitle}>
-                Capturing Moments,
-                <br />
-                Creating Stories
-              </Title>
-            </motion.div>
-            
-            <motion.div variants={fadeInUp}>
-              <Text size="lg" c="dimmed" className={classes.heroSubtitle}>
-                Artisanal photography that transforms fleeting moments into timeless art
-              </Text>
-            </motion.div>
-            
-            <motion.div variants={fadeInUp}>
-              <Button
-                component={NavLink}
-                to="/gallery"
-                size="lg"
-                variant="outline"
-                color="dark"
-                className={classes.heroButton}
-              >
-                View Gallery
-              </Button>
-            </motion.div>
+            <Title order={1} className={classes.pageTitle}>
+              PORTFOLIO
+            </Title>
           </motion.div>
         </Container>
       </section>
 
-      {/* Featured Work */}
-      <section className={classes.featured}>
+      {/* Gallery Grid */}
+      <section className={classes.gallery}>
         <Container size="xl">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={staggerChildren}
+            initial="initial"
+            animate="animate"
+          >
+            <Grid gutter="md">
+              <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <motion.div variants={imageVariants}>
+                  <Box className={classes.imageWrapper}>
+                    <Box className={classes.placeholderImage}>
+                      <Text c="dark.0" ta="center" size="sm" fw={300}>
+                        Portrait Photography
+                      </Text>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid.Col>
+              
+              <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <motion.div variants={imageVariants}>
+                  <Box className={classes.imageWrapper}>
+                    <Box className={classes.placeholderImage}>
+                      <Text c="dark.0" ta="center" size="sm" fw={300}>
+                        Landscape Photography
+                      </Text>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid.Col>
+              
+              <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <motion.div variants={imageVariants}>
+                  <Box className={classes.imageWrapper}>
+                    <Box className={classes.placeholderImage}>
+                      <Text c="dark.0" ta="center" size="sm" fw={300}>
+                        Street Photography
+                      </Text>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid.Col>
+              
+              <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <motion.div variants={imageVariants}>
+                  <Box className={classes.imageWrapper}>
+                    <Box className={classes.placeholderImage}>
+                      <Text c="dark.0" ta="center" size="sm" fw={300}>
+                        Event Photography
+                      </Text>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid.Col>
+              
+              <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <motion.div variants={imageVariants}>
+                  <Box className={classes.imageWrapper}>
+                    <Box className={classes.placeholderImage}>
+                      <Text c="dark.0" ta="center" size="sm" fw={300}>
+                        Wedding Photography
+                      </Text>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid.Col>
+              
+              <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <motion.div variants={imageVariants}>
+                  <Box className={classes.imageWrapper}>
+                    <Box className={classes.placeholderImage}>
+                      <Text c="dark.0" ta="center" size="sm" fw={300}>
+                        Fine Art Photography
+                      </Text>
+                    </Box>
+                  </Box>
+                </motion.div>
+              </Grid.Col>
+            </Grid>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* Footer Section */}
+      <section className={classes.footer}>
+        <Container size="xl">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className={classes.footerContent}
           >
-            <Title order={2} ta="center" mb="xl" className={classes.sectionTitle}>
-              Featured Work
+            <Title order={2} className={classes.footerName}>
+              ANURAG SURESH
             </Title>
+            <Text className={classes.footerAddress}>
+              San Francisco, CA<br />
+              (415) 123-4567
+            </Text>
           </motion.div>
-          
-          <Grid gutter="md">
-            <Grid.Col span={{ base: 12, md: 6 }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className={classes.imageWrapper}
-              >
-                <Box className={classes.placeholderImage}>
-                  <Text c="dimmed" ta="center">
-                    Featured Photography 1
-                  </Text>
-                </Box>
-              </motion.div>
-            </Grid.Col>
-            
-            <Grid.Col span={{ base: 12, md: 6 }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className={classes.imageWrapper}
-              >
-                <Box className={classes.placeholderImage}>
-                  <Text c="dimmed" ta="center">
-                    Featured Photography 2
-                  </Text>
-                </Box>
-              </motion.div>
-            </Grid.Col>
-          </Grid>
         </Container>
       </section>
     </div>

@@ -14,7 +14,7 @@ export default function MainLayout() {
       <AppShell.Header className={classes.header}>
         <div className={classes.headerContent}>
           <NavLink to="/" className={classes.logo}>
-            <Text size="xl" fw={400} c="dark.9" className={classes.logoText}>
+            <Text size="xl" fw={400} c="dark.0" className={classes.logoText}>
               Anurag S
             </Text>
           </NavLink>

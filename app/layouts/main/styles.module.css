@@ -1,15 +1,20 @@
 .shell {
-  background: #ffffff;
+  background: var(--mantine-color-dark-9);
+}
+
+.shell :global(.mantine-AppShell-main) {
+  padding: 0;
+  margin: 0;
 }
 
 .header {
-  border-bottom: 1px solid #f1f3f4;
-  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid var(--mantine-color-dark-6);
+  background: rgba(0, 0, 0, 0.98);
   backdrop-filter: blur(20px);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.04);
 }
 
 .headerContent {
@@ -24,7 +29,7 @@
 
 .logo {
   text-decoration: none;
-  color: inherit;
+  color: var(--mantine-color-dark-0);
   transition: all 0.2s ease;
 }
 
@@ -34,8 +39,8 @@
 }
 
 .logoText {
-  font-family: "Source Sans Pro", "Roboto", "Helvetica Neue", sans-serif;
   letter-spacing: -0.01em;
+  color: var(--mantine-color-dark-0);
 }
 
 .nav {
@@ -50,23 +55,22 @@
 
 .navLink {
   text-decoration: none;
-  color: #495057;
+  color: var(--mantine-color-dark-0);
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.02em;
   transition: all 0.2s ease;
   position: relative;
   padding: 0.5rem 0;
-  font-family: "Source Sans Pro", "Roboto", "Helvetica Neue", sans-serif;
 }
 
 .navLink:hover {
-  color: #212529;
+  color: var(--mantine-color-dark-2);
   transform: translateY(-1px);
 }
 
 .navLink.active {
-  color: #212529;
+  color: var(--mantine-color-dark-0);
   font-weight: 500;
 }
 
@@ -77,6 +81,6 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #212529;
+  background: var(--mantine-color-dark-0);
   border-radius: 1px;
 }

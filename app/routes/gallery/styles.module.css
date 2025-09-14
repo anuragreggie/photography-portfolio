@@ -1,7 +1,9 @@
+@import url('../../../styles/shared.css');
+
 .page {
   min-height: 100vh;
   padding-top: 2rem;
-  background: #ffffff;
+  background: var(--mantine-color-dark-9);
 }
 
 .header {
@@ -14,7 +16,7 @@
   font-weight: 200;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
-  color: #212529;
+  color: var(--mantine-color-dark-0);
 }
 
 .subtitle {
@@ -22,6 +24,7 @@
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  color: var(--mantine-color-dark-0);
 }
 
 .gallery {
@@ -37,22 +40,30 @@
 
 .imageWrapper {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1;
   overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.02);
 }
 
 .placeholderImage {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #495057 0%, #212529 100%);
+  background: linear-gradient(135deg, var(--mantine-color-dark-7), var(--mantine-color-dark-6));
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease;
+  border: 1px solid var(--mantine-color-dark-6);
+  transition: all 0.3s ease;
+  color: var(--mantine-color-dark-0);
 }
 
-.imageCard:hover .placeholderImage {
-  transform: scale(1.05);
+.placeholderImage:hover {
+  background: linear-gradient(135deg, var(--mantine-color-dark-6), var(--mantine-color-dark-5));
 }
 
 .overlay {
@@ -86,11 +97,12 @@
 .modalImage {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #495057 0%, #212529 100%);
+  background: linear-gradient(135deg, var(--mantine-color-dark-6) 0%, var(--mantine-color-dark-8) 100%);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--mantine-color-dark-0);
 }
 
 @media (max-width: 768px) {

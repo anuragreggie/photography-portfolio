@@ -15,7 +15,7 @@ export default function About() {
           <Title order={1} className={classes.title}>
             About
           </Title>
-          <Text size="lg" c="dimmed" className={classes.subtitle}>
+          <Text size="lg" c="dark.0" className={classes.subtitle}>
             Capturing moments, creating memories
           </Text>
         </motion.div>

@@ -43,7 +43,7 @@ export default function Gallery() {
           <Title order={1} className={classes.title}>
             Gallery
           </Title>
-          <Text size="lg" c="dimmed" className={classes.subtitle}>
+          <Text size="lg" c="dark.0" className={classes.subtitle}>
             A curated collection of my photographic work
           </Text>
         </motion.div>
@@ -63,22 +63,21 @@ export default function Gallery() {
                 <motion.div
                   variants={fadeInUp}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={classes.imageCard}
                   onClick={() => setSelectedImage(image.id)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Box className={classes.imageWrapper}>
+                  <Box className={`${classes.imageCard} ${classes.imageWrapper}`}>
                     <Box className={classes.placeholderImage}>
-                      <Text c="white" fw={300} ta="center" size="sm">
+                      <Text c="dark.0" fw={300} ta="center" size="sm">
                         {image.title}
                       </Text>
                     </Box>
                     <div className={classes.overlay}>
-                      <Text c="white" fw={500} size="md">
+                      <Text c="dark.0" fw={500} size="md">
                         {image.title}
                       </Text>
-                      <Text c="gray.3" size="sm">
+                      <Text c="dark.2" size="sm">
                         {image.category}
                       </Text>
                     </div>
@@ -107,7 +106,7 @@ export default function Gallery() {
             className={classes.modalContent}
           >
             <Box className={classes.modalImage}>
-              <Text c="white" ta="center" size="lg">
+              <Text c="dark.0" ta="center" size="lg">
                 {images.find(img => img.id === selectedImage)?.title}
               </Text>
             </Box>
