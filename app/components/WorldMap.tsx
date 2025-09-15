@@ -1,7 +1,6 @@
 import { useState, useMemo, useCallback } from 'react';
 import { Box, Text, Group, Loader, Center } from '@mantine/core';
-import { ComposableMap, Geographies, Geography, Graticule } from 'react-simple-maps';
-import { motion } from 'framer-motion';
+import { ComposableMap, Geographies, Geography, Graticule, ZoomableGroup } from 'react-simple-maps';
 
 interface WorldMapProps {
   selectedCountry: string | null; // null means all
@@ -23,8 +22,11 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
   const [geoData, setGeoData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [zoom, setZoom] = useState(1);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  // View (center coordinates + zoom) handled by ZoomableGroup
+  const [view, setView] = useState<{ coordinates: [number, number]; zoom: number }>({
+    coordinates: [0, 0],
+    zoom: 1,
+  });
   // Projection fixed to Mercator as requested
 
   useState(() => {
@@ -56,23 +58,16 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
 
   const resetToAll = useCallback(() => onCountrySelect(null), [onCountrySelect]);
 
-  const handleZoom = useCallback((event: React.WheelEvent) => {
-    event.preventDefault();
-    const delta = event.deltaY > 0 ? 0.9 : 1.1;
-    setZoom(prevZoom => Math.max(1, Math.min(8, prevZoom * delta)));
-  }, []);
-
   const handleZoomIn = useCallback(() => {
-    setZoom(prevZoom => Math.min(8, prevZoom * 1.2));
+    setView(v => ({ ...v, zoom: Math.min(8, +(v.zoom * 1.2).toFixed(2)) }));
   }, []);
 
   const handleZoomOut = useCallback(() => {
-    setZoom(prevZoom => Math.max(1, prevZoom * 0.8));
+    setView(v => ({ ...v, zoom: Math.max(1, +(v.zoom * 0.8).toFixed(2)) }));
   }, []);
 
   const handleReset = useCallback(() => {
-    setZoom(1);
-    setPosition({ x: 0, y: 0 });
+    setView({ coordinates: [0, 0], zoom: 1 });
   }, []);
 
   const handleLegendKey = useCallback((e: React.KeyboardEvent) => {
@@ -161,52 +156,58 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
             <ComposableMap
               projection="geoEqualEarth"
               style={{ width: '100%', height: '100%' }}
-              onClick={() => onCountrySelect(null)} // Click empty space to reset
-              onWheel={handleZoom}
+              onClick={() => onCountrySelect(null)}
             >
-              <g transform={`scale(${zoom}) translate(${position.x}, ${position.y})`}>
+              <ZoomableGroup
+                center={view.coordinates}
+                zoom={view.zoom}
+                minZoom={1}
+                maxZoom={8}
+                // Called after drag or wheel interactions finish
+                onMoveEnd={(pos: { coordinates: [number, number]; zoom: number }) => setView({ coordinates: pos.coordinates, zoom: pos.zoom })}
+              >
                 <Graticule stroke="#40444b" strokeWidth={3} opacity={0.4} />
                 <Geographies geography={geoData}>
-                {({ geographies }: { geographies: any[] }) => geographies.map((geo: any) => {
-                  const name: string = canonical(geo.properties.name || geo.properties.NAME || '');
-                  const available = isAvailable(name);
-                  const isIndividuallySelected = selectedCountry === name;
-                  return (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      onClick={(e: any) => {
-                        e.stopPropagation();
-                        if (!available) return;
-                        if (isIndividuallySelected) {
-                          onCountrySelect(null); // toggle off -> all
-                        } else {
-                          onCountrySelect(name);
-                        }
-                      }}
-                      style={{
-                        default: {
-                          fill: isIndividuallySelected ? '#339af0' : available ? '#ffffff' : '#2e3239',
-                          outline: 'none',
-                          stroke: '#40444b',
-                          strokeWidth: 0.5,
-                          cursor: available ? 'pointer' : 'not-allowed',
-                          transition: 'fill 120ms ease'
-                        },
-                        hover: {
-                          fill: isIndividuallySelected ? '#339af0' : available ? '#e6e8eb' : '#2e3239',
-                          outline: 'none'
-                        },
-                        pressed: {
-                          fill: '#339af0',
-                          outline: 'none'
-                        }
-                      }}
-                    />
-                  );
-                })}
-              </Geographies>
-              </g>
+                  {({ geographies }: { geographies: any[] }) => geographies.map((geo: any) => {
+                    const name: string = canonical(geo.properties.name || geo.properties.NAME || '');
+                    const available = isAvailable(name);
+                    const isIndividuallySelected = selectedCountry === name;
+                    return (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        onClick={(e: any) => {
+                          e.stopPropagation();
+                          if (!available) return;
+                          if (isIndividuallySelected) {
+                            onCountrySelect(null);
+                          } else {
+                            onCountrySelect(name);
+                          }
+                        }}
+                        style={{
+                          default: {
+                            fill: isIndividuallySelected ? '#339af0' : available ? '#ffffff' : '#2e3239',
+                            outline: 'none',
+                            stroke: '#40444b',
+                            strokeWidth: 0.5,
+                            cursor: available ? 'pointer' : 'not-allowed',
+                            transition: 'fill 120ms ease'
+                          },
+                          hover: {
+                            fill: isIndividuallySelected ? '#339af0' : available ? '#e6e8eb' : '#2e3239',
+                            outline: 'none'
+                          },
+                          pressed: {
+                            fill: '#339af0',
+                            outline: 'none'
+                          }
+                        }}
+                      />
+                    );
+                  })}
+                </Geographies>
+              </ZoomableGroup>
             </ComposableMap>
           </Box>
         )}

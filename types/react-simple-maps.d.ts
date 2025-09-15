@@ -33,6 +33,21 @@ declare module 'react-simple-maps' {
   }
 
   export const ComposableMap: React.FC<ComposableMapProps>;
+  // ZoomableGroup (not included in minimal typings) adds controlled pan/zoom
+  export interface ZoomableGroupProps {
+    center?: [number, number];
+    zoom?: number;
+    minZoom?: number;
+    maxZoom?: number;
+    onMoveEnd?: (position: { coordinates: [number, number]; zoom: number }) => void;
+    children: React.ReactNode;
+  }
+  export const ZoomableGroup: React.FC<ZoomableGroupProps>;
+  // Graticule lines
+  export interface GraticuleProps extends React.SVGProps<SVGPathElement> {
+    step?: [number, number];
+  }
+  export const Graticule: React.FC<GraticuleProps>;
   export const Geographies: React.FC<GeographiesProps>;
   export const Geography: React.FC<GeographyProps>;
 }

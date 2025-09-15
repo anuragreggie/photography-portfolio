@@ -4,6 +4,7 @@ import classes from './GalleryItem.module.css';
 
 export interface GalleryItemProps {
   title: string;
+  src?: string; // image path
   onClick?: () => void;
 }
 
@@ -15,6 +16,7 @@ export const imageVariants = {
 
 export default function GalleryItem({ 
   title, 
+  src,
   onClick
 }: GalleryItemProps) {
   return (
@@ -25,16 +27,15 @@ export default function GalleryItem({
       onClick={onClick}
     >
       <Box className={classes.imageWrapper}>
-        <Box className={classes.placeholderImage}>
-          <Text c="dark.9" ta="center" size="sm" fw={300}>
-            {title}
-          </Text>
-        </Box>
-        <div className={classes.overlay}>
-          <Text c="dark.0" fw={500} size="md" ta="center">
-            {title}
-          </Text>
-        </div>
+        {src ? (
+          <img src={src} alt={title} className={classes.img} loading="lazy" />
+        ) : (
+          <Box className={classes.placeholderImage}>
+            <Text c="dark.9" ta="center" size="sm" fw={300}>
+              {title}
+            </Text>
+          </Box>
+        )}
       </Box>
     </motion.div>
   );

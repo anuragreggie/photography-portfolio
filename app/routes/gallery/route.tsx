@@ -4,20 +4,25 @@ import { useState, useMemo } from 'react';
 import { GalleryItem, WorldMap } from '../../components';
 import classes from './styles.module.css';
 
-const images = [
-  { id: 1, title: 'Cherry Blossoms in Kyoto', category: 'Portrait', country: 'Japan', description: 'Traditional Japanese spring scenery' },
-  { id: 2, title: 'Manhattan Skyline', category: 'Landscape', country: 'United States', description: 'Urban landscape at golden hour' },
-  { id: 3, title: 'Parisian Street Café', category: 'Street', country: 'France', description: 'Authentic French café culture' },
-  { id: 4, title: 'Berlin Modern Architecture', category: 'Architecture', country: 'Germany', description: 'Contemporary German design' },
-  { id: 5, title: 'Mount Fuji Reflection', category: 'Nature', country: 'Japan', description: 'Iconic Japanese landscape' },
-  { id: 6, title: 'Roman Colosseum', category: 'Architecture', country: 'Italy', description: 'Ancient Roman architecture' },
-  { id: 7, title: 'Eiffel Tower at Night', category: 'Street', country: 'France', description: 'Paris illuminated after dark' },
-  { id: 8, title: 'Yellowstone National Park', category: 'Landscape', country: 'United States', description: 'American wilderness' },
-  { id: 9, title: 'Tuscany Countryside', category: 'Landscape', country: 'Italy', description: 'Rolling hills of Tuscany' },
-  { id: 10, title: 'Tokyo Street Fashion', category: 'Street', country: 'Japan', description: 'Modern Japanese street style' },
-  { id: 11, title: 'Bavarian Alps', category: 'Nature', country: 'Germany', description: 'German mountain landscape' },
-  { id: 12, title: 'Grand Canyon', category: 'Landscape', country: 'United States', description: 'Iconic American landmark' },
+// Real Norway images populated from /public/images/norway
+interface PhotoMeta {
+  id: number;
+  file: string;
+  title: string;
+  country: string;
+  description?: string;
+}
+
+const norwayFilenames = [
+  'DSC03619.jpg','DSC03622.jpg','DSC03624.jpg','DSC03625.jpg','DSC03635.jpg','DSC03636.jpg','DSC03654.jpg','DSC03664.jpg','DSC03666.jpg','DSC03667.jpg','DSC03668.jpg','DSC03671.jpg','DSC03724.jpg','DSC03733.jpg','DSC03738.jpg','DSC03756.jpg','DSC03758.jpg','DSC03792.jpg','DSC03809.jpg','DSC03811.jpg','DSC03812.jpg','DSC03819.jpg','DSC03822.jpg','DSC03823.jpg','DSC03828.jpg','DSC03840.jpg','DSC03866.jpg','DSC03947.jpg','DSC03969.jpg','DSC03972.jpg','DSC03983.jpg','DSC03984.jpg','DSC04006.jpg','DSC04025.jpg','DSC04027.jpg','DSC04073.jpg','DSC04081.jpg','DSC04092.jpg','DSC04095.jpg','DSC04097.jpg'
 ];
+
+const images: PhotoMeta[] = norwayFilenames.map((file, idx) => ({
+  id: idx + 1,
+  file: `/images/norway/${file}`,
+  title: file.replace(/\.jpg$/i, '').replace(/DSC0*/i, 'Norway '),
+  country: 'Norway',
+}));
 
 const staggerContainer = {
   animate: {
@@ -33,14 +38,12 @@ export default function Gallery() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
   // Get unique countries for filter options
-  const countries = useMemo(() => {
-    return Array.from(new Set(images.map(img => img.country))).sort();
-  }, []);
+  const countries = useMemo(() => Array.from(new Set(images.map(i => i.country))).sort(), []);
 
   // Filter images based on selected country
   const filteredImages = useMemo(() => {
-    if (!selectedCountry) return images;
-    return images.filter(img => img.country === selectedCountry);
+  if (!selectedCountry) return images;
+  return images.filter(img => img.country === selectedCountry);
   }, [selectedCountry]);
 
   return (
@@ -87,6 +90,7 @@ export default function Gallery() {
               >
                 <GalleryItem
                   title={image.title}
+                  src={image.file}
                   onClick={() => setSelectedImage(image.id)}
                 />
               </Grid.Col>
