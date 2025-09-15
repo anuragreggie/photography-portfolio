@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback } from 'react';
 import { Box, Text, Group, Loader, Center } from '@mantine/core';
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
+import { ComposableMap, Geographies, Geography, Graticule } from 'react-simple-maps';
 import { motion } from 'framer-motion';
 
 interface WorldMapProps {
@@ -23,6 +23,8 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
   const [geoData, setGeoData] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [zoom, setZoom] = useState(1);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
   // Projection fixed to Mercator as requested
 
   useState(() => {
@@ -54,6 +56,25 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
 
   const resetToAll = useCallback(() => onCountrySelect(null), [onCountrySelect]);
 
+  const handleZoom = useCallback((event: React.WheelEvent) => {
+    event.preventDefault();
+    const delta = event.deltaY > 0 ? 0.9 : 1.1;
+    setZoom(prevZoom => Math.max(1, Math.min(8, prevZoom * delta)));
+  }, []);
+
+  const handleZoomIn = useCallback(() => {
+    setZoom(prevZoom => Math.min(8, prevZoom * 1.2));
+  }, []);
+
+  const handleZoomOut = useCallback(() => {
+    setZoom(prevZoom => Math.max(1, prevZoom * 0.8));
+  }, []);
+
+  const handleReset = useCallback(() => {
+    setZoom(1);
+    setPosition({ x: 0, y: 0 });
+  }, []);
+
   const handleLegendKey = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -74,13 +95,78 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
           </Center>
         )}
         {!loading && !error && geoData && (
-          <Box style={{ width: '100%', height: 360, position: 'relative' }}>
+          <Box style={{ width: '100%', height: 500, position: 'relative' }}>
+            {/* Zoom Controls */}
+            <Box style={{ position: 'absolute', top: 10, right: 10, zIndex: 1000 }}>
+              <Group gap="xs">
+                <Box
+                  onClick={handleZoomIn}
+                  style={{
+                    width: 32,
+                    height: 32,
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #40444b',
+                    borderRadius: 4,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    userSelect: 'none'
+                  }}
+                >
+                  +
+                </Box>
+                <Box
+                  onClick={handleZoomOut}
+                  style={{
+                    width: 32,
+                    height: 32,
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #40444b',
+                    borderRadius: 4,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    userSelect: 'none'
+                  }}
+                >
+                  −
+                </Box>
+                <Box
+                  onClick={handleReset}
+                  style={{
+                    width: 32,
+                    height: 32,
+                    backgroundColor: '#ffffff',
+                    border: '1px solid #40444b',
+                    borderRadius: 4,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    fontSize: '12px',
+                    fontWeight: 'bold',
+                    userSelect: 'none'
+                  }}
+                >
+                  ⌂
+                </Box>
+              </Group>
+            </Box>
             <ComposableMap
-              projection="geoMercator"
+              projection="geoEqualEarth"
               style={{ width: '100%', height: '100%' }}
               onClick={() => onCountrySelect(null)} // Click empty space to reset
+              onWheel={handleZoom}
             >
-              <Geographies geography={geoData}>
+              <g transform={`scale(${zoom}) translate(${position.x}, ${position.y})`}>
+                <Graticule stroke="#40444b" strokeWidth={3} opacity={0.4} />
+                <Geographies geography={geoData}>
                 {({ geographies }: { geographies: any[] }) => geographies.map((geo: any) => {
                   const name: string = canonical(geo.properties.name || geo.properties.NAME || '');
                   const available = isAvailable(name);
@@ -120,6 +206,7 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
                   );
                 })}
               </Geographies>
+              </g>
             </ComposableMap>
           </Box>
         )}
