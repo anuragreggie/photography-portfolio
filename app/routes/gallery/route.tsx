@@ -11,14 +11,6 @@ import { WorldMap } from '../../components';
 import classes from './styles.module.css';
 import photosPromise from '../../data/photos';
 
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
 export default function Gallery() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
@@ -102,9 +94,9 @@ export default function Gallery() {
         </Box>
 
         <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          animate="animate"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           className={classes.gallery}
           key={selectedCountry ?? 'all'} // Re-animate when filter changes
         >
