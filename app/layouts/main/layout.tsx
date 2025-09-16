@@ -2,7 +2,7 @@ import { Outlet } from 'react-router';
 import { AppShell, Group, Text, Container, ActionIcon, Burger } from '@mantine/core';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
-import { IconMail, IconBrandInstagram } from '@tabler/icons-react';
+import { IconMail, IconBrandInstagram, IconBrandGithub } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './styles.module.css';
 
@@ -142,6 +142,21 @@ export default function MainLayout() {
                     <IconBrandInstagram size={20} />
                   </ActionIcon>
                 </Group>
+                <Text className={classes.footerCredit}>
+                  Designed by me
+                  <ActionIcon
+                    component="a"
+                    href="https://github.com/anuragreggie/photography-portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="subtle"
+                    size="sm"
+                    className={classes.iconButton}
+                    style={{ display: 'inline-flex', verticalAlign: 'middle' }}
+                  >
+                    <IconBrandGithub size={16} />
+                  </ActionIcon>
+                </Text>
               </div>
             </Container>
           </footer>

@@ -169,6 +169,14 @@
   margin-top: 0.5rem;
 }
 
+.footerCredit {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--mantine-color-dark-3);
+  margin-top: 1rem;
+  text-align: center;
+}
+
 .iconButton {
   color: var(--mantine-color-dark-0);
   transition: all 0.2s ease;
