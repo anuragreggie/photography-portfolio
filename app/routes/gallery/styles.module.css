@@ -107,7 +107,7 @@
 
 .filterSection {
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: right;
 }
 
 @media (max-width: 768px) {

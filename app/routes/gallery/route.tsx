@@ -9,10 +9,10 @@ import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
-import photosPromise from '../../data/photos';
+import photosPromise, { type PhotoWithCountry } from '../../data/photos';
 
 export default function Gallery() {
-  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [photos, setPhotos] = useState<PhotoWithCountry[]>([]);
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(-1);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -35,14 +35,14 @@ export default function Gallery() {
 
   // Get unique countries from photo data
   const countries = useMemo(() => {
-    const uniqueCountries = Array.from(new Set(photos.map(photo => (photo as any).country).filter(Boolean)));
+    const uniqueCountries = Array.from(new Set(photos.map(photo => photo.country).filter(Boolean)));
     return uniqueCountries.sort();
   }, [photos]);
 
   // Filter photos based on selected country
   const filteredPhotos = useMemo(() => {
     if (!selectedCountry) return photos;
-    return photos.filter(photo => (photo as any).country === selectedCountry);
+    return photos.filter(photo => photo.country === selectedCountry);
   }, [selectedCountry, photos]);
 
   if (loading) {
@@ -88,7 +88,7 @@ export default function Gallery() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className={classes.filterSection}
         >
-          <Group justify="center" gap="lg">
+          <Group justify="flex-end" gap="lg">
             <Select
               placeholder="All Locations"
               value={selectedCountry}
@@ -110,6 +110,7 @@ export default function Gallery() {
                   color: 'var(--mantine-color-dark-1)',
                   fontSize: '0.875rem',
                   fontWeight: 300,
+                  textAlign: 'right',
                   '&:focus': {
                     borderBottomColor: 'var(--mantine-color-dark-2)',
                   },
