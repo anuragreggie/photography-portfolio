@@ -103,11 +103,11 @@ export default function Gallery() {
               w={180}
               styles={{
                 input: {
-                  backgroundColor: 'transparent',
+                  backgroundColor: 'var(--mantine-color-dark-9)',
                   border: 'none',
                   borderBottom: '1px solid var(--mantine-color-dark-4)',
                   borderRadius: 0,
-                  color: 'var(--mantine-color-dark-1)',
+                  color: 'var(--mantine-color-dark-0)',
                   fontSize: '0.875rem',
                   fontWeight: 300,
                   textAlign: 'right',
@@ -119,16 +119,22 @@ export default function Gallery() {
                   },
                 },
                 dropdown: {
-                  backgroundColor: 'var(--mantine-color-dark-7)',
+                  backgroundColor: 'var(--mantine-color-dark-9)',
                   border: '1px solid var(--mantine-color-dark-5)',
+                  borderRadius: '4px',
                 },
                 option: {
                   fontSize: '0.875rem',
+                  color: 'var(--mantine-color-dark-0)',
+                  padding: '8px 12px',
+                  backgroundColor: 'var(--mantine-color-dark-9)',
                   '&[data-selected]': {
-                    backgroundColor: 'var(--mantine-color-dark-5)',
+                    backgroundColor: 'var(--mantine-color-dark-9)',
+                    color: 'var(--mantine-color-dark-0)',
                   },
                   '&[data-hovered]': {
-                    backgroundColor: 'var(--mantine-color-dark-6)',
+                    backgroundColor: 'var(--mantine-color-dark-9)',
+                    color: 'var(--mantine-color-dark-0)',
                   },
                 },
               }}
