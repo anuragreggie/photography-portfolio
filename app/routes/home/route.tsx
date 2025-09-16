@@ -1,6 +1,7 @@
 import { Container, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useViewportSize } from '@mantine/hooks';
 
 import { RowsPhotoAlbum } from "react-photo-album";
 import type { Photo } from "react-photo-album";
@@ -18,6 +19,10 @@ export default function Home() {
   const [photos, setPhotos] = useState<Photo[]>([]);
   const [randomPhotos, setRandomPhotos] = useState<Photo[]>([]);
   const [loading, setLoading] = useState(true);
+  const { width } = useViewportSize();
+
+  // Mobile breakpoint  
+  const isMobile = width < 768;
 
   useEffect(() => {
     photosPromise
@@ -84,7 +89,17 @@ export default function Home() {
           >
             <RowsPhotoAlbum 
               photos={randomPhotos} 
-              rowConstraints={{ maxPhotos: 3 }}
+              rowConstraints={{
+                maxPhotos: isMobile ? 2 : 3,
+                singleRowMaxHeight: isMobile ? 400 : 600,
+              }}
+              sizes={{
+                size: "calc(100vw - 40px)",
+                sizes: [
+                  { viewport: "(max-width: 768px)", size: "calc(100vw - 32px)" },
+                  { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
+                ],
+              }}
             />
           </motion.div>
         </Container>

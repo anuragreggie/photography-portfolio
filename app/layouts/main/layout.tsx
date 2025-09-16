@@ -1,14 +1,22 @@
 import { Outlet } from 'react-router';
-import { AppShell, Group, Text, Container, ActionIcon } from '@mantine/core';
+import { AppShell, Group, Text, Container, ActionIcon, Burger } from '@mantine/core';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
 import { IconMail, IconBrandInstagram } from '@tabler/icons-react';
+import { useDisclosure } from '@mantine/hooks';
 import classes from './styles.module.css';
 
 export default function MainLayout() {
+  const [opened, { toggle }] = useDisclosure();
+
   return (
     <AppShell
       header={{ height: 80 }}
+      navbar={{
+        width: 300,
+        breakpoint: 'sm',
+        collapsed: { mobile: !opened, desktop: true },
+      }}
       padding={0}
       className={classes.shell}
     >
@@ -20,7 +28,8 @@ export default function MainLayout() {
             </Text>
           </NavLink>
           
-          <nav className={classes.nav}>
+          {/* Desktop Navigation */}
+          <nav className={classes.desktopNav}>
             <Group gap="2rem">
               <NavLink
                 to="/"
@@ -48,8 +57,49 @@ export default function MainLayout() {
               </NavLink>
             </Group>
           </nav>
+
+          {/* Mobile Burger Menu */}
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            hiddenFrom="sm"
+            size="sm"
+            color="var(--mantine-color-dark-0)"
+          />
         </div>
       </AppShell.Header>
+
+      <AppShell.Navbar className={classes.navbar}>
+        <div className={classes.navbarContent}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${classes.mobileNavLink} ${isActive ? classes.active : ''}`
+            }
+            onClick={toggle}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/gallery"
+            className={({ isActive }) =>
+              `${classes.mobileNavLink} ${isActive ? classes.active : ''}`
+            }
+            onClick={toggle}
+          >
+            Gallery
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `${classes.mobileNavLink} ${isActive ? classes.active : ''}`
+            }
+            onClick={toggle}
+          >
+            About
+          </NavLink>
+        </div>
+      </AppShell.Navbar>
 
       <AppShell.Main>
         <motion.div

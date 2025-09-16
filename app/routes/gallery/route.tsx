@@ -1,6 +1,7 @@
 import { Container, Title, Text, Box, Center } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useState, useEffect, useMemo } from 'react';
+import { useViewportSize } from '@mantine/hooks';
 
 // React Photo Album imports
 import { RowsPhotoAlbum } from "react-photo-album";
@@ -16,6 +17,10 @@ export default function Gallery() {
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(-1);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+  const { width } = useViewportSize();
+
+  // Mobile breakpoint
+  const isMobile = width < 768;
 
   useEffect(() => {
     photosPromise
@@ -100,7 +105,18 @@ export default function Gallery() {
         >
           <RowsPhotoAlbum 
             photos={filteredPhotos} 
-            onClick={({ index: clickIndex }) => setIndex(clickIndex)} 
+            onClick={({ index: clickIndex }) => setIndex(clickIndex)}
+            rowConstraints={{
+              maxPhotos: isMobile ? 2 : 3,
+              singleRowMaxHeight: isMobile ? 400 : 600,
+            }}
+            sizes={{
+              size: "calc(100vw - 40px)",
+              sizes: [
+                { viewport: "(max-width: 768px)", size: "calc(100vw - 32px)" },
+                { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
+              ],
+            }}
           />
           
           {filteredPhotos.length === 0 && (
