@@ -1,4 +1,4 @@
-import { Container, Title, Text, Box, Center } from '@mantine/core';
+import { Container, Title, Text, Box, Center, Select, Group } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useState, useEffect, useMemo } from 'react';
 import { useViewportSize } from '@mantine/hooks';
@@ -8,7 +8,6 @@ import { RowsPhotoAlbum } from "react-photo-album";
 import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
-import { WorldMap } from '../../components';
 import classes from './styles.module.css';
 import photosPromise from '../../data/photos';
 
@@ -34,17 +33,16 @@ export default function Gallery() {
       });
   }, []);
 
-  // Get unique countries for filter options (assuming photos have country metadata)
+  // Get unique countries from photo data
   const countries = useMemo(() => {
-    // For now, just return Norway since that's what we have
-    return ['Norway'];
-  }, []);
+    const uniqueCountries = Array.from(new Set(photos.map(photo => (photo as any).country).filter(Boolean)));
+    return uniqueCountries.sort();
+  }, [photos]);
 
   // Filter photos based on selected country
   const filteredPhotos = useMemo(() => {
     if (!selectedCountry) return photos;
-    // For now, return all photos since they're all Norway photos
-    return photos;
+    return photos.filter(photo => (photo as any).country === selectedCountry);
   }, [selectedCountry, photos]);
 
   if (loading) {
@@ -83,19 +81,64 @@ export default function Gallery() {
           </Title>
         </motion.div>
 
-        {/* Interactive World Map Filter */}
+        {/* Filter Controls */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className={classes.mapSection}
+          className={classes.filterSection}
         >
-          <WorldMap
-            selectedCountry={selectedCountry}
-            onCountrySelect={setSelectedCountry}
-            availableCountries={countries}
-          />
-        </motion.div>        
+          <Group justify="center" gap="lg">
+            <Select
+              placeholder="All Locations"
+              value={selectedCountry}
+              onChange={setSelectedCountry}
+              data={[
+                { value: '', label: 'All Locations' },
+                ...countries.map(country => ({ value: country, label: country }))
+              ]}
+              clearable
+              variant="subtle"
+              size="sm"
+              w={180}
+              styles={{
+                input: {
+                  backgroundColor: 'transparent',
+                  border: 'none',
+                  borderBottom: '1px solid var(--mantine-color-dark-4)',
+                  borderRadius: 0,
+                  color: 'var(--mantine-color-dark-1)',
+                  fontSize: '0.875rem',
+                  fontWeight: 300,
+                  '&:focus': {
+                    borderBottomColor: 'var(--mantine-color-dark-2)',
+                  },
+                  '&::placeholder': {
+                    color: 'var(--mantine-color-dark-3)',
+                  },
+                },
+                dropdown: {
+                  backgroundColor: 'var(--mantine-color-dark-7)',
+                  border: '1px solid var(--mantine-color-dark-5)',
+                },
+                option: {
+                  fontSize: '0.875rem',
+                  '&[data-selected]': {
+                    backgroundColor: 'var(--mantine-color-dark-5)',
+                  },
+                  '&[data-hovered]': {
+                    backgroundColor: 'var(--mantine-color-dark-6)',
+                  },
+                },
+              }}
+            />
+            {selectedCountry && (
+              <Text size="xs" c="dark.3" fw={300}>
+                {filteredPhotos.length} photo{filteredPhotos.length !== 1 ? 's' : ''}
+              </Text>
+            )}
+          </Group>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
