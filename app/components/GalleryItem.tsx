@@ -28,7 +28,7 @@ export default function GalleryItem({
     >
       <Box className={classes.imageWrapper}>
         {src ? (
-          <img src={src} alt={title} className={classes.img} loading="lazy" />
+          <img src={src} alt={title} className={classes.img} />
         ) : (
           <Box className={classes.placeholderImage}>
             <Text c="dark.9" ta="center" size="sm" fw={300}>
