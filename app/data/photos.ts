@@ -52,16 +52,17 @@ const createPhotos = async (): Promise<Photo[]> => {
     } catch (error) {
       console.error(`Failed to load dimensions for ${src}:`, error);
       // Fallback with estimated dimensions if image fails to load
+      // Using 3:2 aspect ratio which is common for photography
       photos.push({
         src,
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 800,
         alt,
         title,
         srcSet: breakpoints.map((breakpoint) => ({
           src,
           width: breakpoint,
-          height: Math.round((600 / 800) * breakpoint),
+          height: Math.round((800 / 1200) * breakpoint),
         })),
       });
     }

@@ -25,7 +25,7 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
   // View (center coordinates + zoom) handled by ZoomableGroup
   const [view, setView] = useState<{ coordinates: [number, number]; zoom: number }>({
     coordinates: [0, 0],
-    zoom: 1,
+    zoom: 1.2,
   });
   // Projection fixed to Mercator as requested
 
@@ -58,18 +58,6 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
 
   const resetToAll = useCallback(() => onCountrySelect(null), [onCountrySelect]);
 
-  const handleZoomIn = useCallback(() => {
-    setView(v => ({ ...v, zoom: Math.min(8, +(v.zoom * 1.2).toFixed(2)) }));
-  }, []);
-
-  const handleZoomOut = useCallback(() => {
-    setView(v => ({ ...v, zoom: Math.max(1, +(v.zoom * 0.8).toFixed(2)) }));
-  }, []);
-
-  const handleReset = useCallback(() => {
-    setView({ coordinates: [0, 0], zoom: 1 });
-  }, []);
-
   const handleLegendKey = useCallback((e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -78,84 +66,32 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
   }, [resetToAll]);
 
   return (
-  <Box style={{ background: 'transparent' }}>
-        {loading && (
-          <Center h={360}>
-            <Loader size="sm" />
-          </Center>
-        )}
-        {error && !loading && (
-          <Center h={360}>
-            <Text c="red" size="sm">{error}</Text>
-          </Center>
-        )}
-        {!loading && !error && geoData && (
-          <Box style={{ width: '100%', height: 500, position: 'relative' }}>
-            {/* Zoom Controls */}
-            <Box style={{ position: 'absolute', top: 10, right: 10, zIndex: 1000 }}>
-              <Group gap="xs">
-                <Box
-                  onClick={handleZoomIn}
-                  style={{
-                    width: 32,
-                    height: 32,
-                    backgroundColor: '#ffffff',
-                    border: '1px solid #40444b',
-                    borderRadius: 4,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    fontSize: '18px',
-                    fontWeight: 'bold',
-                    userSelect: 'none'
-                  }}
-                >
-                  +
-                </Box>
-                <Box
-                  onClick={handleZoomOut}
-                  style={{
-                    width: 32,
-                    height: 32,
-                    backgroundColor: '#ffffff',
-                    border: '1px solid #40444b',
-                    borderRadius: 4,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    fontSize: '18px',
-                    fontWeight: 'bold',
-                    userSelect: 'none'
-                  }}
-                >
-                  −
-                </Box>
-                <Box
-                  onClick={handleReset}
-                  style={{
-                    width: 32,
-                    height: 32,
-                    backgroundColor: '#ffffff',
-                    border: '1px solid #40444b',
-                    borderRadius: 4,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    cursor: 'pointer',
-                    fontSize: '12px',
-                    fontWeight: 'bold',
-                    userSelect: 'none'
-                  }}
-                >
-                  ⌂
-                </Box>
-              </Group>
-            </Box>
+    <Box style={{ background: 'transparent' }}>
+      {loading && (
+        <Center h={400}>
+          <Loader size="sm" color="dark.3" />
+        </Center>
+      )}
+      {error && !loading && (
+        <Center h={400}>
+          <Text c="dark.3" size="sm">{error}</Text>
+        </Center>
+      )}
+      {!loading && !error && geoData && (
+        <Box style={{ 
+          width: '100%', 
+          height: 400, 
+          position: 'relative', 
+          overflow: 'hidden',
+          background: 'transparent'
+        }}>
             <ComposableMap
               projection="geoEqualEarth"
-              style={{ width: '100%', height: '100%' }}
+              style={{ 
+                width: '100%', 
+                height: '100%', 
+                background: 'transparent'
+              }}
               onClick={() => onCountrySelect(null)}
             >
               <ZoomableGroup
@@ -166,7 +102,7 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
                 // Called after drag or wheel interactions finish
                 onMoveEnd={(pos: { coordinates: [number, number]; zoom: number }) => setView({ coordinates: pos.coordinates, zoom: pos.zoom })}
               >
-                <Graticule stroke="#40444b" strokeWidth={3} opacity={0.4} />
+                <Graticule stroke="#404040" strokeWidth={0.5} opacity={0.3} />
                 <Geographies geography={geoData}>
                   {({ geographies }: { geographies: any[] }) => geographies.map((geo: any) => {
                     const name: string = canonical(geo.properties.name || geo.properties.NAME || '');
@@ -187,19 +123,19 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
                         }}
                         style={{
                           default: {
-                            fill: isIndividuallySelected ? '#339af0' : available ? '#ffffff' : '#2e3239',
+                            fill: isIndividuallySelected ? '#339af0' : available ? '#525252' : '#262626',
                             outline: 'none',
-                            stroke: '#40444b',
+                            stroke: '#171717',
                             strokeWidth: 0.5,
                             cursor: available ? 'pointer' : 'not-allowed',
-                            transition: 'fill 120ms ease'
+                            transition: 'fill 200ms ease'
                           },
                           hover: {
-                            fill: isIndividuallySelected ? '#339af0' : available ? '#e6e8eb' : '#2e3239',
+                            fill: isIndividuallySelected ? '#1c7ed6' : available ? '#737373' : '#262626',
                             outline: 'none'
                           },
                           pressed: {
-                            fill: '#339af0',
+                            fill: '#1c7ed6',
                             outline: 'none'
                           }
                         }}
@@ -211,30 +147,69 @@ export function WorldMap({ selectedCountry, onCountrySelect, availableCountries 
             </ComposableMap>
           </Box>
         )}
-  <Group justify="center" gap="md" mt="sm">
-      <Group gap={4}>
-        <Box w={14} h={14} style={{ background: '#339af0', borderRadius: 2 }} />
-        <Text size="xs" c="dark.2">Selected</Text>
+
+      <Group justify="center" gap="md" mt="md">
+        <Group gap={4}>
+          <Box 
+            w={10} 
+            h={10} 
+            style={{ 
+              background: '#339af0', 
+              borderRadius: 3,
+              border: '1px solid #1c7ed6'
+            }} 
+          />
+          <Text size="xs" c="dark.1" fw={500}>Selected</Text>
+        </Group>
+        <Group
+          gap={4}
+          onClick={resetToAll}
+          onKeyDown={handleLegendKey}
+          role="button"
+          aria-label="Show all photos"
+          tabIndex={0}
+          style={{ 
+            cursor: 'pointer', 
+            userSelect: 'none', 
+            outline: 'none',
+            padding: '2px 4px',
+            borderRadius: '6px',
+            transition: 'background-color 0.2s ease'
+          }}
+        >
+          <Box 
+            w={10} 
+            h={10} 
+            style={{ 
+              background: '#525252', 
+              borderRadius: 3,
+              border: '1px solid #404040'
+            }} 
+          />
+          <Text 
+            size="xs" 
+            c="dark.1" 
+            fw={selectedCountry === null ? 600 : 400}
+            style={{ 
+              textDecoration: selectedCountry === null ? 'underline' : 'none'
+            }}
+          >
+            {selectedCountry === null ? 'All (Active)' : 'Available'}
+          </Text>
+        </Group>
+        <Group gap={4}>
+          <Box 
+            w={10} 
+            h={10} 
+            style={{ 
+              background: '#262626', 
+              borderRadius: 3,
+              border: '1px solid #171717'
+            }} 
+          />
+          <Text size="xs" c="dark.3">No Photos</Text>
+        </Group>
       </Group>
-      <Group
-        gap={4}
-        onClick={resetToAll}
-        onKeyDown={handleLegendKey}
-        role="button"
-        aria-label="Show all photos"
-        tabIndex={0}
-        style={{ cursor: 'pointer', userSelect: 'none', outline: 'none' }}
-      >
-        <Box w={14} h={14} style={{ background: '#ffffff', borderRadius: 2, boxShadow: '0 0 0 1px #40444b' }} />
-        <Text size="xs" c="dark.2" fw={selectedCountry === null ? 600 : 400}>
-          {selectedCountry === null ? 'All (Showing)' : 'Available (All)'}
-        </Text>
-      </Group>
-      <Group gap={4}>
-        <Box w={14} h={14} style={{ background: '#2e3239', borderRadius: 2 }} />
-        <Text size="xs" c="dark.2">No Photos</Text>
-      </Group>
-    </Group>
     </Box>
   );
 }

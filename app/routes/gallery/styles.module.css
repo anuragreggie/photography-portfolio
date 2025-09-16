@@ -105,6 +105,11 @@
   color: var(--mantine-color-dark-0);
 }
 
+.mapSection {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 768px) {
   .page {
     padding-top: 1rem;
@@ -116,5 +121,9 @@
   
   .overlay {
     padding: 1.5rem 1rem 1rem;
+  }
+
+  .mapSection {
+    margin-bottom: 1.5rem;
   }
 }

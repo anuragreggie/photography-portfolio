@@ -79,20 +79,18 @@ export default function Gallery() {
         </motion.div>
 
         {/* Interactive World Map Filter */}
-        <Box mb="xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <WorldMap
-              selectedCountry={selectedCountry}
-              onCountrySelect={setSelectedCountry}
-              availableCountries={countries}
-            />
-          </motion.div>
-        </Box>
-
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className={classes.mapSection}
+        >
+          <WorldMap
+            selectedCountry={selectedCountry}
+            onCountrySelect={setSelectedCountry}
+            availableCountries={countries}
+          />
+        </motion.div>        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
