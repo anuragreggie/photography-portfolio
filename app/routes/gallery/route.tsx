@@ -1,28 +1,15 @@
-import { Container, Title, Text, Grid, Box, Modal, Center } from '@mantine/core';
+import { Container, Title, Text, Box, Center } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { useState, useMemo } from 'react';
-import { GalleryItem, WorldMap } from '../../components';
-import classes from './styles.module.css';
+import { useState, useEffect, useMemo } from 'react';
 
-// Dynamically import all Norway images placed under app/assets so Vite fingerprints & optimizes them.
-// NOTE: We moved the JPG files from public/images/norway -> app/assets/images/norway
-// This enables import.meta.glob. Public folder assets aren't processed by Vite and can't be globbed.
-const norwayImageModules = import.meta.glob('../../assets/images/norway/*.jpg', {
-  eager: true, 
-  import: 'default' 
-}) as Record<string, string>;
- 
-const images = Object.entries(norwayImageModules)
-  .sort((a, b) => a[0].localeCompare(b[0]))
-  .map(([path, url], idx) => {
-    const file = path.split('/').pop() || `image-${idx}`;
-    return {
-      id: idx + 1,
-      file: url,
-      title: file.replace(/\.jpg$/i, '').replace(/DSC0*/i, 'Norway '),
-      country: 'Norway'
-  };
-  });
+// React Photo Album imports
+import { RowsPhotoAlbum } from "react-photo-album";
+import type { Photo } from "react-photo-album";
+import "react-photo-album/rows.css";
+
+import { WorldMap } from '../../components';
+import classes from './styles.module.css';
+import photosPromise from '../../data/photos';
 
 const staggerContainer = {
   animate: {
@@ -33,18 +20,57 @@ const staggerContainer = {
 };
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  // null indicates "all countries"
+  const [photos, setPhotos] = useState<Photo[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [index, setIndex] = useState(-1);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
-  // Get unique countries for filter options
-  const countries = useMemo(() => Array.from(new Set(images.map(i => i.country))).sort(), []);
+  useEffect(() => {
+    photosPromise
+      .then((loadedPhotos) => {
+        setPhotos(loadedPhotos);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Failed to load photos:", error);
+        setLoading(false);
+      });
+  }, []);
 
-  // Filter images based on selected country
-  const filteredImages = useMemo(() => {
-  if (!selectedCountry) return images;
-  return images.filter(img => img.country === selectedCountry);
-  }, [selectedCountry]);
+  // Get unique countries for filter options (assuming photos have country metadata)
+  const countries = useMemo(() => {
+    // For now, just return Norway since that's what we have
+    return ['Norway'];
+  }, []);
+
+  // Filter photos based on selected country
+  const filteredPhotos = useMemo(() => {
+    if (!selectedCountry) return photos;
+    // For now, return all photos since they're all Norway photos
+    return photos;
+  }, [selectedCountry, photos]);
+
+  if (loading) {
+    return (
+      <div className={classes.page}>
+        <Container size="xl" py="xl">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className={classes.header}
+          >
+            <Title order={1} className={classes.title}>
+              Gallery
+            </Title>
+          </motion.div>
+          <Center py="xl">
+            <Text>Loading photos...</Text>
+          </Center>
+        </Container>
+      </div>
+    );
+  }
 
   return (
     <div className={classes.page}>
@@ -82,22 +108,12 @@ export default function Gallery() {
           className={classes.gallery}
           key={selectedCountry ?? 'all'} // Re-animate when filter changes
         >
-          <Grid gutter="md">
-            {filteredImages.map((image, index) => (
-              <Grid.Col 
-                key={image.id} 
-                span={{ base: 12, sm: 6, md: 4 }}
-              >
-                <GalleryItem
-                  title={image.title}
-                  src={image.file}
-                  onClick={() => setSelectedImage(image.id)}
-                />
-              </Grid.Col>
-            ))}
-          </Grid>
+          <RowsPhotoAlbum 
+            photos={filteredPhotos} 
+            onClick={({ index: clickIndex }) => setIndex(clickIndex)} 
+          />
           
-          {filteredImages.length === 0 && (
+          {filteredPhotos.length === 0 && (
             <Box py="xl" my="xl">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -115,33 +131,113 @@ export default function Gallery() {
         </motion.div>
       </Container>
 
-      <Modal
-        opened={selectedImage !== null}
-        onClose={() => setSelectedImage(null)}
-        size="90%"
-        padding={0}
-        withCloseButton={false}
-        centered
-        className={classes.modal}
-      >
-        {selectedImage && (
+      {/* Simple lightbox overlay */}
+      {index >= 0 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            zIndex: 1000,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px'
+          }}
+          onClick={() => setIndex(-1)}
+        >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className={classes.modalContent}
+            style={{
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+            onClick={(e) => e.stopPropagation()}
           >
-            <Box className={classes.modalImage}>
-              <Text c="dark.0" ta="center" size="lg">
-                {images.find(img => img.id === selectedImage)?.title}
-              </Text>
-              <Text c="dark.2" ta="center" size="sm" mt="xs">
-                {images.find(img => img.id === selectedImage)?.country}
-              </Text>
-            </Box>
+            <img
+              src={filteredPhotos[index]?.src}
+              alt={filteredPhotos[index]?.alt}
+              style={{
+                maxWidth: '80vw',
+                maxHeight: '80vh',
+                objectFit: 'contain',
+                display: 'block'
+              }}
+            />
+            <button
+              onClick={() => setIndex(-1)}
+              style={{
+                position: 'absolute',
+                top: '10px',
+                right: '10px',
+                background: 'rgba(0, 0, 0, 0.5)',
+                color: 'white',
+                border: 'none',
+                borderRadius: '50%',
+                width: '40px',
+                height: '40px',
+                cursor: 'pointer',
+                fontSize: '18px'
+              }}
+            >
+              ×
+            </button>
+            {/* Navigation buttons */}
+            {index > 0 && (
+              <button
+                onClick={() => setIndex(index - 1)}
+                style={{
+                  position: 'absolute',
+                  left: '10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'rgba(0, 0, 0, 0.5)',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  cursor: 'pointer',
+                  fontSize: '18px'
+                }}
+              >
+                ‹
+              </button>
+            )}
+            {index < filteredPhotos.length - 1 && (
+              <button
+                onClick={() => setIndex(index + 1)}
+                style={{
+                  position: 'absolute',
+                  right: '10px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'rgba(0, 0, 0, 0.5)',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  cursor: 'pointer',
+                  fontSize: '18px'
+                }}
+              >
+                ›
+              </button>
+            )}
           </motion.div>
-        )}
-      </Modal>
+        </motion.div>
+      )}
     </div>
   );
 }
