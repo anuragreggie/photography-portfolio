@@ -4,25 +4,15 @@ import { useState, useMemo } from 'react';
 import { GalleryItem, WorldMap } from '../../components';
 import classes from './styles.module.css';
 
-// Real Norway images populated from /public/images/norway
-interface PhotoMeta {
-  id: number;
-  file: string; // resolved URL from Vite
-  title: string;
-  country: string;
-  description?: string;
-}
-
 // Dynamically import all Norway images placed under app/assets so Vite fingerprints & optimizes them.
 // NOTE: We moved the JPG files from public/images/norway -> app/assets/images/norway
 // This enables import.meta.glob. Public folder assets aren't processed by Vite and can't be globbed.
 const norwayImageModules = import.meta.glob('../../assets/images/norway/*.jpg', {
-  eager: true, // load eagerly since we need list immediately
-  import: 'default' // get the resolved URL string
+  eager: true, 
+  import: 'default' 
 }) as Record<string, string>;
-
-// Convert module map to ordered array (sorted by original filename for stable ordering)
-const images: PhotoMeta[] = Object.entries(norwayImageModules)
+ 
+const images = Object.entries(norwayImageModules)
   .sort((a, b) => a[0].localeCompare(b[0]))
   .map(([path, url], idx) => {
     const file = path.split('/').pop() || `image-${idx}`;
@@ -31,7 +21,7 @@ const images: PhotoMeta[] = Object.entries(norwayImageModules)
       file: url,
       title: file.replace(/\.jpg$/i, '').replace(/DSC0*/i, 'Norway '),
       country: 'Norway'
-    } as PhotoMeta;
+  };
   });
 
 const staggerContainer = {
