@@ -2,6 +2,10 @@ import { Container, Title, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 import classes from './styles.module.css';
 
+// Import images from assets
+import sonyA6400 from '../../assets/images/sony-a6400.png';
+import sigma1850 from '../../assets/images/sigma-18-50mm.jpg';
+
 export default function About() {
   return (
     <div className={classes.page}>
@@ -52,7 +56,7 @@ export default function About() {
                 >
                   <div className={classes.equipmentImageWrapper}>
                     <img 
-                      src="/images/sony-a6400.png" 
+                      src={sonyA6400} 
                       alt="Sony A6400 Mirrorless Camera"
                       className={classes.equipmentMainImage}
                     />
@@ -68,7 +72,7 @@ export default function About() {
                 >
                   <div className={classes.equipmentImageWrapper}>
                     <img 
-                      src="/images/sigma-18-50mm.jpg" 
+                      src={sigma1850} 
                       alt="Sigma 18-50mm F2.8 DC DN Contemporary Lens"
                       className={classes.equipmentMainImage}
                     />
