@@ -1,8 +1,13 @@
 import type { Photo } from "react-photo-album";
+import pkg from 'exifr';
+
 
 export type PhotoWithCountry = Photo & {
   country: string;
+  dateTaken?: Date;
 };
+
+const {parse} = pkg;
 
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
@@ -23,7 +28,6 @@ function getImageDimensions(src: string): Promise<{ width: number; height: numbe
 }
 
 const photoData = Object.entries(allImageModules)
-  .sort((a, b) => a[0].localeCompare(b[0]))
   .map(([path, url], idx) => {
     const pathParts = path.split('/');
     const countryFolder = pathParts[pathParts.length - 2]; // Get folder name (country)
@@ -45,6 +49,9 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
   
   for (const { src, alt, title, country } of photoData) {
     try {
+      const exif = await parse(src).catch(() => null);
+      const dateTaken = exif?.DateTimeOriginal || exif?.CreateDate || exif?.ModifyDate;
+      
       const { width, height } = await getImageDimensions(src);
       
       photos.push({
@@ -53,7 +60,8 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
         height,
         alt,
         title,
-        country, 
+        country,
+        dateTaken: dateTaken ? new Date(dateTaken) : undefined,
         srcSet: breakpoints.map((breakpoint) => ({
           src,
           width: breakpoint,
@@ -70,7 +78,7 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
         height: 800,
         alt,
         title,
-        country, 
+        country,
         srcSet: breakpoints.map((breakpoint) => ({
           src,
           width: breakpoint,
@@ -79,6 +87,13 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
       });
     }
   }
+  
+  photos.sort((a, b) => {
+    if (!a.dateTaken && !b.dateTaken) return 0;
+    if (!a.dateTaken) return 1;
+    if (!b.dateTaken) return -1;
+    return b.dateTaken.getTime() - a.dateTaken.getTime();
+  });
   
   return photos;
 };
