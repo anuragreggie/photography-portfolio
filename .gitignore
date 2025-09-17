@@ -15,7 +15,6 @@ dist/
 .env.development.local
 .env.test.local
 .env.production.local
-
 # IDE and editor files
 .vscode/
 .idea/
@@ -78,3 +77,6 @@ temp/
 *.njsproj
 *.sln
 *.sw?
+
+# Don't track the images directory 
+app/assets/images

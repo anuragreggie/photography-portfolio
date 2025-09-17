@@ -10,34 +10,42 @@ import "react-photo-album/rows.css";
 import classes from './styles.module.css';
 import photosPromise from '../../data/photos';
 
-function getRandomPhotos(photos: Photo[], count: number = 9): Photo[] {
-  const shuffled = [...photos].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
-}
+const fixedImagePaths = [
+  'japan/tokyo-tower-through-leaves.jpg',
+  'japan/shinkansen-driver-v2.jpg',
+  'italy/DSC01844.jpg',
+  'norway/DSC04092.jpg',
+  'norway/DSC04025.jpg',
+  'france/eiffel-from-streets.jpg',
+  'japan/tokyo-skyline.png',
+  'norway/DSC03654.jpg',
+  'norway/DSC03947.jpg',
+];
+
+
+
+
 
 export default function Home() {
-  const [photos, setPhotos] = useState<Photo[]>([]);
-  const [randomPhotos, setRandomPhotos] = useState<Photo[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [fixedPhotos, setFixedPhotos] = useState<Photo[] | null>(null);
   const { width } = useViewportSize();
-
-  // Mobile breakpoint  
   const isMobile = width < 768;
 
   useEffect(() => {
     photosPromise
       .then((loadedPhotos) => {
-        setPhotos(loadedPhotos);
-        setRandomPhotos(getRandomPhotos(loadedPhotos, 9));
-        setLoading(false);
+        const filtered = fixedImagePaths.map(relPath =>
+          loadedPhotos.find(photo => photo.src.includes(`/assets/images/${relPath}`))!
+        );
+        setFixedPhotos(filtered);
       })
       .catch((error) => {
         console.error("Failed to load photos:", error);
-        setLoading(false);
+        setFixedPhotos([]);
       });
   }, []);
 
-  if (loading) {
+  if (!fixedPhotos) {
     return (
       <div className={classes.page}>
         <section className={classes.header}>
@@ -88,7 +96,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           >
             <RowsPhotoAlbum 
-              photos={randomPhotos} 
+              photos={fixedPhotos} 
               rowConstraints={{
                 maxPhotos: isMobile ? 2 : 3,
                 singleRowMaxHeight: isMobile ? 400 : 600,
