@@ -26,9 +26,7 @@ export default function About() {
 
         <Container size="md" className={classes.content}>
           <Text className={classes.description}>
-            Welcome to my photography portfolio. I'm passionate about capturing 
-            life's precious moments through the lens, creating timeless images 
-            that tell your unique story.
+            This portfolio is a collection of images I’ve taken along the way, moments that stood out to me and felt worth remembering.
           </Text>
 
           <motion.div
