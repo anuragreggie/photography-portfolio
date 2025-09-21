@@ -1,13 +1,12 @@
 import type { Photo } from "react-photo-album";
 import pkg from 'exifr';
 
+const { parse } = pkg;
 
 export type PhotoWithCountry = Photo & {
   country: string;
   dateTaken?: Date;
 };
-
-const {parse} = pkg;
 
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 

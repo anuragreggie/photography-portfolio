@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'react-router';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, Center, Loader, Text } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { theme } from '../styles/theme';
 import type { Route } from './+types/root';
@@ -58,6 +58,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return <Outlet />;
+}
+
+export function hydrateFallback() {
+  return (
+    <Center h="100vh">
+      <div style={{ textAlign: 'center' }}>
+        <Loader size="lg" />
+        <Text mt="md" size="lg">Loading...</Text>
+      </div>
+    </Center>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
