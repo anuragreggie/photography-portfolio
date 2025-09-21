@@ -8,7 +8,7 @@ import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
-import createPhotos from '../../data/photos';
+import createPhotos, { type PhotoWithCountry } from '../../data/photos';
 
 const fixedImagePaths = [
   'japan/tokyo-tower-through-leaves.jpg',
@@ -27,16 +27,16 @@ const fixedImagePaths = [
 
 
 export default function Home() {
-  const [fixedPhotos, setFixedPhotos] = useState<Photo[] | null>(null);
+  const [fixedPhotos, setFixedPhotos] = useState<PhotoWithCountry[] | null>(null);
   const { width } = useViewportSize();
   const isMobile = width < 768;
 
   useEffect(() => {
     createPhotos()
       .then((loadedPhotos) => {
-        const filtered = fixedImagePaths.map(relPath =>
-          loadedPhotos.find(photo => photo.src.includes(`/assets/images/${relPath}`))!
-        );
+        const filtered = fixedImagePaths
+          .map(relPath => loadedPhotos.find(photo => photo.relPath === relPath))
+          .filter((p): p is PhotoWithCountry => Boolean(p));
         setFixedPhotos(filtered);
       })
       .catch((error) => {
