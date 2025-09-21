@@ -1,37 +1,30 @@
 import { Container, Title, Text, Box, Center, Select, Group } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { useViewportSize } from '@mantine/hooks';
+import { useLoaderData } from 'react-router';
 
-// React Photo Album imports
 import { RowsPhotoAlbum } from "react-photo-album";
-import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
 import createPhotos, { type PhotoWithCountry } from '../../data/photos';
 
+export async function clientLoader() {
+  const photos = await createPhotos();
+  return { photos };
+}
+
+clientLoader.hydrate = true as const;
+
 export default function Gallery() {
-  const [photos, setPhotos] = useState<PhotoWithCountry[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { photos } = useLoaderData<{ photos: PhotoWithCountry[] }>();
   const [index, setIndex] = useState(-1);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const { width } = useViewportSize();
 
   // Mobile breakpoint
   const isMobile = width < 768;
-
-  useEffect(() => {
-    createPhotos()
-      .then((loadedPhotos) => {
-        setPhotos(loadedPhotos);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Failed to load photos:", error);
-        setLoading(false);
-      });
-  }, []);
 
   // Get unique countries from photo data
   const countries = useMemo(() => {
@@ -44,28 +37,6 @@ export default function Gallery() {
     if (!selectedCountry) return photos;
     return photos.filter(photo => photo.country === selectedCountry);
   }, [selectedCountry, photos]);
-
-  if (loading) {
-    return (
-      <div className={classes.page}>
-        <Container size="xl" py="xl">
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className={classes.header}
-          >
-            <Title order={1} className={classes.title}>
-              Gallery
-            </Title>
-          </motion.div>
-          <Center py="xl">
-            <Text>Loading photos...</Text>
-          </Center>
-        </Container>
-      </div>
-    );
-  }
 
   return (
     <div className={classes.page}>
