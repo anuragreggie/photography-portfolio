@@ -8,7 +8,7 @@ import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
-import photosPromise from '../../data/photos';
+import createPhotos from '../../data/photos';
 
 const fixedImagePaths = [
   'japan/tokyo-tower-through-leaves.jpg',
@@ -32,7 +32,7 @@ export default function Home() {
   const isMobile = width < 768;
 
   useEffect(() => {
-    photosPromise
+    createPhotos()
       .then((loadedPhotos) => {
         const filtered = fixedImagePaths.map(relPath =>
           loadedPhotos.find(photo => photo.src.includes(`/assets/images/${relPath}`))!

@@ -9,7 +9,7 @@ import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
-import photosPromise, { type PhotoWithCountry } from '../../data/photos';
+import createPhotos, { type PhotoWithCountry } from '../../data/photos';
 
 export default function Gallery() {
   const [photos, setPhotos] = useState<PhotoWithCountry[]>([]);
@@ -22,7 +22,7 @@ export default function Gallery() {
   const isMobile = width < 768;
 
   useEffect(() => {
-    photosPromise
+    createPhotos()
       .then((loadedPhotos) => {
         setPhotos(loadedPhotos);
         setLoading(false);

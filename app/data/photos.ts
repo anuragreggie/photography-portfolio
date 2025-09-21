@@ -98,4 +98,4 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
   return photos;
 };
 
-export default createPhotos();
+export default createPhotos;
