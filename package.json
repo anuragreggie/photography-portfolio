@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "images:resize": "node ./scripts/resize-images.mjs"
   },
   "dependencies": {
     "@mantine/core": "^8.2.4",
@@ -43,6 +44,7 @@
     "eslint-plugin-react-x": "^1.52.4",
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
+    "sharp": "^0.33.5",
     "typescript": "^5.7.2",
     "vite": "^6.0.7"
   }

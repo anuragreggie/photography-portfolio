@@ -88,10 +88,13 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
   }
   
   photos.sort((a, b) => {
-    if (!a.dateTaken && !b.dateTaken) return 0;
-    if (!a.dateTaken) return 1;
-    if (!b.dateTaken) return -1;
-    return b.dateTaken.getTime() - a.dateTaken.getTime();
+    const ad = a.dateTaken?.getTime();
+    const bd = b.dateTaken?.getTime();
+    if (ad && bd) return bd - ad; // newest first
+    if (ad) return -1; // a has a date, b doesn't
+    if (bd) return 1;  // b has a date, a doesn't
+    // Deterministic fallback when EXIF is missing on both
+    return a.src.localeCompare(b.src);
   });
   
   return photos;
