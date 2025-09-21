@@ -77,6 +77,3 @@ temp/
 *.njsproj
 *.sln
 *.sw?
-
-# Don't track the images directory 
-app/assets/images
