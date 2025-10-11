@@ -12,9 +12,9 @@ export type PhotoWithCountry = Photo & {
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
 const allImageModules = import.meta.glob('../assets/images/*/*.{jpg,jpeg,png,webp}', {
-  eager: true, 
+  eager: false, 
   import: 'default' 
-}) as Record<string, string>;
+}) as Record<string, () => Promise<string>>;
 
 function getImageDimensions(src: string): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {
@@ -28,7 +28,7 @@ function getImageDimensions(src: string): Promise<{ width: number; height: numbe
 }
 
 const photoData = Object.entries(allImageModules)
-  .map(([path, url], idx) => {
+  .map(([path, importFn], idx) => {
     const pathParts = path.split('/');
     const countryFolder = pathParts[pathParts.length - 2]; // Get folder name (country)
     const file = pathParts.pop() || `image-${idx}`;
@@ -39,7 +39,7 @@ const photoData = Object.entries(allImageModules)
     const relPath = `${countryFolder}/${file}`;
 
     return {
-      src: url,
+      importFn,
       alt: file.replace(/\.(jpg|jpeg|png|webp)$/i, '').replace(/DSC0*/i, `${country} `),
       title: file.replace(/\.(jpg|jpeg|png|webp)$/i, '').replace(/DSC0*/i, `${country} `),
       country: country,
@@ -50,8 +50,11 @@ const photoData = Object.entries(allImageModules)
 const createPhotos = async (): Promise<PhotoWithCountry[]> => {
   const photos: PhotoWithCountry[] = [];
   
-  for (const { src, alt, title, country, relPath } of photoData) {
+  for (const { importFn, alt, title, country, relPath } of photoData) {
     try {
+      // Dynamically import the image URL
+      const src = await importFn();
+      
       const exif = await parse(src).catch(() => null);
       const dateTaken = exif?.DateTimeOriginal || exif?.CreateDate || exif?.ModifyDate;
       
@@ -73,23 +76,8 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
         })),
       });
     } catch (error) {
-      console.error(`Failed to load dimensions for ${src}:`, error);
-      // Fallback with estimated dimensions if image fails to load
-      // Using 3:2 aspect ratio which is common for photography
-      photos.push({
-        src,
-        width: 1200,
-        height: 800,
-        alt,
-        title,
-        country,
-        relPath,
-        srcSet: breakpoints.map((breakpoint) => ({
-          src,
-          width: breakpoint,
-          height: Math.round((800 / 1200) * breakpoint),
-        })),
-      });
+      console.error(`Failed to load dimensions for image in ${relPath}:`, error);
+      continue;
     }
   }
   
