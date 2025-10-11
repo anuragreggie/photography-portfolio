@@ -34,9 +34,15 @@ export default function Home() {
   useEffect(() => {
     createPhotos()
       .then((loadedPhotos) => {
+        if (!Array.isArray(loadedPhotos)) {
+          console.error("loadedPhotos is not an array:", loadedPhotos);
+          setFixedPhotos([]);
+          return;
+        }
+        
         const filtered = fixedImagePaths
-          .map(relPath => loadedPhotos.find(photo => photo.relPath === relPath))
-          .filter((p): p is PhotoWithCountry => Boolean(p));
+          .map(relPath => loadedPhotos.find(photo => photo?.relPath === relPath))
+          .filter((p): p is PhotoWithCountry => Boolean(p && p.src && p.width && p.height));
         setFixedPhotos(filtered);
       })
       .catch((error) => {

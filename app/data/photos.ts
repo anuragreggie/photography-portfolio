@@ -60,6 +60,12 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
       
       const { width, height } = await getImageDimensions(src);
       
+      // Ensure valid dimensions before proceeding
+      if (!width || !height || width <= 0 || height <= 0) {
+        console.warn(`Invalid dimensions for image ${relPath}: ${width}x${height}`);
+        continue;
+      }
+      
       photos.push({
         src,
         width,
@@ -82,13 +88,18 @@ const createPhotos = async (): Promise<PhotoWithCountry[]> => {
   }
   
   photos.sort((a, b) => {
+    // Ensure we have valid photos to compare
+    if (!a || !b) return 0;
+    
     const ad = a.dateTaken?.getTime();
     const bd = b.dateTaken?.getTime();
+    
     if (ad && bd) return bd - ad; // newest first
-    if (ad) return -1; // a has a date, b doesn't
-    if (bd) return 1;  // b has a date, a doesn't
+    if (ad && !bd) return -1; // a has a date, b doesn't
+    if (!ad && bd) return 1;  // b has a date, a doesn't
+    
     // Deterministic fallback when EXIF is missing on both
-    return a.src.localeCompare(b.src);
+    return (a.src || '').localeCompare(b.src || '');
   });
   
   return photos;

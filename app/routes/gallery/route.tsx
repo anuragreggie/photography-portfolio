@@ -28,14 +28,22 @@ export default function Gallery() {
 
   // Get unique countries from photo data
   const countries = useMemo(() => {
-    const uniqueCountries = Array.from(new Set(photos.map(photo => photo.country).filter(Boolean)));
+    if (!photos || !Array.isArray(photos)) return [];
+    const uniqueCountries = Array.from(
+      new Set(
+        photos
+          .map(photo => photo?.country)
+          .filter((country): country is string => Boolean(country))
+      )
+    );
     return uniqueCountries.sort();
   }, [photos]);
 
   // Filter photos based on selected country
   const filteredPhotos = useMemo(() => {
+    if (!photos || !Array.isArray(photos)) return [];
     if (!selectedCountry) return photos;
-    return photos.filter(photo => photo.country === selectedCountry);
+    return photos.filter(photo => photo?.country === selectedCountry);
   }, [selectedCountry, photos]);
 
   return (
