@@ -142,15 +142,6 @@
   font-weight: 400;
 }
 
-.equipmentHighlight {
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  line-height: 1.6;
-  color: var(--mantine-color-dark-2);
-  font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.005em;
-}
-
 @media (max-width: 768px) {
   .equipmentSection {
     margin-top: 3rem;

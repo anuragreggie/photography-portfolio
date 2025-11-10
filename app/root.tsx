@@ -6,16 +6,16 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'react-router';
+import type { LinksFunction, MetaFunction } from 'react-router';
 import { MantineProvider, Center, Loader, Text } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { theme } from '../styles/theme';
-import type { Route } from './+types/root';
 
 import './app.css';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 
-export const links: Route.LinksFunction = () => [
+export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',
@@ -28,7 +28,7 @@ export const links: Route.LinksFunction = () => [
   }
 ];
 
-export const meta: Route.MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     { title: 'Anurag S' },
     { name: 'description', content: 'Minimalist photography portfolio showcasing artistic vision through elegant imagery' },
@@ -71,7 +71,7 @@ export function hydrateFallback() {
   );
 }
 
-export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
+export function ErrorBoundary({ error }: { error: unknown }) {
   let message = 'Oops!';
   let details = 'An unexpected error occurred.';
   let stack: string | undefined;

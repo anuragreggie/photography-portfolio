@@ -5,7 +5,6 @@
 }
 
 .header {
-  text-align: left;
   margin-bottom: 2rem;
 }
 
@@ -14,25 +13,15 @@
   font-weight: 300;
   letter-spacing: -0.02em;
   color: var(--mantine-color-dark-0);
+  margin-bottom: 0.5rem;
 }
 
-.locationCard {
-  overflow: hidden;
-  border-radius: 0;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.gallery {
+  margin-top: 2rem;
 }
 
-.locationCard:hover {
-  transform: scale(1.02);
-}
-
-.locationImage {
-  transition: transform 0.3s ease;
-}
-
-.locationCard:hover .locationImage {
-  transform: scale(1.05);
+.backButton {
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
