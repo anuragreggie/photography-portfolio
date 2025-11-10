@@ -8,7 +8,7 @@ import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
-import createPhotos, { type PhotoWithCountry } from '../../data/photos';
+import { createPhotosByPaths, type PhotoWithCountry } from '../../data/photos';
 
 const fixedImagePaths = [
   'japan/tokyo-tower-through-leaves.jpg',
@@ -32,7 +32,7 @@ export default function Home() {
   const isMobile = width < 768;
 
   useEffect(() => {
-    createPhotos()
+    createPhotosByPaths(fixedImagePaths)
       .then((loadedPhotos) => {
         if (!Array.isArray(loadedPhotos)) {
           console.error("loadedPhotos is not an array:", loadedPhotos);
@@ -40,10 +40,7 @@ export default function Home() {
           return;
         }
         
-        const filtered = fixedImagePaths
-          .map(relPath => loadedPhotos.find(photo => photo?.relPath === relPath))
-          .filter((p): p is PhotoWithCountry => Boolean(p && p.src && p.width && p.height));
-        setFixedPhotos(filtered);
+        setFixedPhotos(loadedPhotos);
       })
       .catch((error) => {
         console.error("Failed to load photos:", error);
