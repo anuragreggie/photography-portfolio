@@ -63,7 +63,7 @@ const photoMetadata: PhotoMetadata[] = Object.entries(allImageModules)
     const pathParts = path.split('/');
     const countryFolder = pathParts[pathParts.length - 2];
     const filename = pathParts.pop() || `image-${idx}`;
-    
+
     const country = capitalizeCountry(countryFolder);
     const relPath = `${countryFolder}/${filename}`;
     const title = formatImageTitle(filename, country);
@@ -123,48 +123,56 @@ async function loadMultiplePhotos(
   return sortFn ? sortFn(validPhotos) : validPhotos;
 }
 
-const createPhotos = async (): Promise<PhotoWithCountry[]> => {
+const photoCachePromise: Promise<PhotoWithCountry[]> = (async () => {
   return loadMultiplePhotos(photoMetadata, sortPhotosByDate);
+})();
+
+async function getCachedPhotos(): Promise<PhotoWithCountry[]> {
+  return photoCachePromise;
+}
+
+const createPhotos = async (): Promise<PhotoWithCountry[]> => {
+  return getCachedPhotos();
 };
 
 export const createPhotosByPaths = async (paths: string[]): Promise<PhotoWithCountry[]> => {
-  const filtered = photoMetadata.filter(({ relPath }) => paths.includes(relPath));
-  
-  return loadMultiplePhotos(filtered, (photos) => 
-    photos.sort((a, b) => paths.indexOf(a.relPath) - paths.indexOf(b.relPath))
+  if (paths.length === 0) return [];
+
+  const order = new Map(paths.map((path, idx) => [path.toLowerCase(), idx]));
+  const photos = await getCachedPhotos();
+  const filtered = photos.filter(({ relPath }) => order.has(relPath.toLowerCase()));
+
+  return filtered.sort((a, b) => 
+    (order.get(a.relPath.toLowerCase()) ?? 0) - (order.get(b.relPath.toLowerCase()) ?? 0)
   );
 };
 
 export const createPhotosByLocation = async (locationFolder: string): Promise<PhotoWithCountry[]> => {
-  const filtered = photoMetadata.filter(({ relPath }) => 
-    relPath.toLowerCase().startsWith(locationFolder.toLowerCase())
-  );
-  
-  return loadMultiplePhotos(filtered, sortPhotosByDate);
+  const normalized = locationFolder.toLowerCase();
+  const photos = await getCachedPhotos();
+  const filtered = photos.filter(({ relPath }) => relPath.toLowerCase().startsWith(`${normalized}/`));
+
+  return sortPhotosByDate(filtered.slice());
 };
 
 export const getLocationMetadata = async () => {
+  const photos = await getCachedPhotos();
   const metadata: Record<string, { count: number; heroImage: string | null }> = {};
-  
-  for (const { importFn, country, relPath } of photoMetadata) {
-    const countryLower = country.toLowerCase();
-    
+
+  for (const photo of photos) {
+    const countryLower = photo.country.toLowerCase();
+
     if (!metadata[countryLower]) {
       metadata[countryLower] = { count: 0, heroImage: null };
     }
-    
+
     metadata[countryLower].count++;
-    
+
     if (!metadata[countryLower].heroImage) {
-      try {
-        const src = await importFn();
-        metadata[countryLower].heroImage = src;
-      } catch (error) {
-        console.error(`Failed to load hero image for ${relPath}:`, error);
-      }
+      metadata[countryLower].heroImage = photo.src;
     }
   }
-  
+
   return metadata;
 };
 

@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import {
   isRouteErrorResponse,
   Links,
@@ -35,7 +36,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>

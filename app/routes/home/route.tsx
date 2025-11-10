@@ -1,10 +1,9 @@
 import { Container, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
 import { useViewportSize } from '@mantine/hooks';
+import { useLoaderData } from 'react-router';
 
 import { RowsPhotoAlbum } from "react-photo-album";
-import type { Photo } from "react-photo-album";
 import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
@@ -22,55 +21,17 @@ const fixedImagePaths = [
   'norway/DSC03947.jpg',
 ];
 
+export async function clientLoader() {
+  const fixedPhotos = await createPhotosByPaths(fixedImagePaths);
+  return { fixedPhotos };
+}
 
-
-
+clientLoader.hydrate = true as const;
 
 export default function Home() {
-  const [fixedPhotos, setFixedPhotos] = useState<PhotoWithCountry[] | null>(null);
+  const { fixedPhotos } = useLoaderData<{ fixedPhotos: PhotoWithCountry[] }>();
   const { width } = useViewportSize();
   const isMobile = width < 768;
-
-  useEffect(() => {
-    createPhotosByPaths(fixedImagePaths)
-      .then((loadedPhotos) => {
-        if (!Array.isArray(loadedPhotos)) {
-          console.error("loadedPhotos is not an array:", loadedPhotos);
-          setFixedPhotos([]);
-          return;
-        }
-        
-        setFixedPhotos(loadedPhotos);
-      })
-      .catch((error) => {
-        console.error("Failed to load photos:", error);
-        setFixedPhotos([]);
-      });
-  }, []);
-
-  if (!fixedPhotos) {
-    return (
-      <div className={classes.page}>
-        <section className={classes.header}>
-          <Container size="xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className={classes.headerContent}
-            >
-              <Text className={classes.pageTitle}>
-                Life Through Optics
-              </Text>
-            </motion.div>
-          </Container>
-        </section>
-        <Container size="xl">
-          <Text ta="center" py="xl">Loading photos...</Text>
-        </Container>
-      </div>
-    );
-  }
 
   return (
     <div className={classes.page}>
@@ -98,20 +59,26 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
           >
-            <RowsPhotoAlbum 
-              photos={fixedPhotos} 
-              rowConstraints={{
-                maxPhotos: isMobile ? 2 : 3,
-                singleRowMaxHeight: isMobile ? 400 : 600,
-              }}
-              sizes={{
-                size: "calc(100vw - 40px)",
-                sizes: [
-                  { viewport: "(max-width: 768px)", size: "calc(100vw - 32px)" },
-                  { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
-                ],
-              }}
-            />
+            {fixedPhotos.length > 0 ? (
+              <RowsPhotoAlbum 
+                photos={fixedPhotos} 
+                rowConstraints={{
+                  maxPhotos: isMobile ? 2 : 3,
+                  singleRowMaxHeight: isMobile ? 400 : 600,
+                }}
+                sizes={{
+                  size: "calc(100vw - 40px)",
+                  sizes: [
+                    { viewport: "(max-width: 768px)", size: "calc(100vw - 32px)" },
+                    { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
+                  ],
+                }}
+              />
+            ) : (
+              <Text ta="center" py="xl">
+                Images coming soon.
+              </Text>
+            )}
           </motion.div>
         </Container>
       </section>

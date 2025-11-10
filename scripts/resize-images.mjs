@@ -9,7 +9,7 @@ async function importSharp() {
   try {
     const sharp = (await import('sharp')).default;
     return sharp;
-  } catch (err) {
+  } catch {
     console.error('\nMissing dependency: sharp');
     console.error('Install it with: npm i -D sharp');
     process.exit(1);
@@ -46,9 +46,6 @@ async function processImage(sharp, file) {
       console.warn('Skipping (no dimensions):', path.relative(IMAGES_DIR, file));
       return { skipped: true };
     }
-
-    const longEdge = Math.max(meta.width, meta.height);
-    const shortEdge = Math.min(meta.width, meta.height);
 
     const ext = path.extname(file).toLowerCase();
 
