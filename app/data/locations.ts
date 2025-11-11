@@ -1,58 +1,50 @@
+// Import hero images with optimization
+import japanHero from '../assets/images/japan/fuji-pagoda.jpg?format=webp&w=800&quality=80';
+import italyHero from '../assets/images/italy/DSC01737-2.jpg?format=webp&w=800&quality=80';
+import franceHero from '../assets/images/france/bear-in-car.jpg?format=webp&w=800&quality=80';
+import ukHero from '../assets/images/uk/curvy-street.jpg?format=webp&w=800&quality=80';
+import dubaiHero from '../assets/images/dubai/Dubai-sunset.jpg?format=webp&w=800&quality=80';
+import norwayHero from '../assets/images/norway/DSC03635.jpg?format=webp&w=800&quality=80';
+
 export interface Location {
-  id: string;
   name: string;
-  slug: string;
-  description: string;
   folder: string;
-  heroImage?: string; // Will be set dynamically
-  photoCount?: number; // Will be set dynamically
+  heroImage: string;
 }
 
 export const locations: Location[] = [
-  {
-    id: 'japan',
-    name: 'Japan',
-    slug: 'japan',
-    description: 'Ancient temples, modern cities, and serene landscapes',
+  { 
+    name: 'Japan', 
     folder: 'japan',
+    heroImage: japanHero
   },
-  {
-    id: 'italy',
-    name: 'Italy',
-    slug: 'italy',
-    description: 'Renaissance art, historic architecture, and Italian culture',
+  { 
+    name: 'Italy', 
     folder: 'italy',
+    heroImage: italyHero
   },
-  {
-    id: 'france',
-    name: 'France',
-    slug: 'france',
-    description: 'Parisian elegance, countryside charm, and cultural richness',
+  { 
+    name: 'France', 
     folder: 'france',
+    heroImage: franceHero
   },
-  {
-    id: 'uk',
-    name: 'United Kingdom',
-    slug: 'uk',
-    description: 'Historic landmarks, royal heritage, and British culture',
+  { 
+    name: 'United Kingdom', 
     folder: 'uk',
+    heroImage: ukHero
   },
-  {
-    id: 'dubai',
-    name: 'Dubai',
-    slug: 'dubai',
-    description: 'Modern marvels, desert beauty, and architectural wonders',
+  { 
+    name: 'Dubai', 
     folder: 'dubai',
+    heroImage: dubaiHero
   },
-  {
-    id: 'norway',
-    name: 'Norway',
-    slug: 'norway',
-    description: 'Fjords, northern lights, and Scandinavian beauty',
+  { 
+    name: 'Norway', 
     folder: 'norway',
+    heroImage: norwayHero
   },
 ];
 
-export function getLocationBySlug(slug: string): Location | undefined {
-  return locations.find(loc => loc.slug.toLowerCase() === slug.toLowerCase());
+export function getLocationByFolder(folder: string): Location | undefined {
+  return locations.find(loc => loc.folder.toLowerCase() === folder.toLowerCase());
 }

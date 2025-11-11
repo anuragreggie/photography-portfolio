@@ -18,7 +18,6 @@ type PhotoMetadata = {
 };
 
 type LocationMetadata = Record<string, {
-  count: number;
   heroImage: string | null;
 }>;
 
@@ -180,19 +179,15 @@ export async function createPhotosByLocation(location: string): Promise<PhotoWit
 }
 
 export async function getLocationMetadata(): Promise<LocationMetadata> {
-  const metadata: LocationMetadata = {};
   const heroMetadataMap = new Map<string, PhotoMetadata>();
+  const metadata: LocationMetadata = {};
   
   for (const meta of PHOTO_METADATA) {
     const countryKey = meta.country.toLowerCase();
     
-    if (!metadata[countryKey]) {
-      metadata[countryKey] = { count: 0, heroImage: null };
-    }
-    metadata[countryKey].count++;
-    
     if (!heroMetadataMap.has(countryKey)) {
       heroMetadataMap.set(countryKey, meta);
+      metadata[countryKey] = { heroImage: null };
     }
   }
   
@@ -200,7 +195,7 @@ export async function getLocationMetadata(): Promise<LocationMetadata> {
   
   for (const photo of heroPhotos) {
     const countryKey = photo.country.toLowerCase();
-    metadata[countryKey].heroImage = photo.src;
+    metadata[countryKey] = { heroImage: photo.src };
   }
   
   return metadata;

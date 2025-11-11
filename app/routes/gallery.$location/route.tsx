@@ -10,12 +10,12 @@ import "react-photo-album/rows.css";
 
 import classes from './styles.module.css';
 import { createPhotosByLocation, type PhotoWithCountry } from '../../data/photos';
-import { getLocationBySlug, type Location } from '../../data/locations';
+import { getLocationByFolder, type Location } from '../../data/locations';
 
 export async function clientLoader({ params }: { params: { location: string } }) {
-  const locationSlug = params.location;
-  const location = getLocationBySlug(locationSlug);
-  
+  const locationFolder = params.location;
+  const location = getLocationByFolder(locationFolder);
+
   if (!location) {
     throw redirect('/gallery');
   }

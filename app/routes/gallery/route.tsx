@@ -1,33 +1,11 @@
 import { Container, Title, SimpleGrid, Image, Text, Box } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { Link, useLoaderData } from 'react-router';
-import { locations, type Location } from '../../data/locations';
-import { getLocationMetadata } from '../../data/photos';
+import { Link } from 'react-router';
+import { locations } from '../../data/locations';
 
 import classes from './styles.module.css';
 
-export async function clientLoader() {
-  const metadata = await getLocationMetadata();
-  
-  // Enrich locations with metadata
-  const enrichedLocations = locations.map(loc => ({
-    ...loc,
-    heroImage: metadata[loc.folder.toLowerCase()]?.heroImage || null,
-    photoCount: metadata[loc.folder.toLowerCase()]?.count || 0,
-  }));
-  
-  return { locations: enrichedLocations };
-}
-
-clientLoader.hydrate = true as const;
-
-interface EnrichedLocation extends Omit<Location, 'heroImage'> {
-  heroImage: string | null;
-  photoCount: number;
-}
-
 export default function GalleryOverview() {
-  const { locations } = useLoaderData<{ locations: EnrichedLocation[] }>();
 
   return (
     <div className={classes.page}>
@@ -55,44 +33,28 @@ export default function GalleryOverview() {
           >
             {locations.map((location, index) => (
               <motion.div
-                key={location.id}
+                key={location.folder}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
               >
                 <Box
                   component={Link}
-                  to={`/gallery/${location.slug}`}
+                  to={`/gallery/${location.folder}`}
                   style={{
                     textDecoration: 'none',
                     display: 'block',
                   }}
                 >
                   <Box className={classes.locationCard}>
-                    {location.heroImage ? (
-                      <Image
-                        src={location.heroImage}
-                        alt={location.name}
-                        height={300}
-                        fit="cover"
-                        className={classes.locationImage}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <Box
-                        h={300}
-                        style={{
-                          backgroundColor: 'var(--mantine-color-dark-6)',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                        }}
-                      >
-                        <Text c="dark.3" size="xl">
-                          {location.name}
-                        </Text>
-                      </Box>
-                    )}
+                    <Image
+                      src={location.heroImage}
+                      alt={location.name}
+                      height={300}
+                      fit="cover"
+                      className={classes.locationImage}
+                      loading="lazy"
+                    />
                   </Box>
                   <Text 
                     size="sm" 
