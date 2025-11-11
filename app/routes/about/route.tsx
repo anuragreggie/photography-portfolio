@@ -57,6 +57,7 @@ export default function About() {
                       src={sonyA6400} 
                       alt="Sony A6400 Mirrorless Camera"
                       className={classes.equipmentMainImage}
+                      loading="lazy"
                     />
                   </div>
                   <Text className={classes.imageLabel}>Sony A6400</Text>
@@ -73,6 +74,7 @@ export default function About() {
                       src={sigma1850} 
                       alt="Sigma 18-50mm F2.8 DC DN Contemporary Lens"
                       className={classes.equipmentMainImage}
+                      loading="lazy"
                     />
                   </div>
                   <Text className={classes.imageLabel}>Sigma 18-50mm F2.8</Text>

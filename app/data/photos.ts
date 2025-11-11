@@ -6,20 +6,44 @@ const { parse } = pkg;
 export type PhotoWithCountry = Photo & {
   country: string;
   dateTaken?: Date;
-  relPath: string; // e.g., "italy/DSC01844.jpg"
+  relPath: string;
 };
 
-const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
+type PhotoMetadata = {
+  importFn: () => Promise<string>;
+  alt: string;
+  title: string;
+  country: string;
+  relPath: string;
+};
 
-const allImageModules = import.meta.glob('../assets/images/*/*.{jpg,jpeg,png,webp}', {
-  eager: false, 
-  import: 'default' 
-}) as Record<string, () => Promise<string>>;
+type LocationMetadata = Record<string, {
+  count: number;
+  heroImage: string | null;
+}>;
 
-function getImageDimensions(src: string): Promise<{ width: number; height: number }> {
+const BREAKPOINTS = [400, 800, 1280, 1920] as const;
+
+const IMAGE_MODULES = import.meta.glob(
+  '../assets/images/*/*.{jpg,jpeg,png,webp}',
+  {
+    eager: false,
+    import: 'default',
+    query: {
+      format: 'webp',
+      quality: '80',
+      w: '1920',
+    },
+  }
+) as Record<string, () => Promise<string>>;
+
+async function getImageDimensions(src: string): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+    img.onload = () => resolve({ 
+      width: img.naturalWidth, 
+      height: img.naturalHeight 
+    });
     img.onerror = reject;
     img.src = src;
   });
@@ -37,59 +61,69 @@ function formatImageTitle(filename: string, country: string): string {
 
 function sortPhotosByDate(photos: PhotoWithCountry[]): PhotoWithCountry[] {
   return photos.sort((a, b) => {
-    if (!a || !b) return 0;
-    
     const aTime = a.dateTaken?.getTime();
     const bTime = b.dateTaken?.getTime();
     
-    if (aTime && bTime) return bTime - aTime; // newest first
+    if (aTime && bTime) return bTime - aTime;
     if (aTime && !bTime) return -1;
     if (!aTime && bTime) return 1;
     
-    return (a.src || '').localeCompare(b.src || '');
+    return a.src.localeCompare(b.src);
   });
 }
 
-type PhotoMetadata = {
-  importFn: () => Promise<string>;
-  alt: string;
-  title: string;
-  country: string;
-  relPath: string;
-};
+const PHOTO_METADATA: PhotoMetadata[] = Object.entries(IMAGE_MODULES).map(([path, importFn]) => {
+  const pathParts = path.split('/');
+  const countryFolder = pathParts[pathParts.length - 2];
+  const filename = pathParts[pathParts.length - 1];
 
-const photoMetadata: PhotoMetadata[] = Object.entries(allImageModules)
-  .map(([path, importFn], idx) => {
-    const pathParts = path.split('/');
-    const countryFolder = pathParts[pathParts.length - 2];
-    const filename = pathParts.pop() || `image-${idx}`;
+  const country = capitalizeCountry(countryFolder);
+  const relPath = `${countryFolder}/${filename}`;
+  const title = formatImageTitle(filename, country);
 
-    const country = capitalizeCountry(countryFolder);
-    const relPath = `${countryFolder}/${filename}`;
-    const title = formatImageTitle(filename, country);
+  return {
+    importFn,
+    alt: title,
+    title,
+    country,
+    relPath,
+  };
+});
 
-    return {
-      importFn,
-      alt: title,
-      title,
-      country,
-      relPath,
-    };
-  });
+const METADATA_BY_PATH = new Map(
+  PHOTO_METADATA.map(meta => [meta.relPath.toLowerCase(), meta])
+);
 
-async function loadPhotoData(metadata: PhotoMetadata): Promise<PhotoWithCountry | null> {
+async function loadSinglePhoto(metadata: PhotoMetadata): Promise<PhotoWithCountry | null> {
   const { importFn, alt, title, country, relPath } = metadata;
   
   try {
     const src = await importFn();
-    const exif = await parse(src).catch(() => null);
-    const dateTaken = exif?.DateTimeOriginal || exif?.CreateDate || exif?.ModifyDate;
-    const { width, height } = await getImageDimensions(src);
     
-    if (!width || !height || width <= 0 || height <= 0) {
-      console.warn(`Invalid dimensions for image ${relPath}: ${width}x${height}`);
+    if (!src) {
+      console.warn(`[Photo Loader] No source for ${relPath}`);
       return null;
     }
+    
+    const [dimensions, exif] = await Promise.all([
+      getImageDimensions(src),
+      parse(src).catch(() => null),
+    ]);
+    
+    const { width, height } = dimensions;
+    
+    if (!width || !height || width <= 0 || height <= 0) {
+      console.warn(`[Photo Loader] Invalid dimensions for ${relPath}: ${width}x${height}`);
+      return null;
+    }
+    
+    const dateTaken = exif?.DateTimeOriginal || exif?.CreateDate || exif?.ModifyDate;
+    
+    const srcSet = BREAKPOINTS.map((breakpoint) => ({
+      src,
+      width: breakpoint,
+      height: Math.round((height / width) * breakpoint),
+    }));
     
     return {
       src,
@@ -100,80 +134,74 @@ async function loadPhotoData(metadata: PhotoMetadata): Promise<PhotoWithCountry 
       country,
       relPath,
       dateTaken: dateTaken ? new Date(dateTaken) : undefined,
-      srcSet: breakpoints.map((breakpoint) => ({
-        src,
-        width: breakpoint,
-        height: Math.round((height / width) * breakpoint),
-      })),
+      srcSet,
     };
   } catch (error) {
-    console.error(`Failed to load image ${relPath}:`, error);
+    console.error(`[Photo Loader] Failed to load ${relPath}:`, error);
     return null;
   }
 }
 
 async function loadMultiplePhotos(
   metadataList: PhotoMetadata[],
-  sortFn?: (photos: PhotoWithCountry[]) => PhotoWithCountry[]
+  sort: boolean = false
 ): Promise<PhotoWithCountry[]> {
-  const photoPromises = metadataList.map(loadPhotoData);
-  const loadedPhotos = await Promise.all(photoPromises);
-  const validPhotos = loadedPhotos.filter((p): p is PhotoWithCountry => p !== null);
-  
-  return sortFn ? sortFn(validPhotos) : validPhotos;
+  const results = await Promise.all(metadataList.map(loadSinglePhoto));
+  const validPhotos = results.filter((photo): photo is PhotoWithCountry => photo !== null);
+  return sort ? sortPhotosByDate(validPhotos) : validPhotos;
 }
 
-const photoCachePromise: Promise<PhotoWithCountry[]> = (async () => {
-  return loadMultiplePhotos(photoMetadata, sortPhotosByDate);
-})();
-
-async function getCachedPhotos(): Promise<PhotoWithCountry[]> {
-  return photoCachePromise;
-}
-
-const createPhotos = async (): Promise<PhotoWithCountry[]> => {
-  return getCachedPhotos();
-};
-
-export const createPhotosByPaths = async (paths: string[]): Promise<PhotoWithCountry[]> => {
+export async function createPhotosByPaths(paths: string[]): Promise<PhotoWithCountry[]> {
   if (paths.length === 0) return [];
 
-  const order = new Map(paths.map((path, idx) => [path.toLowerCase(), idx]));
-  const photos = await getCachedPhotos();
-  const filtered = photos.filter(({ relPath }) => order.has(relPath.toLowerCase()));
+  const pathOrder = new Map(paths.map((path, idx) => [path.toLowerCase(), idx]));
+  
+  const requestedMetadata = paths
+    .map(path => METADATA_BY_PATH.get(path.toLowerCase()))
+    .filter((meta): meta is PhotoMetadata => meta !== undefined);
+  
+  const photos = await loadMultiplePhotos(requestedMetadata, false);
+  
+  return photos.sort((a, b) => {
+    const orderA = pathOrder.get(a.relPath.toLowerCase()) ?? 999;
+    const orderB = pathOrder.get(b.relPath.toLowerCase()) ?? 999;
+    return orderA - orderB;
+  });
+}
 
-  return filtered.sort((a, b) => 
-    (order.get(a.relPath.toLowerCase()) ?? 0) - (order.get(b.relPath.toLowerCase()) ?? 0)
+export async function createPhotosByLocation(location: string): Promise<PhotoWithCountry[]> {
+  const normalizedLocation = location.toLowerCase();
+  
+  const locationMetadata = PHOTO_METADATA.filter(({ relPath }) =>
+    relPath.toLowerCase().startsWith(`${normalizedLocation}/`)
   );
-};
+  
+  return loadMultiplePhotos(locationMetadata, true);
+}
 
-export const createPhotosByLocation = async (locationFolder: string): Promise<PhotoWithCountry[]> => {
-  const normalized = locationFolder.toLowerCase();
-  const photos = await getCachedPhotos();
-  const filtered = photos.filter(({ relPath }) => relPath.toLowerCase().startsWith(`${normalized}/`));
-
-  return sortPhotosByDate(filtered.slice());
-};
-
-export const getLocationMetadata = async () => {
-  const photos = await getCachedPhotos();
-  const metadata: Record<string, { count: number; heroImage: string | null }> = {};
-
-  for (const photo of photos) {
-    const countryLower = photo.country.toLowerCase();
-
-    if (!metadata[countryLower]) {
-      metadata[countryLower] = { count: 0, heroImage: null };
+export async function getLocationMetadata(): Promise<LocationMetadata> {
+  const metadata: LocationMetadata = {};
+  const heroMetadataMap = new Map<string, PhotoMetadata>();
+  
+  for (const meta of PHOTO_METADATA) {
+    const countryKey = meta.country.toLowerCase();
+    
+    if (!metadata[countryKey]) {
+      metadata[countryKey] = { count: 0, heroImage: null };
     }
-
-    metadata[countryLower].count++;
-
-    if (!metadata[countryLower].heroImage) {
-      metadata[countryLower].heroImage = photo.src;
+    metadata[countryKey].count++;
+    
+    if (!heroMetadataMap.has(countryKey)) {
+      heroMetadataMap.set(countryKey, meta);
     }
   }
-
+  
+  const heroPhotos = await loadMultiplePhotos(Array.from(heroMetadataMap.values()), false);
+  
+  for (const photo of heroPhotos) {
+    const countryKey = photo.country.toLowerCase();
+    metadata[countryKey].heroImage = photo.src;
+  }
+  
   return metadata;
-};
-
-export default createPhotos;
+}

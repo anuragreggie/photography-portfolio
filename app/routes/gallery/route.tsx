@@ -76,6 +76,7 @@ export default function GalleryOverview() {
                         height={300}
                         fit="cover"
                         className={classes.locationImage}
+                        loading="lazy"
                       />
                     ) : (
                       <Box

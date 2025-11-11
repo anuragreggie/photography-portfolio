@@ -88,6 +88,11 @@ export default function LocationGallery() {
                   { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
                 ],
               }}
+              componentsProps={{
+                image: {
+                  loading: 'lazy',
+                },
+              }}
             />
           ) : (
             <Box py="xl" my="xl">

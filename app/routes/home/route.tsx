@@ -73,6 +73,11 @@ export default function Home() {
                     { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
                   ],
                 }}
+                componentsProps={{
+                  image: {
+                    loading: 'lazy',
+                  },
+                }}
               />
             ) : (
               <Text ta="center" py="xl">

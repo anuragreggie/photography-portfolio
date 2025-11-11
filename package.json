@@ -49,6 +49,7 @@
     "sharp": "^0.33.5",
     "ts-unused-exports": "^11.0.1",
     "typescript": "^5.7.2",
-    "vite": "^6.0.7"
+    "vite": "^6.0.7",
+    "vite-imagetools": "^9.0.0"
   }
 }
