@@ -4,7 +4,7 @@ import classes from './styles.module.css';
 
 // Import images from assets
 import sonyA6400 from '../../assets/images/sony-a6400.png';
-import sigma1850 from '../../assets/images/sigma-18-50mm.jpg';
+import sigma1850 from '../../assets/images/sigma-18-50mm.png';
 
 export default function About() {
   return (

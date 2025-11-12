@@ -4,16 +4,16 @@ export const theme = createTheme({
   primaryColor: 'dark',
   colors: {
     dark: [
-      '#fafafa', // dark[0] - primary text color (off-white)
-      '#e9e9e9', // dark[1] - lighter secondary text
-      '#d4d4d4', // dark[2] - muted text
-      '#a3a3a3', // dark[3] - disabled text
+      '#000000', // dark[0] - primary text color (black)
+      '#171717', // dark[1] - lighter secondary text
+      '#262626', // dark[2] - muted text
+      '#525252', // dark[3] - disabled text
       '#737373', // dark[4] - borders/dividers
-      '#525252', // dark[5] - hover states
-      '#404040', // dark[6] - secondary backgrounds
-      '#262626', // dark[7] - card backgrounds
-      '#171717', // dark[8] - elevated surfaces
-      '#000000', // dark[9] - primary background (black)
+      '#a3a3a3', // dark[5] - hover states
+      '#d4d4d4', // dark[6] - secondary backgrounds
+      '#e9e9e9', // dark[7] - card backgrounds
+      '#f5f5f5', // dark[8] - elevated surfaces
+      '#ffffff', // dark[9] - primary background (white)
     ],
   },
   fontFamily: '"Lora", Georgia, serif',
