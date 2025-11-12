@@ -19,14 +19,13 @@ export default function About() {
           <Title order={1} className={classes.title}>
             About
           </Title>
-          <Text size="lg" c="dark.0" className={classes.subtitle}>
-            Capturing moments, creating memories
+          <Text size="sm" c="dark.0" className={classes.subtitle}>
+            This portfolio is a collection of images I’ve taken along the way, moments that stood out to me and felt worth remembering.
           </Text>
         </motion.div>
 
-        <Container size="md" className={classes.content}>
+        <Container size="lg" className={classes.content}>
           <Text className={classes.description}>
-            This portfolio is a collection of images I’ve taken along the way, moments that stood out to me and felt worth remembering.
           </Text>
 
           <motion.div
