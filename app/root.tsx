@@ -35,6 +35,8 @@ export const meta: MetaFunction = () => {
   return [
     { title: 'Anurag S' },
     { name: 'description', content: 'Minimalist photography portfolio showcasing artistic vision through elegant imagery' },
+    { name: 'color-scheme', content: 'light' },
+    { name: 'theme-color', content: '#fafaf9' },
   ];
 };
 
