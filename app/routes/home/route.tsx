@@ -75,7 +75,7 @@ export default function Home() {
                 }}
                 componentsProps={{
                   image: {
-                    loading: 'lazy',
+                    loading: 'eager',
                   },
                 }}
               />
