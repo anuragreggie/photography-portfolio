@@ -17,6 +17,8 @@ import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 
 export const links: LinksFunction = () => [
+  { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+  { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
     rel: 'preconnect',

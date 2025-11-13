@@ -13,7 +13,7 @@ export const theme = createTheme({
       '#d4d4d4', // dark[6] - secondary backgrounds
       '#e9e9e9', // dark[7] - card backgrounds
       '#f5f5f5', // dark[8] - elevated surfaces
-      '#ffffff', // dark[9] - primary background (white)
+      '#fafaf9', // dark[9] - primary background (warm off-white)
     ],
   },
   fontFamily: '"Lora", Georgia, serif',
