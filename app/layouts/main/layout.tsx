@@ -2,7 +2,7 @@ import { Outlet } from 'react-router';
 import { AppShell, Group, Text, Container, ActionIcon, Burger } from '@mantine/core';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
-import { IconMail, IconBrandInstagram, IconBrandGithub } from '@tabler/icons-react';
+import { IconMail, IconBrandInstagram, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './styles.module.css';
 
@@ -140,6 +140,17 @@ export default function MainLayout() {
                     className={classes.iconButton}
                   >
                     <IconBrandInstagram size={20} />
+                  </ActionIcon>
+                  <ActionIcon
+                    component="a"
+                    href="https://www.linkedin.com/in/anurag-suresh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="subtle"
+                    size="lg"
+                    className={classes.iconButton}
+                  >
+                    <IconBrandLinkedin size={20} />
                   </ActionIcon>
                 </Group>
                 <Text className={classes.footerCredit}>
