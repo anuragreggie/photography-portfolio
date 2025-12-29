@@ -15,7 +15,7 @@ const fixedImagePaths = [
   'italy/DSC01844.jpg',
   'norway/DSC04092.jpg',
   'norway/DSC04025.jpg',
-  'france/eiffel-from-streets.jpg',
+  'switzerland/DSC06483.jpg',
   'japan/tokyo-skyline.png',
   'norway/DSC03654.jpg',
   'norway/DSC03947.jpg',

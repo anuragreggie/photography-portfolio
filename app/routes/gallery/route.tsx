@@ -60,7 +60,8 @@ export default function GalleryOverview() {
                     size="sm" 
                     mt="xs" 
                     c="dark.0"
-                    fw={400}
+                    fw={500}
+                    ta="center"
                   >
                     {location.name}
                   </Text>
