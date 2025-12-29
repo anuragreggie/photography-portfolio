@@ -3,7 +3,6 @@ import japanHero from '../assets/images/japan/tokyo-skyline.png?format=webp&w=80
 import italyHero from '../assets/images/italy/DSC01844.jpg?format=webp&w=800&quality=80';
 import franceHero from '../assets/images/france/eiffel-from-streets.jpg?format=webp&w=800&quality=80';
 import ukHero from '../assets/images/uk/DSC04177.jpg?format=webp&w=800&quality=80';
-import dubaiHero from '../assets/images/dubai/Dubai-sunset.jpg?format=webp&w=800&quality=80';
 import norwayHero from '../assets/images/norway/DSC03664.jpg?format=webp&w=800&quality=80';
 import switzerlandHero from '../assets/images/switzerland/DSC06301.jpg?format=webp&w=800&quality=80';
 
@@ -34,11 +33,6 @@ export const locations: Location[] = [
     folder: 'uk',
     heroImage: ukHero
   },
-  // { 
-  //   name: 'Dubai', 
-  //   folder: 'dubai',
-  //   heroImage: dubaiHero
-  // },
   { 
     name: 'Norway', 
     folder: 'norway',
