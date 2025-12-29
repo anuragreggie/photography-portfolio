@@ -5,6 +5,7 @@ import franceHero from '../assets/images/france/eiffel-from-streets.jpg?format=w
 import ukHero from '../assets/images/uk/DSC04177.jpg?format=webp&w=800&quality=80';
 import norwayHero from '../assets/images/norway/DSC03664.jpg?format=webp&w=800&quality=80';
 import switzerlandHero from '../assets/images/switzerland/DSC06301.jpg?format=webp&w=800&quality=80';
+import hongKongHero from '../assets/images/hong-kong/DSC05565.jpg?format=webp&w=800&quality=80';
 
 export interface Location {
   name: string;
@@ -12,11 +13,17 @@ export interface Location {
   heroImage: string;
 }
 
+// Note: keep sorted
 export const locations: Location[] = [
   { 
-    name: 'Japan', 
-    folder: 'japan',
-    heroImage: japanHero
+    name: 'France', 
+    folder: 'france',
+    heroImage: franceHero
+  },
+  { 
+    name: 'Hong Kong', 
+    folder: 'hong-kong',
+    heroImage: hongKongHero
   },
   { 
     name: 'Italy', 
@@ -24,14 +31,9 @@ export const locations: Location[] = [
     heroImage: italyHero
   },
   { 
-    name: 'France', 
-    folder: 'france',
-    heroImage: franceHero
-  },
-  { 
-    name: 'United Kingdom', 
-    folder: 'uk',
-    heroImage: ukHero
+    name: 'Japan', 
+    folder: 'japan',
+    heroImage: japanHero
   },
   { 
     name: 'Norway', 
@@ -42,6 +44,11 @@ export const locations: Location[] = [
     name: 'Switzerland', 
     folder: 'switzerland',
     heroImage: switzerlandHero
+  },
+  { 
+    name: 'United Kingdom', 
+    folder: 'uk',
+    heroImage: ukHero
   },
 ];
 

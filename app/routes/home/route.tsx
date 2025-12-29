@@ -12,7 +12,7 @@ import { createPhotosByPaths, type PhotoWithCountry } from '../../data/photos';
 const fixedImagePaths = [
   'japan/tokyo-tower-through-leaves.jpg',
   'japan/shinkansen-driver-v2.jpg',
-  'italy/DSC01844.jpg',
+  'hong-kong/DSC05828.jpg',
   'norway/DSC04092.jpg',
   'norway/DSC04025.jpg',
   'switzerland/DSC06483.jpg',
