@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import classes from './styles.module.css';
 
 // Import images from assets
-import sonyA6400 from '../../assets/images/sony-a6400.png';
+import sonyA6700 from '../../assets/images/sony-a6700.png';
 import sigma1850 from '../../assets/images/sigma-18-50mm.png';
 
 export default function About() {
@@ -53,13 +53,13 @@ export default function About() {
                 >
                   <div className={classes.equipmentImageWrapper}>
                     <img 
-                      src={sonyA6400} 
-                      alt="Sony A6400 Mirrorless Camera"
+                      src={sonyA6700} 
+                      alt="Sony A6700 Mirrorless Camera"
                       className={classes.equipmentMainImage}
                       loading="lazy"
                     />
                   </div>
-                  <Text className={classes.imageLabel}>Sony A6400</Text>
+                  <Text className={classes.imageLabel}>Sony A6700</Text>
                 </motion.div>
                 
                 <motion.div
@@ -82,7 +82,7 @@ export default function About() {
               
               <div className={classes.equipmentDescription}>
                 <Text className={classes.equipmentText}>
-                  I primarily shoot with a <strong>Sony A6400</strong> paired with a <strong>Sigma 18-50mm F2.8 DC DN</strong> lens. 
+                  I primarily shoot with a <strong>Sony A6700</strong> paired with a <strong>Sigma 18-50mm F2.8 DC DN</strong> lens. 
                   This combo works great for a variety of photography styles, from portraits to landscapes, while being compact and travel-friendly.
                 </Text>
               </div>

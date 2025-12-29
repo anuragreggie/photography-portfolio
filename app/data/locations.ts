@@ -5,6 +5,7 @@ import franceHero from '../assets/images/france/eiffel-from-streets.jpg?format=w
 import ukHero from '../assets/images/uk/DSC04177.jpg?format=webp&w=800&quality=80';
 import dubaiHero from '../assets/images/dubai/Dubai-sunset.jpg?format=webp&w=800&quality=80';
 import norwayHero from '../assets/images/norway/DSC03664.jpg?format=webp&w=800&quality=80';
+import switzerlandHero from '../assets/images/switzerland/DSC06301.jpg?format=webp&w=800&quality=80';
 
 export interface Location {
   name: string;
@@ -42,6 +43,11 @@ export const locations: Location[] = [
     name: 'Norway', 
     folder: 'norway',
     heroImage: norwayHero
+  },
+  { 
+    name: 'Switzerland', 
+    folder: 'switzerland',
+    heroImage: switzerlandHero
   },
 ];
 
