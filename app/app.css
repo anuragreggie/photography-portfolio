@@ -21,12 +21,6 @@ body {
   background-color: #fafaf9;
 }
 
-/* Prevent browser dark mode overrides */
-:root {
-  color-scheme: light only;
-  forced-color-adjust: none;
-}
-
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

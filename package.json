@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "npm run images:manifest && npm run images:optimize && react-router build",
+    "build:quick": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",

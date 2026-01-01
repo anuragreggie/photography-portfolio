@@ -32,6 +32,7 @@ const MANIFEST_FILE = path.resolve(__dirname, '..', 'app', 'data', 'image-manife
 const BREAKPOINTS = [400, 800, 1280, 1920];
 const QUALITY = 80;
 const EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
+const CONCURRENCY = 8; // Process 8 images in parallel
 
 async function* walkImages(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -52,6 +53,27 @@ async function* walkImages(dir) {
 
 function toMB(bytes) {
   return (bytes / (1024 * 1024)).toFixed(2);
+}
+
+async function needsRegeneration(sourcePath, outputPaths) {
+  try {
+    const sourceStat = await fs.stat(sourcePath);
+    for (const outputPath of outputPaths) {
+      try {
+        const outputStat = await fs.stat(outputPath);
+        // If any output is older than source, regenerate all
+        if (outputStat.mtime < sourceStat.mtime) {
+          return true;
+        }
+      } catch {
+        // Output doesn't exist, needs generation
+        return true;
+      }
+    }
+    return false; // All outputs exist and are newer than source
+  } catch {
+    return true;
+  }
 }
 
 async function processImage(sharp, filePath, existingManifest) {
@@ -88,6 +110,40 @@ async function processImage(sharp, filePath, existingManifest) {
     // Create output directory
     const outputFolder = path.join(OUTPUT_DIR, countryFolder);
     await fs.mkdir(outputFolder, { recursive: true });
+    
+    // Check if all variants already exist and are up-to-date
+    const outputPaths = BREAKPOINTS.map(bp => 
+      path.join(outputFolder, `${baseName}-${bp}w.webp`)
+    );
+    
+    const needsRegen = await needsRegeneration(filePath, outputPaths);
+    if (!needsRegen) {
+      // Load existing variant info from files
+      const responsiveVariants = [];
+      for (let i = 0; i < BREAKPOINTS.length; i++) {
+        const breakpoint = BREAKPOINTS[i];
+        const outputPath = outputPaths[i];
+        const publicUrl = `/images/${countryFolder}/${baseName}-${breakpoint}w.webp`;
+        try {
+          const stat = await fs.stat(outputPath);
+          const buffer = await fs.readFile(outputPath);
+          const meta = await sharp(buffer).metadata();
+          responsiveVariants.push({
+            width: meta.width,
+            height: meta.height,
+            src: publicUrl,
+            size: stat.size,
+          });
+        } catch {
+          // If we can't read existing file, fall through to regenerate
+          break;
+        }
+      }
+      if (responsiveVariants.length === BREAKPOINTS.length) {
+        // Don't log skipped files to reduce noise
+        return { relPath: relPathLower, responsiveVariants, skipped: true };
+      }
+    }
     
     const responsiveVariants = [];
     let totalSaved = 0;
@@ -154,14 +210,34 @@ async function main() {
   // Ensure output directory exists
   await fs.mkdir(OUTPUT_DIR, { recursive: true });
   
-  const results = new Map();
-  let count = 0;
-  
+  // Collect all image paths first
+  const allImages = [];
   for await (const filePath of walkImages(IMAGES_DIR)) {
-    const result = await processImage(sharp, filePath, existingManifest);
-    if (result) {
-      results.set(result.relPath, result.responsiveVariants);
-      count++;
+    allImages.push(filePath);
+  }
+  
+  console.log(`Found ${allImages.length} images to process (${CONCURRENCY} parallel workers)\n`);
+  
+  const results = new Map();
+  let processedCount = 0;
+  let skippedCount = 0;
+  
+  // Process images in parallel batches
+  for (let i = 0; i < allImages.length; i += CONCURRENCY) {
+    const batch = allImages.slice(i, i + CONCURRENCY);
+    const batchResults = await Promise.all(
+      batch.map(filePath => processImage(sharp, filePath, existingManifest))
+    );
+    
+    for (const result of batchResults) {
+      if (result) {
+        results.set(result.relPath, result.responsiveVariants);
+        if (result.skipped) {
+          skippedCount++;
+        } else {
+          processedCount++;
+        }
+      }
     }
   }
   
@@ -185,7 +261,8 @@ async function main() {
     }
   }
   
-  console.log(`\n✅ Generated ${count * BREAKPOINTS.length} responsive images`);
+  console.log(`\n✅ Processed ${processedCount + skippedCount} images (${skippedCount} cached, ${processedCount} regenerated)`);
+  console.log(`   Total variants: ${results.size * BREAKPOINTS.length}`);
   console.log(`   Total size: ${toMB(totalSize)} MB`);
   console.log(`   Output: ${OUTPUT_DIR}`);
   console.log(`   Manifest updated: ${MANIFEST_FILE}`);
