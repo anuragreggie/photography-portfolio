@@ -1,0 +1,3521 @@
+{
+  "generatedAt": "2026-01-01T21:06:47.113Z",
+  "breakpoints": [
+    400,
+    800,
+    1280,
+    1920
+  ],
+  "images": {
+    "france/dsc00888.jpg": {
+      "relPath": "france/DSC00888.jpg",
+      "country": "France",
+      "countryFolder": "france",
+      "filename": "DSC00888.jpg",
+      "title": "France 888",
+      "alt": "France 888",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-01-10T14:44:11.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "france/bear-in-car.jpg": {
+      "relPath": "france/bear-in-car.jpg",
+      "country": "France",
+      "countryFolder": "france",
+      "filename": "bear-in-car.jpg",
+      "title": "bear-in-car",
+      "alt": "bear-in-car",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-01-10T15:56:42.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "france/catacombes.jpg": {
+      "relPath": "france/catacombes.jpg",
+      "country": "France",
+      "countryFolder": "france",
+      "filename": "catacombes.jpg",
+      "title": "catacombes",
+      "alt": "catacombes",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-01-10T11:43:31.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "france/eiffel-from-streets.jpg": {
+      "relPath": "france/eiffel-from-streets.jpg",
+      "country": "France",
+      "countryFolder": "france",
+      "filename": "eiffel-from-streets.jpg",
+      "title": "eiffel-from-streets",
+      "alt": "eiffel-from-streets",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-01-10T09:48:26.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "france/shop-with-orange-lights.jpg": {
+      "relPath": "france/shop-with-orange-lights.jpg",
+      "country": "France",
+      "countryFolder": "france",
+      "filename": "shop-with-orange-lights.jpg",
+      "title": "shop-with-orange-lights",
+      "alt": "shop-with-orange-lights",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-01-10T16:08:05.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "france/street-with-decor.jpg": {
+      "relPath": "france/street-with-decor.jpg",
+      "country": "France",
+      "countryFolder": "france",
+      "filename": "street-with-decor.jpg",
+      "title": "street-with-decor",
+      "alt": "street-with-decor",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-01-10T16:11:12.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc04766.jpg": {
+      "relPath": "hong-kong/DSC04766.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC04766.jpg",
+      "title": "Hong Kong 4766",
+      "alt": "Hong Kong 4766",
+      "width": 4099,
+      "height": 6149,
+      "aspectRatio": 0.6666124573101317,
+      "dateTaken": "2025-12-01T23:48:41.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1920,
+          "height": 2880
+        }
+      ]
+    },
+    "hong-kong/dsc04782.jpg": {
+      "relPath": "hong-kong/DSC04782.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC04782.jpg",
+      "title": "Hong Kong 4782",
+      "alt": "Hong Kong 4782",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-01T23:51:18.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc04788.jpg": {
+      "relPath": "hong-kong/DSC04788.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC04788.jpg",
+      "title": "Hong Kong 4788",
+      "alt": "Hong Kong 4788",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-01T23:54:30.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc04823.jpg": {
+      "relPath": "hong-kong/DSC04823.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC04823.jpg",
+      "title": "Hong Kong 4823",
+      "alt": "Hong Kong 4823",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T00:09:43.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc04932.jpg": {
+      "relPath": "hong-kong/DSC04932.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC04932.jpg",
+      "title": "Hong Kong 4932",
+      "alt": "Hong Kong 4932",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T01:03:12.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc04996.jpg": {
+      "relPath": "hong-kong/DSC04996.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC04996.jpg",
+      "title": "Hong Kong 4996",
+      "alt": "Hong Kong 4996",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T01:21:07.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05002.jpg": {
+      "relPath": "hong-kong/DSC05002.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05002.jpg",
+      "title": "Hong Kong 5002",
+      "alt": "Hong Kong 5002",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T01:24:32.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05011.jpg": {
+      "relPath": "hong-kong/DSC05011.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05011.jpg",
+      "title": "Hong Kong 5011",
+      "alt": "Hong Kong 5011",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T01:52:19.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05030.jpg": {
+      "relPath": "hong-kong/DSC05030.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05030.jpg",
+      "title": "Hong Kong 5030",
+      "alt": "Hong Kong 5030",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T03:02:26.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05033.jpg": {
+      "relPath": "hong-kong/DSC05033.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05033.jpg",
+      "title": "Hong Kong 5033",
+      "alt": "Hong Kong 5033",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T03:09:43.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05034.jpg": {
+      "relPath": "hong-kong/DSC05034.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05034.jpg",
+      "title": "Hong Kong 5034",
+      "alt": "Hong Kong 5034",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T03:13:09.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05181.jpg": {
+      "relPath": "hong-kong/DSC05181.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05181.jpg",
+      "title": "Hong Kong 5181",
+      "alt": "Hong Kong 5181",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-02T14:07:32.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05182.jpg": {
+      "relPath": "hong-kong/DSC05182.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05182.jpg",
+      "title": "Hong Kong 5182",
+      "alt": "Hong Kong 5182",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-03T01:46:01.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05213.jpg": {
+      "relPath": "hong-kong/DSC05213.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05213.jpg",
+      "title": "Hong Kong 5213",
+      "alt": "Hong Kong 5213",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-03T03:10:05.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05311.jpg": {
+      "relPath": "hong-kong/DSC05311.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05311.jpg",
+      "title": "Hong Kong 5311",
+      "alt": "Hong Kong 5311",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-03T05:44:21.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05565.jpg": {
+      "relPath": "hong-kong/DSC05565.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05565.jpg",
+      "title": "Hong Kong 5565",
+      "alt": "Hong Kong 5565",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-03T12:23:55.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05596.jpg": {
+      "relPath": "hong-kong/DSC05596.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05596.jpg",
+      "title": "Hong Kong 5596",
+      "alt": "Hong Kong 5596",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-03T12:39:52.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05606.jpg": {
+      "relPath": "hong-kong/DSC05606.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05606.jpg",
+      "title": "Hong Kong 5606",
+      "alt": "Hong Kong 5606",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-04T02:16:55.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05616.jpg": {
+      "relPath": "hong-kong/DSC05616.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05616.jpg",
+      "title": "Hong Kong 5616",
+      "alt": "Hong Kong 5616",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-04T02:24:18.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05670.jpg": {
+      "relPath": "hong-kong/DSC05670.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05670.jpg",
+      "title": "Hong Kong 5670",
+      "alt": "Hong Kong 5670",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-04T02:32:49.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05690.jpg": {
+      "relPath": "hong-kong/DSC05690.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05690.jpg",
+      "title": "Hong Kong 5690",
+      "alt": "Hong Kong 5690",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-04T02:59:12.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05768.jpg": {
+      "relPath": "hong-kong/DSC05768.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05768.jpg",
+      "title": "Hong Kong 5768",
+      "alt": "Hong Kong 5768",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-04T10:01:38.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "hong-kong/dsc05769.jpg": {
+      "relPath": "hong-kong/DSC05769.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05769.jpg",
+      "title": "Hong Kong 5769",
+      "alt": "Hong Kong 5769",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-04T10:02:07.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "hong-kong/dsc05796.jpg": {
+      "relPath": "hong-kong/DSC05796.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05796.jpg",
+      "title": "Hong Kong 5796",
+      "alt": "Hong Kong 5796",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-04T10:11:10.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "hong-kong/dsc05797.jpg": {
+      "relPath": "hong-kong/DSC05797.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05797.jpg",
+      "title": "Hong Kong 5797",
+      "alt": "Hong Kong 5797",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-04T10:11:25.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "hong-kong/dsc05798.jpg": {
+      "relPath": "hong-kong/DSC05798.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05798.jpg",
+      "title": "Hong Kong 5798",
+      "alt": "Hong Kong 5798",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-04T10:11:52.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "hong-kong/dsc05799.jpg": {
+      "relPath": "hong-kong/DSC05799.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05799.jpg",
+      "title": "Hong Kong 5799",
+      "alt": "Hong Kong 5799",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-04T10:12:11.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "hong-kong/dsc05813.jpg": {
+      "relPath": "hong-kong/DSC05813.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05813.jpg",
+      "title": "Hong Kong 5813",
+      "alt": "Hong Kong 5813",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-05T02:08:31.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05828.jpg": {
+      "relPath": "hong-kong/DSC05828.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05828.jpg",
+      "title": "Hong Kong 5828",
+      "alt": "Hong Kong 5828",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-05T05:02:40.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "hong-kong/dsc05860.jpg": {
+      "relPath": "hong-kong/DSC05860.jpg",
+      "country": "Hong Kong",
+      "countryFolder": "hong-kong",
+      "filename": "DSC05860.jpg",
+      "title": "Hong Kong 5860",
+      "alt": "Hong Kong 5860",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-05T05:13:57.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01737-2.jpg": {
+      "relPath": "italy/DSC01737-2.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01737-2.jpg",
+      "title": "Italy 1737-2",
+      "alt": "Italy 1737-2",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-03T08:13:18.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01740.jpg": {
+      "relPath": "italy/DSC01740.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01740.jpg",
+      "title": "Italy 1740",
+      "alt": "Italy 1740",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-03T08:14:28.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01744.jpg": {
+      "relPath": "italy/DSC01744.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01744.jpg",
+      "title": "Italy 1744",
+      "alt": "Italy 1744",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-03T08:17:14.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01767.jpg": {
+      "relPath": "italy/DSC01767.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01767.jpg",
+      "title": "Italy 1767",
+      "alt": "Italy 1767",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-03T08:29:14.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01777.jpg": {
+      "relPath": "italy/DSC01777.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01777.jpg",
+      "title": "Italy 1777",
+      "alt": "Italy 1777",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-03T08:47:52.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01844.jpg": {
+      "relPath": "italy/DSC01844.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01844.jpg",
+      "title": "Italy 1844",
+      "alt": "Italy 1844",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-04T08:34:09.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01848.jpg": {
+      "relPath": "italy/DSC01848.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01848.jpg",
+      "title": "Italy 1848",
+      "alt": "Italy 1848",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-04T08:37:22.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01851.jpg": {
+      "relPath": "italy/DSC01851.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01851.jpg",
+      "title": "Italy 1851",
+      "alt": "Italy 1851",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-04T08:45:38.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01854.jpg": {
+      "relPath": "italy/DSC01854.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01854.jpg",
+      "title": "Italy 1854",
+      "alt": "Italy 1854",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-04T08:50:09.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "italy/dsc01867.jpg": {
+      "relPath": "italy/DSC01867.jpg",
+      "country": "Italy",
+      "countryFolder": "italy",
+      "filename": "DSC01867.jpg",
+      "title": "Italy 1867",
+      "alt": "Italy 1867",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-05-04T10:03:52.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/car-racing.jpg": {
+      "relPath": "japan/car-racing.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "car-racing.jpg",
+      "title": "car-racing",
+      "alt": "car-racing",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-06-06T09:05:19.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "japan/crossing-street-lady.jpg": {
+      "relPath": "japan/crossing-street-lady.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "crossing-street-lady.jpg",
+      "title": "crossing-street-lady",
+      "alt": "crossing-street-lady",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-05T02:14:10.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/fuji-from-plane.jpg": {
+      "relPath": "japan/fuji-from-plane.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "fuji-from-plane.jpg",
+      "title": "fuji-from-plane",
+      "alt": "fuji-from-plane",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-04T20:29:28.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/fuji-lawson.jpg": {
+      "relPath": "japan/fuji-lawson.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "fuji-lawson.jpg",
+      "title": "fuji-lawson",
+      "alt": "fuji-lawson",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-10T08:50:49.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/fuji-pagoda.jpg": {
+      "relPath": "japan/fuji-pagoda.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "fuji-pagoda.jpg",
+      "title": "fuji-pagoda",
+      "alt": "fuji-pagoda",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-10T21:11:26.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/godzilla-street-view.jpg": {
+      "relPath": "japan/godzilla-street-view.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "godzilla-street-view.jpg",
+      "title": "godzilla-street-view",
+      "alt": "godzilla-street-view",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-07T08:02:30.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/imperial-palace-lake.jpg": {
+      "relPath": "japan/imperial-palace-lake.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "imperial-palace-lake.jpg",
+      "title": "imperial-palace-lake",
+      "alt": "imperial-palace-lake",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-06-06T02:35:27.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "japan/imperial-palace.jpg": {
+      "relPath": "japan/imperial-palace.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "imperial-palace.jpg",
+      "title": "imperial-palace",
+      "alt": "imperial-palace",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-06T02:45:47.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/kyoto-streets.jpg": {
+      "relPath": "japan/kyoto-streets.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "kyoto-streets.jpg",
+      "title": "kyoto-streets",
+      "alt": "kyoto-streets",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-11T21:18:35.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/kyoto-temple-through-frame.jpg": {
+      "relPath": "japan/kyoto-temple-through-frame.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "kyoto-temple-through-frame.jpg",
+      "title": "kyoto-temple-through-frame",
+      "alt": "kyoto-temple-through-frame",
+      "width": 2040,
+      "height": 1999,
+      "aspectRatio": 1.0205102551275638,
+      "dateTaken": "2025-06-11T21:46:53.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 392
+        },
+        {
+          "width": 800,
+          "height": 784
+        },
+        {
+          "width": 1280,
+          "height": 1254
+        },
+        {
+          "width": 1920,
+          "height": 1881
+        }
+      ]
+    },
+    "japan/lawson-fuji.png": {
+      "relPath": "japan/lawson-fuji.png",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "lawson-fuji.png",
+      "title": "lawson-fuji",
+      "alt": "lawson-fuji",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": null,
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/man-sat-alleyway.jpg": {
+      "relPath": "japan/man-sat-alleyway.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "man-sat-alleyway.jpg",
+      "title": "man-sat-alleyway",
+      "alt": "man-sat-alleyway",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-07T08:17:59.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/me-writing.jpg": {
+      "relPath": "japan/me-writing.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "me-writing.jpg",
+      "title": "me-writing",
+      "alt": "me-writing",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-09T00:24:29.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/nara-crossing.jpg": {
+      "relPath": "japan/nara-crossing.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "nara-crossing.jpg",
+      "title": "nara-crossing",
+      "alt": "nara-crossing",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-13T05:24:16.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/omotesando-street.jpg": {
+      "relPath": "japan/omotesando-street.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "omotesando-street.jpg",
+      "title": "omotesando-street",
+      "alt": "omotesando-street",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-05T04:06:21.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/osaka-canal.jpg": {
+      "relPath": "japan/osaka-canal.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "osaka-canal.jpg",
+      "title": "osaka-canal",
+      "alt": "osaka-canal",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-14T02:07:31.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/rami-ali.jpg": {
+      "relPath": "japan/rami-ali.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "rami-ali.jpg",
+      "title": "rami-ali",
+      "alt": "rami-ali",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-08T01:53:44.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/shibuya-sky-top-view-halation.png": {
+      "relPath": "japan/shibuya-sky-top-view-halation.png",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "shibuya-sky-top-view-halation.png",
+      "title": "shibuya-sky-top-view-halation",
+      "alt": "shibuya-sky-top-view-halation",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": null,
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "japan/shinkansen-driver-v2.jpg": {
+      "relPath": "japan/shinkansen-driver-v2.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "shinkansen-driver-v2.jpg",
+      "title": "shinkansen-driver-v2",
+      "alt": "shinkansen-driver-v2",
+      "width": 2040,
+      "height": 1314,
+      "aspectRatio": 1.552511415525114,
+      "dateTaken": "2025-06-14T22:48:05.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 258
+        },
+        {
+          "width": 800,
+          "height": 515
+        },
+        {
+          "width": 1280,
+          "height": 824
+        },
+        {
+          "width": 1920,
+          "height": 1237
+        }
+      ]
+    },
+    "japan/singh-street.jpg": {
+      "relPath": "japan/singh-street.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "singh-street.jpg",
+      "title": "singh-street",
+      "alt": "singh-street",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-06T08:21:48.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/tokyo-skyline.png": {
+      "relPath": "japan/tokyo-skyline.png",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "tokyo-skyline.png",
+      "title": "tokyo-skyline",
+      "alt": "tokyo-skyline",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": null,
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/tokyo-tower-through-leaves.jpg": {
+      "relPath": "japan/tokyo-tower-through-leaves.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "tokyo-tower-through-leaves.jpg",
+      "title": "tokyo-tower-through-leaves",
+      "alt": "tokyo-tower-through-leaves",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-06T22:57:05.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "japan/train-tracks.jpg": {
+      "relPath": "japan/train-tracks.jpg",
+      "country": "Japan",
+      "countryFolder": "japan",
+      "filename": "train-tracks.jpg",
+      "title": "train-tracks",
+      "alt": "train-tracks",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-06-06T09:51:21.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03635.jpg": {
+      "relPath": "norway/DSC03635.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03635.jpg",
+      "title": "Norway 3635",
+      "alt": "Norway 3635",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-21T10:43:57.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03654.jpg": {
+      "relPath": "norway/DSC03654.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03654.jpg",
+      "title": "Norway 3654",
+      "alt": "Norway 3654",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-21T16:01:59.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03664.jpg": {
+      "relPath": "norway/DSC03664.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03664.jpg",
+      "title": "Norway 3664",
+      "alt": "Norway 3664",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-21T16:03:12.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03666.jpg": {
+      "relPath": "norway/DSC03666.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03666.jpg",
+      "title": "Norway 3666",
+      "alt": "Norway 3666",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-22T09:45:06.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03668.jpg": {
+      "relPath": "norway/DSC03668.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03668.jpg",
+      "title": "Norway 3668",
+      "alt": "Norway 3668",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-22T09:46:31.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03671.jpg": {
+      "relPath": "norway/DSC03671.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03671.jpg",
+      "title": "Norway 3671",
+      "alt": "Norway 3671",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-22T09:48:19.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03724.jpg": {
+      "relPath": "norway/DSC03724.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03724.jpg",
+      "title": "Norway 3724",
+      "alt": "Norway 3724",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-22T12:39:16.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03733.jpg": {
+      "relPath": "norway/DSC03733.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03733.jpg",
+      "title": "Norway 3733",
+      "alt": "Norway 3733",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-22T12:55:43.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03738.jpg": {
+      "relPath": "norway/DSC03738.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03738.jpg",
+      "title": "Norway 3738",
+      "alt": "Norway 3738",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-22T13:07:07.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03792.jpg": {
+      "relPath": "norway/DSC03792.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03792.jpg",
+      "title": "Norway 3792",
+      "alt": "Norway 3792",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-22T14:29:55.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03811.jpg": {
+      "relPath": "norway/DSC03811.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03811.jpg",
+      "title": "Norway 3811",
+      "alt": "Norway 3811",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-22T14:41:54.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03823.jpg": {
+      "relPath": "norway/DSC03823.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03823.jpg",
+      "title": "Norway 3823",
+      "alt": "Norway 3823",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-23T10:35:15.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03828.jpg": {
+      "relPath": "norway/DSC03828.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03828.jpg",
+      "title": "Norway 3828",
+      "alt": "Norway 3828",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-23T10:36:53.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03866.jpg": {
+      "relPath": "norway/DSC03866.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03866.jpg",
+      "title": "Norway 3866",
+      "alt": "Norway 3866",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-23T11:09:11.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03947.jpg": {
+      "relPath": "norway/DSC03947.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03947.jpg",
+      "title": "Norway 3947",
+      "alt": "Norway 3947",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-25T06:41:03.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc03969.jpg": {
+      "relPath": "norway/DSC03969.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03969.jpg",
+      "title": "Norway 3969",
+      "alt": "Norway 3969",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-25T06:56:12.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc03972.jpg": {
+      "relPath": "norway/DSC03972.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC03972.jpg",
+      "title": "Norway 3972",
+      "alt": "Norway 3972",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-25T07:16:02.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc04006.jpg": {
+      "relPath": "norway/DSC04006.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC04006.jpg",
+      "title": "Norway 4006",
+      "alt": "Norway 4006",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-08-25T07:38:21.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "norway/dsc04025.jpg": {
+      "relPath": "norway/DSC04025.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC04025.jpg",
+      "title": "Norway 4025",
+      "alt": "Norway 4025",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-25T08:29:19.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc04073.jpg": {
+      "relPath": "norway/DSC04073.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC04073.jpg",
+      "title": "Norway 4073",
+      "alt": "Norway 4073",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-25T10:01:19.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "norway/dsc04092.jpg": {
+      "relPath": "norway/DSC04092.jpg",
+      "country": "Norway",
+      "countryFolder": "norway",
+      "filename": "DSC04092.jpg",
+      "title": "Norway 4092",
+      "alt": "Norway 4092",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-08-25T10:07:03.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "switzerland/dsc06154.jpg": {
+      "relPath": "switzerland/DSC06154.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06154.jpg",
+      "title": "Switzerland 6154",
+      "alt": "Switzerland 6154",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-10T10:59:34.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "switzerland/dsc06201.jpg": {
+      "relPath": "switzerland/DSC06201.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06201.jpg",
+      "title": "Switzerland 6201",
+      "alt": "Switzerland 6201",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-10T14:18:55.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "switzerland/dsc06232.jpg": {
+      "relPath": "switzerland/DSC06232.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06232.jpg",
+      "title": "Switzerland 6232",
+      "alt": "Switzerland 6232",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-10T14:53:09.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06301.jpg": {
+      "relPath": "switzerland/DSC06301.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06301.jpg",
+      "title": "Switzerland 6301",
+      "alt": "Switzerland 6301",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-11T10:04:04.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06380.jpg": {
+      "relPath": "switzerland/DSC06380.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06380.jpg",
+      "title": "Switzerland 6380",
+      "alt": "Switzerland 6380",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-11T10:44:17.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06387.jpg": {
+      "relPath": "switzerland/DSC06387.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06387.jpg",
+      "title": "Switzerland 6387",
+      "alt": "Switzerland 6387",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-11T10:46:46.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "switzerland/dsc06392.jpg": {
+      "relPath": "switzerland/DSC06392.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06392.jpg",
+      "title": "Switzerland 6392",
+      "alt": "Switzerland 6392",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-11T10:49:30.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "switzerland/dsc06395.jpg": {
+      "relPath": "switzerland/DSC06395.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06395.jpg",
+      "title": "Switzerland 6395",
+      "alt": "Switzerland 6395",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-11T10:50:24.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06433.jpg": {
+      "relPath": "switzerland/DSC06433.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06433.jpg",
+      "title": "Switzerland 6433",
+      "alt": "Switzerland 6433",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-12T12:59:33.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06440.jpg": {
+      "relPath": "switzerland/DSC06440.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06440.jpg",
+      "title": "Switzerland 6440",
+      "alt": "Switzerland 6440",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-12-12T13:48:59.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "switzerland/dsc06449.jpg": {
+      "relPath": "switzerland/DSC06449.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06449.jpg",
+      "title": "Switzerland 6449",
+      "alt": "Switzerland 6449",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-12T13:55:00.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06483.jpg": {
+      "relPath": "switzerland/DSC06483.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06483.jpg",
+      "title": "Switzerland 6483",
+      "alt": "Switzerland 6483",
+      "width": 1365,
+      "height": 2040,
+      "aspectRatio": 0.6691176470588235,
+      "dateTaken": "2025-12-12T14:05:00.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 598
+        },
+        {
+          "width": 800,
+          "height": 1196
+        },
+        {
+          "width": 1280,
+          "height": 1913
+        },
+        {
+          "width": 1365,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06543.jpg": {
+      "relPath": "switzerland/DSC06543.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06543.jpg",
+      "title": "Switzerland 6543",
+      "alt": "Switzerland 6543",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-12T15:48:37.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06584.jpg": {
+      "relPath": "switzerland/DSC06584.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06584.jpg",
+      "title": "Switzerland 6584",
+      "alt": "Switzerland 6584",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-12T16:09:58.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "switzerland/dsc06591.jpg": {
+      "relPath": "switzerland/DSC06591.jpg",
+      "country": "Switzerland",
+      "countryFolder": "switzerland",
+      "filename": "DSC06591.jpg",
+      "title": "Switzerland 6591",
+      "alt": "Switzerland 6591",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-12-12T16:14:49.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04107.jpg": {
+      "relPath": "uk/DSC04107.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04107.jpg",
+      "title": "Uk 4107",
+      "alt": "Uk 4107",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-09-26T11:56:19.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04161.jpg": {
+      "relPath": "uk/DSC04161.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04161.jpg",
+      "title": "Uk 4161",
+      "alt": "Uk 4161",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-09-26T12:34:26.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04177.jpg": {
+      "relPath": "uk/DSC04177.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04177.jpg",
+      "title": "Uk 4177",
+      "alt": "Uk 4177",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-09-26T12:40:55.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04234.jpg": {
+      "relPath": "uk/DSC04234.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04234.jpg",
+      "title": "Uk 4234",
+      "alt": "Uk 4234",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-09-26T14:11:02.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04354.jpg": {
+      "relPath": "uk/DSC04354.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04354.jpg",
+      "title": "Uk 4354",
+      "alt": "Uk 4354",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-10-26T06:44:46.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04429.jpg": {
+      "relPath": "uk/DSC04429.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04429.jpg",
+      "title": "Uk 4429",
+      "alt": "Uk 4429",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-11-01T10:58:22.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04436.jpg": {
+      "relPath": "uk/DSC04436.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04436.jpg",
+      "title": "Uk 4436",
+      "alt": "Uk 4436",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-11-01T10:59:53.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04446.jpg": {
+      "relPath": "uk/DSC04446.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04446.jpg",
+      "title": "Uk 4446",
+      "alt": "Uk 4446",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-11-01T11:07:18.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/dsc04453.jpg": {
+      "relPath": "uk/DSC04453.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04453.jpg",
+      "title": "Uk 4453",
+      "alt": "Uk 4453",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-11-01T11:25:03.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "uk/dsc04481.jpg": {
+      "relPath": "uk/DSC04481.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC04481.jpg",
+      "title": "Uk 4481",
+      "alt": "Uk 4481",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-11-01T12:13:40.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    },
+    "uk/bridge-open.jpg": {
+      "relPath": "uk/bridge-open.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "bridge-open.jpg",
+      "title": "bridge-open",
+      "alt": "bridge-open",
+      "width": 2040,
+      "height": 1360,
+      "aspectRatio": 1.5,
+      "dateTaken": "2025-09-26T13:45:50.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 267
+        },
+        {
+          "width": 800,
+          "height": 533
+        },
+        {
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "width": 1920,
+          "height": 1280
+        }
+      ]
+    },
+    "uk/curvy-street.jpg": {
+      "relPath": "uk/curvy-street.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "curvy-street.jpg",
+      "title": "curvy-street",
+      "alt": "curvy-street",
+      "width": 1360,
+      "height": 2040,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2025-04-18T15:53:46.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1360,
+          "height": 2040
+        }
+      ]
+    }
+  }
+}

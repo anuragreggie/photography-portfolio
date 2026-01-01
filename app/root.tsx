@@ -13,22 +13,21 @@ import { Notifications } from '@mantine/notifications';
 import { theme } from '../styles/theme';
 
 import './app.css';
+import './fonts.css';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 
 export const links: LinksFunction = () => [
   { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
   { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
-  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-  {
-    rel: 'preconnect',
-    href: 'https://fonts.gstatic.com',
-    crossOrigin: 'anonymous',
-  },
-  {
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap',
-  }
+  // Preload critical fonts for faster text rendering
+  { rel: 'preload', href: '/fonts/lora-latin-400.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+  { rel: 'preload', href: '/fonts/lora-latin-600.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+  // Preload hero images for home page (LCP optimization)
+  // Desktop gets 1280w, mobile gets 800w
+  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
+  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)' },
+  { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
 ];
 
 export const meta: MetaFunction = () => {

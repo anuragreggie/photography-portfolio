@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
+    "build": "npm run images:manifest && react-router build",
+    "build:full": "npm run images:manifest && npm run images:optimize && react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
@@ -11,7 +12,9 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "images:resize": "node ./scripts/resize-images.mjs"
+    "images:resize": "node ./scripts/resize-images.mjs",
+    "images:manifest": "node ./scripts/generate-image-manifest.mjs",
+    "images:optimize": "node ./scripts/generate-responsive-images.mjs"
   },
   "dependencies": {
     "@mantine/core": "^8.2.4",
@@ -20,7 +23,6 @@
     "@react-router/node": "^7.7.1",
     "@react-router/serve": "^7.7.1",
     "@tabler/icons-react": "^3.34.1",
-    "exifr": "^7.1.3",
     "framer-motion": "^11.10.0",
     "isbot": "^5",
     "react": "^18.3.1",
@@ -41,6 +43,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "exifr": "^7.1.3",
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "sharp": "^0.33.5",
