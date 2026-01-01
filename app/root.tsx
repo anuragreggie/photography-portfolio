@@ -24,18 +24,22 @@ export const links: LinksFunction = () => [
   { rel: 'preload', href: '/fonts/lora-latin-400.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
   { rel: 'preload', href: '/fonts/lora-latin-600.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
   // Preload hero images for home page (LCP optimization)
-  // Desktop gets 1280w, mobile gets 800w
+  // Desktop (3 columns): preload first 3 images at 1280w
   { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
-  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)' },
   { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
+  { rel: 'preload', href: '/images/hong-kong/DSC05828-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
+  // Mobile (2 columns): preload first 2 images at 800w
+  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)' },
+  { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)' },
 ];
 
 export const meta: MetaFunction = () => {
   return [
     { title: 'Anurag S' },
     { name: 'description', content: 'Minimalist photography portfolio showcasing artistic vision through elegant imagery' },
-    { name: 'color-scheme', content: 'light' },
+    { name: 'color-scheme', content: 'light only' },
     { name: 'theme-color', content: '#fafaf9' },
+    { name: 'supported-color-schemes', content: 'light' },
   ];
 };
 

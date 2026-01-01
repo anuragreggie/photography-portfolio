@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-01T21:06:47.113Z",
+  "generatedAt": "2026-01-01T21:52:01.003Z",
   "breakpoints": [
     400,
     800,
@@ -35,6 +35,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/DSC00888-400w.webp",
+          "size": 22018
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/DSC00888-800w.webp",
+          "size": 72790
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/DSC00888-1280w.webp",
+          "size": 159088
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/DSC00888-1920w.webp",
+          "size": 293120
+        }
       ]
     },
     "france/bear-in-car.jpg": {
@@ -64,6 +90,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/bear-in-car-400w.webp",
+          "size": 13440
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/bear-in-car-800w.webp",
+          "size": 36450
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/bear-in-car-1280w.webp",
+          "size": 72190
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/bear-in-car-1920w.webp",
+          "size": 127706
         }
       ]
     },
@@ -95,6 +147,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/catacombes-400w.webp",
+          "size": 30894
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/catacombes-800w.webp",
+          "size": 88846
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/catacombes-1280w.webp",
+          "size": 168666
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/catacombes-1920w.webp",
+          "size": 281416
+        }
       ]
     },
     "france/eiffel-from-streets.jpg": {
@@ -124,6 +202,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/eiffel-from-streets-400w.webp",
+          "size": 16740
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/eiffel-from-streets-800w.webp",
+          "size": 55928
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/eiffel-from-streets-1280w.webp",
+          "size": 120088
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/eiffel-from-streets-1920w.webp",
+          "size": 213144
         }
       ]
     },
@@ -155,6 +259,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/shop-with-orange-lights-400w.webp",
+          "size": 20252
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/shop-with-orange-lights-800w.webp",
+          "size": 74784
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/shop-with-orange-lights-1280w.webp",
+          "size": 178086
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/shop-with-orange-lights-1920w.webp",
+          "size": 347178
+        }
       ]
     },
     "france/street-with-decor.jpg": {
@@ -184,6 +314,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/street-with-decor-400w.webp",
+          "size": 22530
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/street-with-decor-800w.webp",
+          "size": 74224
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/street-with-decor-1280w.webp",
+          "size": 160204
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/street-with-decor-1920w.webp",
+          "size": 286732
         }
       ]
     },
@@ -215,6 +371,32 @@
           "width": 1920,
           "height": 2880
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC04766-400w.webp",
+          "size": 20496
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC04766-800w.webp",
+          "size": 64678
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC04766-1280w.webp",
+          "size": 141268
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC04766-1920w.webp",
+          "size": 259334
+        }
       ]
     },
     "hong-kong/dsc04782.jpg": {
@@ -244,6 +426,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC04782-400w.webp",
+          "size": 20040
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC04782-800w.webp",
+          "size": 69244
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC04782-1280w.webp",
+          "size": 155814
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC04782-1920w.webp",
+          "size": 294844
         }
       ]
     },
@@ -275,6 +483,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC04788-400w.webp",
+          "size": 16910
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC04788-800w.webp",
+          "size": 61700
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC04788-1280w.webp",
+          "size": 143304
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC04788-1920w.webp",
+          "size": 268394
+        }
       ]
     },
     "hong-kong/dsc04823.jpg": {
@@ -304,6 +538,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC04823-400w.webp",
+          "size": 18542
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC04823-800w.webp",
+          "size": 56214
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC04823-1280w.webp",
+          "size": 112674
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC04823-1920w.webp",
+          "size": 198970
         }
       ]
     },
@@ -335,6 +595,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC04932-400w.webp",
+          "size": 17604
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC04932-800w.webp",
+          "size": 59684
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC04932-1280w.webp",
+          "size": 128924
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC04932-1920w.webp",
+          "size": 235178
+        }
       ]
     },
     "hong-kong/dsc04996.jpg": {
@@ -364,6 +650,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC04996-400w.webp",
+          "size": 13756
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC04996-800w.webp",
+          "size": 41604
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC04996-1280w.webp",
+          "size": 92648
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC04996-1920w.webp",
+          "size": 180242
         }
       ]
     },
@@ -395,6 +707,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05002-400w.webp",
+          "size": 20618
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05002-800w.webp",
+          "size": 68276
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05002-1280w.webp",
+          "size": 145308
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05002-1920w.webp",
+          "size": 264394
+        }
       ]
     },
     "hong-kong/dsc05011.jpg": {
@@ -424,6 +762,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05011-400w.webp",
+          "size": 23698
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05011-800w.webp",
+          "size": 74352
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05011-1280w.webp",
+          "size": 154818
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05011-1920w.webp",
+          "size": 281426
         }
       ]
     },
@@ -455,6 +819,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05030-400w.webp",
+          "size": 23988
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05030-800w.webp",
+          "size": 88552
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05030-1280w.webp",
+          "size": 203122
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05030-1920w.webp",
+          "size": 380692
+        }
       ]
     },
     "hong-kong/dsc05033.jpg": {
@@ -484,6 +874,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05033-400w.webp",
+          "size": 20932
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05033-800w.webp",
+          "size": 64414
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05033-1280w.webp",
+          "size": 128254
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05033-1920w.webp",
+          "size": 220182
         }
       ]
     },
@@ -515,6 +931,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05034-400w.webp",
+          "size": 21292
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05034-800w.webp",
+          "size": 67030
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05034-1280w.webp",
+          "size": 140368
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05034-1920w.webp",
+          "size": 242500
+        }
       ]
     },
     "hong-kong/dsc05181.jpg": {
@@ -544,6 +986,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05181-400w.webp",
+          "size": 10840
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05181-800w.webp",
+          "size": 27968
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05181-1280w.webp",
+          "size": 49680
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05181-1920w.webp",
+          "size": 80462
         }
       ]
     },
@@ -575,6 +1043,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05182-400w.webp",
+          "size": 20062
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05182-800w.webp",
+          "size": 62518
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05182-1280w.webp",
+          "size": 124978
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05182-1920w.webp",
+          "size": 207644
+        }
       ]
     },
     "hong-kong/dsc05213.jpg": {
@@ -604,6 +1098,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05213-400w.webp",
+          "size": 16370
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05213-800w.webp",
+          "size": 54190
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05213-1280w.webp",
+          "size": 119858
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05213-1920w.webp",
+          "size": 223136
         }
       ]
     },
@@ -635,6 +1155,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05311-400w.webp",
+          "size": 26900
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05311-800w.webp",
+          "size": 90416
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05311-1280w.webp",
+          "size": 197660
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05311-1920w.webp",
+          "size": 366634
+        }
       ]
     },
     "hong-kong/dsc05565.jpg": {
@@ -664,6 +1210,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05565-400w.webp",
+          "size": 24028
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05565-800w.webp",
+          "size": 85786
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05565-1280w.webp",
+          "size": 189778
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05565-1920w.webp",
+          "size": 346938
         }
       ]
     },
@@ -695,6 +1267,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05596-400w.webp",
+          "size": 17838
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05596-800w.webp",
+          "size": 58906
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05596-1280w.webp",
+          "size": 124250
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05596-1920w.webp",
+          "size": 228306
+        }
       ]
     },
     "hong-kong/dsc05606.jpg": {
@@ -724,6 +1322,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05606-400w.webp",
+          "size": 23388
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05606-800w.webp",
+          "size": 77810
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05606-1280w.webp",
+          "size": 167494
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05606-1920w.webp",
+          "size": 309888
         }
       ]
     },
@@ -755,6 +1379,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05616-400w.webp",
+          "size": 27016
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05616-800w.webp",
+          "size": 91458
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05616-1280w.webp",
+          "size": 197290
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05616-1920w.webp",
+          "size": 366514
+        }
       ]
     },
     "hong-kong/dsc05670.jpg": {
@@ -784,6 +1434,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05670-400w.webp",
+          "size": 16360
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05670-800w.webp",
+          "size": 43926
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05670-1280w.webp",
+          "size": 80506
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05670-1920w.webp",
+          "size": 133060
         }
       ]
     },
@@ -815,6 +1491,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05690-400w.webp",
+          "size": 21826
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05690-800w.webp",
+          "size": 81962
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05690-1280w.webp",
+          "size": 188490
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05690-1920w.webp",
+          "size": 367668
+        }
       ]
     },
     "hong-kong/dsc05768.jpg": {
@@ -844,6 +1546,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/hong-kong/DSC05768-400w.webp",
+          "size": 7818
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/hong-kong/DSC05768-800w.webp",
+          "size": 27638
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/hong-kong/DSC05768-1280w.webp",
+          "size": 62674
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05768-1920w.webp",
+          "size": 118658
         }
       ]
     },
@@ -875,6 +1603,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/hong-kong/DSC05769-400w.webp",
+          "size": 9294
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/hong-kong/DSC05769-800w.webp",
+          "size": 36508
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/hong-kong/DSC05769-1280w.webp",
+          "size": 83646
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05769-1920w.webp",
+          "size": 153910
+        }
       ]
     },
     "hong-kong/dsc05796.jpg": {
@@ -904,6 +1658,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/hong-kong/DSC05796-400w.webp",
+          "size": 7742
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/hong-kong/DSC05796-800w.webp",
+          "size": 30536
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/hong-kong/DSC05796-1280w.webp",
+          "size": 71558
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05796-1920w.webp",
+          "size": 142810
         }
       ]
     },
@@ -935,6 +1715,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/hong-kong/DSC05797-400w.webp",
+          "size": 11340
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/hong-kong/DSC05797-800w.webp",
+          "size": 42864
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/hong-kong/DSC05797-1280w.webp",
+          "size": 96896
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05797-1920w.webp",
+          "size": 178696
+        }
       ]
     },
     "hong-kong/dsc05798.jpg": {
@@ -964,6 +1770,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/hong-kong/DSC05798-400w.webp",
+          "size": 8996
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/hong-kong/DSC05798-800w.webp",
+          "size": 33760
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/hong-kong/DSC05798-1280w.webp",
+          "size": 77548
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05798-1920w.webp",
+          "size": 144316
         }
       ]
     },
@@ -995,6 +1827,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/hong-kong/DSC05799-400w.webp",
+          "size": 6378
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/hong-kong/DSC05799-800w.webp",
+          "size": 25310
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/hong-kong/DSC05799-1280w.webp",
+          "size": 58320
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05799-1920w.webp",
+          "size": 115930
+        }
       ]
     },
     "hong-kong/dsc05813.jpg": {
@@ -1024,6 +1882,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05813-400w.webp",
+          "size": 15936
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05813-800w.webp",
+          "size": 39694
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05813-1280w.webp",
+          "size": 69248
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05813-1920w.webp",
+          "size": 115298
         }
       ]
     },
@@ -1055,6 +1939,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05828-400w.webp",
+          "size": 17262
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05828-800w.webp",
+          "size": 59800
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05828-1280w.webp",
+          "size": 130936
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05828-1920w.webp",
+          "size": 233862
+        }
       ]
     },
     "hong-kong/dsc05860.jpg": {
@@ -1084,6 +1994,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/hong-kong/DSC05860-400w.webp",
+          "size": 15808
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/hong-kong/DSC05860-800w.webp",
+          "size": 50876
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/hong-kong/DSC05860-1280w.webp",
+          "size": 99084
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/hong-kong/DSC05860-1920w.webp",
+          "size": 165892
         }
       ]
     },
@@ -1115,6 +2051,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01737-2-400w.webp",
+          "size": 33276
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01737-2-800w.webp",
+          "size": 117278
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01737-2-1280w.webp",
+          "size": 266858
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01737-2-1920w.webp",
+          "size": 524284
+        }
       ]
     },
     "italy/dsc01740.jpg": {
@@ -1144,6 +2106,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01740-400w.webp",
+          "size": 33494
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01740-800w.webp",
+          "size": 119876
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01740-1280w.webp",
+          "size": 272832
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01740-1920w.webp",
+          "size": 519608
         }
       ]
     },
@@ -1175,6 +2163,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01744-400w.webp",
+          "size": 31812
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01744-800w.webp",
+          "size": 108700
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01744-1280w.webp",
+          "size": 240098
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01744-1920w.webp",
+          "size": 459608
+        }
       ]
     },
     "italy/dsc01767.jpg": {
@@ -1204,6 +2218,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01767-400w.webp",
+          "size": 16448
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01767-800w.webp",
+          "size": 52066
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01767-1280w.webp",
+          "size": 110318
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01767-1920w.webp",
+          "size": 228132
         }
       ]
     },
@@ -1235,6 +2275,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01777-400w.webp",
+          "size": 17508
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01777-800w.webp",
+          "size": 54062
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01777-1280w.webp",
+          "size": 113958
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01777-1920w.webp",
+          "size": 216806
+        }
       ]
     },
     "italy/dsc01844.jpg": {
@@ -1264,6 +2330,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01844-400w.webp",
+          "size": 13112
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01844-800w.webp",
+          "size": 47984
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01844-1280w.webp",
+          "size": 109952
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01844-1920w.webp",
+          "size": 208352
         }
       ]
     },
@@ -1295,6 +2387,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01848-400w.webp",
+          "size": 23518
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01848-800w.webp",
+          "size": 79912
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01848-1280w.webp",
+          "size": 177618
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01848-1920w.webp",
+          "size": 334256
+        }
       ]
     },
     "italy/dsc01851.jpg": {
@@ -1324,6 +2442,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01851-400w.webp",
+          "size": 13824
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01851-800w.webp",
+          "size": 55940
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01851-1280w.webp",
+          "size": 138802
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01851-1920w.webp",
+          "size": 279888
         }
       ]
     },
@@ -1355,6 +2499,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01854-400w.webp",
+          "size": 11554
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01854-800w.webp",
+          "size": 42418
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01854-1280w.webp",
+          "size": 99002
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01854-1920w.webp",
+          "size": 202568
+        }
       ]
     },
     "italy/dsc01867.jpg": {
@@ -1384,6 +2554,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/italy/DSC01867-400w.webp",
+          "size": 9250
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/italy/DSC01867-800w.webp",
+          "size": 29142
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/italy/DSC01867-1280w.webp",
+          "size": 81834
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/italy/DSC01867-1920w.webp",
+          "size": 211210
         }
       ]
     },
@@ -1415,6 +2611,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/japan/car-racing-400w.webp",
+          "size": 13308
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/japan/car-racing-800w.webp",
+          "size": 39608
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/japan/car-racing-1280w.webp",
+          "size": 81744
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/japan/car-racing-1920w.webp",
+          "size": 156164
+        }
       ]
     },
     "japan/crossing-street-lady.jpg": {
@@ -1444,6 +2666,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/crossing-street-lady-400w.webp",
+          "size": 20098
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/crossing-street-lady-800w.webp",
+          "size": 64892
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/crossing-street-lady-1280w.webp",
+          "size": 138154
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/crossing-street-lady-1920w.webp",
+          "size": 243104
         }
       ]
     },
@@ -1475,6 +2723,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/fuji-from-plane-400w.webp",
+          "size": 3532
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/fuji-from-plane-800w.webp",
+          "size": 9364
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/fuji-from-plane-1280w.webp",
+          "size": 20756
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/fuji-from-plane-1920w.webp",
+          "size": 60992
+        }
       ]
     },
     "japan/fuji-lawson.jpg": {
@@ -1504,6 +2778,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/fuji-lawson-400w.webp",
+          "size": 6594
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/fuji-lawson-800w.webp",
+          "size": 19454
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/fuji-lawson-1280w.webp",
+          "size": 38372
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/fuji-lawson-1920w.webp",
+          "size": 65698
         }
       ]
     },
@@ -1535,6 +2835,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/fuji-pagoda-400w.webp",
+          "size": 14078
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/fuji-pagoda-800w.webp",
+          "size": 47280
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/fuji-pagoda-1280w.webp",
+          "size": 108862
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/fuji-pagoda-1920w.webp",
+          "size": 245596
+        }
       ]
     },
     "japan/godzilla-street-view.jpg": {
@@ -1564,6 +2890,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/godzilla-street-view-400w.webp",
+          "size": 27354
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/godzilla-street-view-800w.webp",
+          "size": 87360
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/godzilla-street-view-1280w.webp",
+          "size": 177852
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/godzilla-street-view-1920w.webp",
+          "size": 315136
         }
       ]
     },
@@ -1595,6 +2947,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/japan/imperial-palace-lake-400w.webp",
+          "size": 16832
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/japan/imperial-palace-lake-800w.webp",
+          "size": 64454
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/japan/imperial-palace-lake-1280w.webp",
+          "size": 158376
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/japan/imperial-palace-lake-1920w.webp",
+          "size": 310022
+        }
       ]
     },
     "japan/imperial-palace.jpg": {
@@ -1624,6 +3002,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/imperial-palace-400w.webp",
+          "size": 17048
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/imperial-palace-800w.webp",
+          "size": 65848
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/imperial-palace-1280w.webp",
+          "size": 160294
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/imperial-palace-1920w.webp",
+          "size": 330696
         }
       ]
     },
@@ -1655,6 +3059,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/kyoto-streets-400w.webp",
+          "size": 12270
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/kyoto-streets-800w.webp",
+          "size": 40900
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/kyoto-streets-1280w.webp",
+          "size": 91324
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/kyoto-streets-1920w.webp",
+          "size": 197160
+        }
       ]
     },
     "japan/kyoto-temple-through-frame.jpg": {
@@ -1684,6 +3114,32 @@
         {
           "width": 1920,
           "height": 1881
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 391,
+          "src": "/images/japan/kyoto-temple-through-frame-400w.webp",
+          "size": 19762
+        },
+        {
+          "width": 800,
+          "height": 784,
+          "src": "/images/japan/kyoto-temple-through-frame-800w.webp",
+          "size": 74724
+        },
+        {
+          "width": 1280,
+          "height": 1254,
+          "src": "/images/japan/kyoto-temple-through-frame-1280w.webp",
+          "size": 170970
+        },
+        {
+          "width": 1920,
+          "height": 1881,
+          "src": "/images/japan/kyoto-temple-through-frame-1920w.webp",
+          "size": 322522
         }
       ]
     },
@@ -1715,6 +3171,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/lawson-fuji-400w.webp",
+          "size": 6352
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/lawson-fuji-800w.webp",
+          "size": 17624
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/lawson-fuji-1280w.webp",
+          "size": 34148
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/lawson-fuji-1920w.webp",
+          "size": 58936
+        }
       ]
     },
     "japan/man-sat-alleyway.jpg": {
@@ -1744,6 +3226,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/man-sat-alleyway-400w.webp",
+          "size": 20342
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/man-sat-alleyway-800w.webp",
+          "size": 59934
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/man-sat-alleyway-1280w.webp",
+          "size": 116910
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/man-sat-alleyway-1920w.webp",
+          "size": 195010
         }
       ]
     },
@@ -1775,6 +3283,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/me-writing-400w.webp",
+          "size": 8330
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/me-writing-800w.webp",
+          "size": 22574
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/me-writing-1280w.webp",
+          "size": 49306
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/me-writing-1920w.webp",
+          "size": 119306
+        }
       ]
     },
     "japan/nara-crossing.jpg": {
@@ -1804,6 +3338,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/nara-crossing-400w.webp",
+          "size": 28006
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/nara-crossing-800w.webp",
+          "size": 92588
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/nara-crossing-1280w.webp",
+          "size": 189232
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/nara-crossing-1920w.webp",
+          "size": 323826
         }
       ]
     },
@@ -1835,6 +3395,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/omotesando-street-400w.webp",
+          "size": 17870
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/omotesando-street-800w.webp",
+          "size": 58250
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/omotesando-street-1280w.webp",
+          "size": 127244
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/omotesando-street-1920w.webp",
+          "size": 235344
+        }
       ]
     },
     "japan/osaka-canal.jpg": {
@@ -1864,6 +3450,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/osaka-canal-400w.webp",
+          "size": 11542
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/osaka-canal-800w.webp",
+          "size": 41014
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/osaka-canal-1280w.webp",
+          "size": 94520
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/osaka-canal-1920w.webp",
+          "size": 191854
         }
       ]
     },
@@ -1895,6 +3507,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/rami-ali-400w.webp",
+          "size": 30588
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/rami-ali-800w.webp",
+          "size": 111936
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/rami-ali-1280w.webp",
+          "size": 254044
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/rami-ali-1920w.webp",
+          "size": 484360
+        }
       ]
     },
     "japan/shibuya-sky-top-view-halation.png": {
@@ -1924,6 +3562,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/japan/shibuya-sky-top-view-halation-400w.webp",
+          "size": 18972
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/japan/shibuya-sky-top-view-halation-800w.webp",
+          "size": 62216
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/japan/shibuya-sky-top-view-halation-1280w.webp",
+          "size": 132226
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/japan/shibuya-sky-top-view-halation-1920w.webp",
+          "size": 238020
         }
       ]
     },
@@ -1955,6 +3619,32 @@
           "width": 1920,
           "height": 1237
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 257,
+          "src": "/images/japan/shinkansen-driver-v2-400w.webp",
+          "size": 13248
+        },
+        {
+          "width": 800,
+          "height": 515,
+          "src": "/images/japan/shinkansen-driver-v2-800w.webp",
+          "size": 34592
+        },
+        {
+          "width": 1280,
+          "height": 824,
+          "src": "/images/japan/shinkansen-driver-v2-1280w.webp",
+          "size": 66674
+        },
+        {
+          "width": 1920,
+          "height": 1237,
+          "src": "/images/japan/shinkansen-driver-v2-1920w.webp",
+          "size": 121270
+        }
       ]
     },
     "japan/singh-street.jpg": {
@@ -1984,6 +3674,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/singh-street-400w.webp",
+          "size": 21660
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/singh-street-800w.webp",
+          "size": 65256
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/singh-street-1280w.webp",
+          "size": 131866
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/singh-street-1920w.webp",
+          "size": 250956
         }
       ]
     },
@@ -2015,6 +3731,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/tokyo-skyline-400w.webp",
+          "size": 14472
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/tokyo-skyline-800w.webp",
+          "size": 48208
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/tokyo-skyline-1280w.webp",
+          "size": 105136
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/tokyo-skyline-1920w.webp",
+          "size": 190116
+        }
       ]
     },
     "japan/tokyo-tower-through-leaves.jpg": {
@@ -2044,6 +3786,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/tokyo-tower-through-leaves-400w.webp",
+          "size": 26542
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/tokyo-tower-through-leaves-800w.webp",
+          "size": 84206
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/tokyo-tower-through-leaves-1280w.webp",
+          "size": 175584
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/tokyo-tower-through-leaves-1920w.webp",
+          "size": 331122
         }
       ]
     },
@@ -2075,6 +3843,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/japan/train-tracks-400w.webp",
+          "size": 14960
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/japan/train-tracks-800w.webp",
+          "size": 48334
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/japan/train-tracks-1280w.webp",
+          "size": 97726
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/japan/train-tracks-1920w.webp",
+          "size": 168936
+        }
       ]
     },
     "norway/dsc03635.jpg": {
@@ -2104,6 +3898,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03635-400w.webp",
+          "size": 15586
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03635-800w.webp",
+          "size": 49900
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03635-1280w.webp",
+          "size": 103488
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03635-1920w.webp",
+          "size": 174800
         }
       ]
     },
@@ -2135,6 +3955,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03654-400w.webp",
+          "size": 10128
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03654-800w.webp",
+          "size": 37088
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03654-1280w.webp",
+          "size": 85114
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03654-1920w.webp",
+          "size": 159306
+        }
       ]
     },
     "norway/dsc03664.jpg": {
@@ -2164,6 +4010,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03664-400w.webp",
+          "size": 12076
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03664-800w.webp",
+          "size": 44136
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03664-1280w.webp",
+          "size": 105948
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03664-1920w.webp",
+          "size": 211802
         }
       ]
     },
@@ -2195,6 +4067,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03666-400w.webp",
+          "size": 8990
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03666-800w.webp",
+          "size": 35452
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03666-1280w.webp",
+          "size": 88554
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03666-1920w.webp",
+          "size": 176084
+        }
       ]
     },
     "norway/dsc03668.jpg": {
@@ -2224,6 +4122,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03668-400w.webp",
+          "size": 7132
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03668-800w.webp",
+          "size": 27736
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03668-1280w.webp",
+          "size": 63068
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03668-1920w.webp",
+          "size": 121554
         }
       ]
     },
@@ -2255,6 +4179,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03671-400w.webp",
+          "size": 7856
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03671-800w.webp",
+          "size": 29598
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03671-1280w.webp",
+          "size": 69352
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03671-1920w.webp",
+          "size": 131962
+        }
       ]
     },
     "norway/dsc03724.jpg": {
@@ -2284,6 +4234,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03724-400w.webp",
+          "size": 11102
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03724-800w.webp",
+          "size": 35974
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03724-1280w.webp",
+          "size": 76874
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03724-1920w.webp",
+          "size": 139524
         }
       ]
     },
@@ -2315,6 +4291,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03733-400w.webp",
+          "size": 8320
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03733-800w.webp",
+          "size": 32440
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03733-1280w.webp",
+          "size": 79500
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03733-1920w.webp",
+          "size": 154060
+        }
       ]
     },
     "norway/dsc03738.jpg": {
@@ -2344,6 +4346,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03738-400w.webp",
+          "size": 18068
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03738-800w.webp",
+          "size": 74118
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03738-1280w.webp",
+          "size": 191904
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03738-1920w.webp",
+          "size": 417486
         }
       ]
     },
@@ -2375,6 +4403,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03792-400w.webp",
+          "size": 7928
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03792-800w.webp",
+          "size": 30382
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03792-1280w.webp",
+          "size": 80126
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03792-1920w.webp",
+          "size": 180116
+        }
       ]
     },
     "norway/dsc03811.jpg": {
@@ -2404,6 +4458,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03811-400w.webp",
+          "size": 6830
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03811-800w.webp",
+          "size": 22734
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03811-1280w.webp",
+          "size": 51906
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03811-1920w.webp",
+          "size": 105664
         }
       ]
     },
@@ -2435,6 +4515,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03823-400w.webp",
+          "size": 9908
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03823-800w.webp",
+          "size": 35772
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03823-1280w.webp",
+          "size": 84052
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03823-1920w.webp",
+          "size": 170210
+        }
       ]
     },
     "norway/dsc03828.jpg": {
@@ -2464,6 +4570,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03828-400w.webp",
+          "size": 13358
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03828-800w.webp",
+          "size": 35210
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03828-1280w.webp",
+          "size": 62738
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03828-1920w.webp",
+          "size": 104522
         }
       ]
     },
@@ -2495,6 +4627,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03866-400w.webp",
+          "size": 4524
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03866-800w.webp",
+          "size": 17306
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03866-1280w.webp",
+          "size": 44196
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03866-1920w.webp",
+          "size": 98606
+        }
       ]
     },
     "norway/dsc03947.jpg": {
@@ -2524,6 +4682,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03947-400w.webp",
+          "size": 13470
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03947-800w.webp",
+          "size": 49978
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03947-1280w.webp",
+          "size": 120758
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03947-1920w.webp",
+          "size": 261692
         }
       ]
     },
@@ -2555,6 +4739,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC03969-400w.webp",
+          "size": 36154
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC03969-800w.webp",
+          "size": 145380
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC03969-1280w.webp",
+          "size": 367278
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC03969-1920w.webp",
+          "size": 768972
+        }
       ]
     },
     "norway/dsc03972.jpg": {
@@ -2584,6 +4794,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC03972-400w.webp",
+          "size": 20076
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC03972-800w.webp",
+          "size": 77472
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC03972-1280w.webp",
+          "size": 181170
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC03972-1920w.webp",
+          "size": 354568
         }
       ]
     },
@@ -2615,6 +4851,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/norway/DSC04006-400w.webp",
+          "size": 8408
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/norway/DSC04006-800w.webp",
+          "size": 32238
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/norway/DSC04006-1280w.webp",
+          "size": 77770
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/norway/DSC04006-1920w.webp",
+          "size": 159570
+        }
       ]
     },
     "norway/dsc04025.jpg": {
@@ -2644,6 +4906,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC04025-400w.webp",
+          "size": 12836
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC04025-800w.webp",
+          "size": 38472
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC04025-1280w.webp",
+          "size": 74748
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC04025-1920w.webp",
+          "size": 133434
         }
       ]
     },
@@ -2675,6 +4963,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC04073-400w.webp",
+          "size": 17770
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC04073-800w.webp",
+          "size": 69602
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC04073-1280w.webp",
+          "size": 172392
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC04073-1920w.webp",
+          "size": 355014
+        }
       ]
     },
     "norway/dsc04092.jpg": {
@@ -2704,6 +5018,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/norway/DSC04092-400w.webp",
+          "size": 16504
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/norway/DSC04092-800w.webp",
+          "size": 66238
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/norway/DSC04092-1280w.webp",
+          "size": 165148
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/norway/DSC04092-1920w.webp",
+          "size": 338690
         }
       ]
     },
@@ -2735,6 +5075,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/switzerland/DSC06154-400w.webp",
+          "size": 16032
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/switzerland/DSC06154-800w.webp",
+          "size": 58966
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/switzerland/DSC06154-1280w.webp",
+          "size": 138710
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06154-1920w.webp",
+          "size": 261458
+        }
       ]
     },
     "switzerland/dsc06201.jpg": {
@@ -2764,6 +5130,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/switzerland/DSC06201-400w.webp",
+          "size": 20734
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/switzerland/DSC06201-800w.webp",
+          "size": 73416
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/switzerland/DSC06201-1280w.webp",
+          "size": 150718
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06201-1920w.webp",
+          "size": 247714
         }
       ]
     },
@@ -2795,6 +5187,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06232-400w.webp",
+          "size": 20412
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06232-800w.webp",
+          "size": 72516
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06232-1280w.webp",
+          "size": 161930
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06232-1920w.webp",
+          "size": 302432
+        }
       ]
     },
     "switzerland/dsc06301.jpg": {
@@ -2824,6 +5242,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06301-400w.webp",
+          "size": 16504
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06301-800w.webp",
+          "size": 63274
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06301-1280w.webp",
+          "size": 155248
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06301-1920w.webp",
+          "size": 316648
         }
       ]
     },
@@ -2855,6 +5299,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06380-400w.webp",
+          "size": 11188
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06380-800w.webp",
+          "size": 47006
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06380-1280w.webp",
+          "size": 117998
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06380-1920w.webp",
+          "size": 236846
+        }
       ]
     },
     "switzerland/dsc06387.jpg": {
@@ -2884,6 +5354,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/switzerland/DSC06387-400w.webp",
+          "size": 18708
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/switzerland/DSC06387-800w.webp",
+          "size": 75774
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/switzerland/DSC06387-1280w.webp",
+          "size": 189428
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06387-1920w.webp",
+          "size": 392130
         }
       ]
     },
@@ -2915,6 +5411,32 @@
           "width": 1920,
           "height": 1280
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/switzerland/DSC06392-400w.webp",
+          "size": 12928
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/switzerland/DSC06392-800w.webp",
+          "size": 52320
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/switzerland/DSC06392-1280w.webp",
+          "size": 129942
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06392-1920w.webp",
+          "size": 254102
+        }
       ]
     },
     "switzerland/dsc06395.jpg": {
@@ -2944,6 +5466,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06395-400w.webp",
+          "size": 13654
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06395-800w.webp",
+          "size": 56060
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06395-1280w.webp",
+          "size": 138802
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06395-1920w.webp",
+          "size": 274646
         }
       ]
     },
@@ -2975,6 +5523,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06433-400w.webp",
+          "size": 13946
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06433-800w.webp",
+          "size": 49440
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06433-1280w.webp",
+          "size": 115230
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06433-1920w.webp",
+          "size": 228122
+        }
       ]
     },
     "switzerland/dsc06440.jpg": {
@@ -3004,6 +5578,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/switzerland/DSC06440-400w.webp",
+          "size": 18846
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/switzerland/DSC06440-800w.webp",
+          "size": 66866
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/switzerland/DSC06440-1280w.webp",
+          "size": 156680
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06440-1920w.webp",
+          "size": 302358
         }
       ]
     },
@@ -3035,6 +5635,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06449-400w.webp",
+          "size": 16594
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06449-800w.webp",
+          "size": 63356
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06449-1280w.webp",
+          "size": 146988
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06449-1920w.webp",
+          "size": 266990
+        }
       ]
     },
     "switzerland/dsc06483.jpg": {
@@ -3064,6 +5690,32 @@
         {
           "width": 1365,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06483-400w.webp",
+          "size": 8284
+        },
+        {
+          "width": 535,
+          "height": 800,
+          "src": "/images/switzerland/DSC06483-800w.webp",
+          "size": 30482
+        },
+        {
+          "width": 856,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06483-1280w.webp",
+          "size": 66912
+        },
+        {
+          "width": 1285,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06483-1920w.webp",
+          "size": 124190
         }
       ]
     },
@@ -3095,6 +5747,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06543-400w.webp",
+          "size": 10120
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06543-800w.webp",
+          "size": 37164
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06543-1280w.webp",
+          "size": 85512
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06543-1920w.webp",
+          "size": 159968
+        }
       ]
     },
     "switzerland/dsc06584.jpg": {
@@ -3124,6 +5802,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06584-400w.webp",
+          "size": 14494
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06584-800w.webp",
+          "size": 48420
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06584-1280w.webp",
+          "size": 100830
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06584-1920w.webp",
+          "size": 177618
         }
       ]
     },
@@ -3155,6 +5859,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/switzerland/DSC06591-400w.webp",
+          "size": 8916
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/switzerland/DSC06591-800w.webp",
+          "size": 29614
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/switzerland/DSC06591-1280w.webp",
+          "size": 60014
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/switzerland/DSC06591-1920w.webp",
+          "size": 107240
+        }
       ]
     },
     "uk/dsc04107.jpg": {
@@ -3184,6 +5914,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04107-400w.webp",
+          "size": 11502
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04107-800w.webp",
+          "size": 36826
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04107-1280w.webp",
+          "size": 78236
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04107-1920w.webp",
+          "size": 140488
         }
       ]
     },
@@ -3215,6 +5971,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04161-400w.webp",
+          "size": 16022
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04161-800w.webp",
+          "size": 58584
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04161-1280w.webp",
+          "size": 145806
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04161-1920w.webp",
+          "size": 302070
+        }
       ]
     },
     "uk/dsc04177.jpg": {
@@ -3244,6 +6026,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04177-400w.webp",
+          "size": 18326
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04177-800w.webp",
+          "size": 60864
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04177-1280w.webp",
+          "size": 132034
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04177-1920w.webp",
+          "size": 235076
         }
       ]
     },
@@ -3275,6 +6083,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04234-400w.webp",
+          "size": 12866
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04234-800w.webp",
+          "size": 42794
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04234-1280w.webp",
+          "size": 92600
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04234-1920w.webp",
+          "size": 170610
+        }
       ]
     },
     "uk/dsc04354.jpg": {
@@ -3304,6 +6138,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04354-400w.webp",
+          "size": 9270
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04354-800w.webp",
+          "size": 33976
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04354-1280w.webp",
+          "size": 81878
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04354-1920w.webp",
+          "size": 168556
         }
       ]
     },
@@ -3335,6 +6195,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04429-400w.webp",
+          "size": 23162
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04429-800w.webp",
+          "size": 83830
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04429-1280w.webp",
+          "size": 174606
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04429-1920w.webp",
+          "size": 296238
+        }
       ]
     },
     "uk/dsc04436.jpg": {
@@ -3364,6 +6250,32 @@
         {
           "width": 1360,
           "height": 2040
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04436-400w.webp",
+          "size": 16648
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04436-800w.webp",
+          "size": 54662
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04436-1280w.webp",
+          "size": 119518
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04436-1920w.webp",
+          "size": 235072
         }
       ]
     },
@@ -3395,6 +6307,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04446-400w.webp",
+          "size": 16448
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04446-800w.webp",
+          "size": 61812
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04446-1280w.webp",
+          "size": 136764
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04446-1920w.webp",
+          "size": 249940
+        }
       ]
     },
     "uk/dsc04453.jpg": {
@@ -3424,6 +6362,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/uk/DSC04453-400w.webp",
+          "size": 24346
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/uk/DSC04453-800w.webp",
+          "size": 76412
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/uk/DSC04453-1280w.webp",
+          "size": 159392
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/uk/DSC04453-1920w.webp",
+          "size": 280362
         }
       ]
     },
@@ -3455,6 +6419,32 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC04481-400w.webp",
+          "size": 13596
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC04481-800w.webp",
+          "size": 40286
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC04481-1280w.webp",
+          "size": 82622
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC04481-1920w.webp",
+          "size": 144550
+        }
       ]
     },
     "uk/bridge-open.jpg": {
@@ -3484,6 +6474,32 @@
         {
           "width": 1920,
           "height": 1280
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/uk/bridge-open-400w.webp",
+          "size": 12368
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/uk/bridge-open-800w.webp",
+          "size": 36056
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/uk/bridge-open-1280w.webp",
+          "size": 70408
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/uk/bridge-open-1920w.webp",
+          "size": 127678
         }
       ]
     },
@@ -3515,7 +6531,34 @@
           "width": 1360,
           "height": 2040
         }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/curvy-street-400w.webp",
+          "size": 20426
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/curvy-street-800w.webp",
+          "size": 72674
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/curvy-street-1280w.webp",
+          "size": 172202
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/curvy-street-1920w.webp",
+          "size": 346120
+        }
       ]
     }
-  }
+  },
+  "hasResponsiveVariants": true
 }

@@ -5,7 +5,8 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: light only;
+  background-color: #fafaf9;
 }
 
 html,
@@ -17,7 +18,13 @@ body {
 body {
   line-height: 1.5;
   color: var(--mantine-color-dark-0);
-  background-color: var(--mantine-color-dark-9);
+  background-color: #fafaf9;
+}
+
+/* Prevent browser dark mode overrides */
+:root {
+  color-scheme: light only;
+  forced-color-adjust: none;
 }
 
 /* Smooth scrolling */
