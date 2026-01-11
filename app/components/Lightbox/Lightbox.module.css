@@ -1,0 +1,78 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.closeButton,
+.navButton {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover,
+.navButton:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.closeButton {
+  top: 10px;
+  right: 10px;
+}
+
+.navButton {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .image {
+    max-width: 95vw;
+    max-height: 85vh;
+  }
+
+  .closeButton,
+  .navButton {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}

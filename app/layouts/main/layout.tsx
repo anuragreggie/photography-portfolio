@@ -123,7 +123,7 @@ export default function MainLayout() {
                 <Group gap="lg" justify="center" className={classes.footerIcons}>
                   <ActionIcon
                     component="a"
-                    href="anuragreggie@gmail.com"
+                    href="mailto:anuragreggie@gmail.com"
                     variant="subtle"
                     size="lg"
                     className={classes.iconButton}

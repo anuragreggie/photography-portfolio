@@ -16,6 +16,11 @@
   color: var(--mantine-color-dark-0);
 }
 
+.locationLink {
+  text-decoration: none;
+  display: block;
+}
+
 .locationCard {
   overflow: hidden;
   border-radius: 0;
