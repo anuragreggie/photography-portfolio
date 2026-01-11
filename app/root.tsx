@@ -24,13 +24,13 @@ export const links: LinksFunction = () => [
   { rel: 'preload', href: '/fonts/lora-latin-400.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
   { rel: 'preload', href: '/fonts/lora-latin-600.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
   // Preload hero images for home page (LCP optimization)
-  // Desktop (3 columns): preload first 3 images at 1280w
-  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
-  { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
-  { rel: 'preload', href: '/images/hong-kong/DSC05828-1280w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)' },
-  // Mobile (2 columns): preload first 2 images at 800w
-  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)' },
-  { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)' },
+  // Desktop (3 columns): preload first 3 images with srcset for retina support
+  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-1920w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)', imageSrcSet: '/images/japan/tokyo-tower-through-leaves-800w.webp 800w, /images/japan/tokyo-tower-through-leaves-1280w.webp 1280w, /images/japan/tokyo-tower-through-leaves-1920w.webp 1920w', imageSizes: '33vw' },
+  { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-1920w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)', imageSrcSet: '/images/japan/shinkansen-driver-v2-800w.webp 800w, /images/japan/shinkansen-driver-v2-1280w.webp 1280w, /images/japan/shinkansen-driver-v2-1920w.webp 1920w', imageSizes: '33vw' },
+  { rel: 'preload', href: '/images/hong-kong/DSC05828-1920w.webp', as: 'image', type: 'image/webp', media: '(min-width: 768px)', imageSrcSet: '/images/hong-kong/DSC05828-800w.webp 800w, /images/hong-kong/DSC05828-1280w.webp 1280w, /images/hong-kong/DSC05828-1920w.webp 1920w', imageSizes: '33vw' },
+  // Mobile (2 columns): preload first 2 images with srcset
+  { rel: 'preload', href: '/images/japan/tokyo-tower-through-leaves-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)', imageSrcSet: '/images/japan/tokyo-tower-through-leaves-400w.webp 400w, /images/japan/tokyo-tower-through-leaves-800w.webp 800w', imageSizes: '50vw' },
+  { rel: 'preload', href: '/images/japan/shinkansen-driver-v2-800w.webp', as: 'image', type: 'image/webp', media: '(max-width: 767px)', imageSrcSet: '/images/japan/shinkansen-driver-v2-400w.webp 400w, /images/japan/shinkansen-driver-v2-800w.webp 800w', imageSizes: '50vw' },
 ];
 
 export const meta: MetaFunction = () => {
