@@ -27,7 +27,7 @@ export default function GalleryOverview() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <SimpleGrid
-            cols={{ base: 1, sm: 2, lg: 4 }}
+            cols={{ base: 2, sm: 2, lg: 4 }}
             spacing="lg"
             mt="xl"
           >
