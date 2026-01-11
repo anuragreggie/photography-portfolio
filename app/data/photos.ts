@@ -175,25 +175,3 @@ export async function createPhotosByLocation(location: string): Promise<PhotoWit
   return loadMultiplePhotos(entries, true);
 }
 
-export async function getLocationMetadata(): Promise<Record<string, { heroImage: string | null }>> {
-  const heroEntries = new Map<string, ImageManifestEntry>();
-  const metadata: Record<string, { heroImage: string | null }> = {};
-  
-  for (const entry of Object.values(manifest.images)) {
-    const countryKey = entry.country.toLowerCase();
-    
-    if (!heroEntries.has(countryKey)) {
-      heroEntries.set(countryKey, entry);
-      metadata[countryKey] = { heroImage: null };
-    }
-  }
-  
-  const heroPhotos = await loadMultiplePhotos(Array.from(heroEntries.values()), false);
-  
-  for (const photo of heroPhotos) {
-    const countryKey = photo.country.toLowerCase();
-    metadata[countryKey] = { heroImage: photo.src };
-  }
-  
-  return metadata;
-}

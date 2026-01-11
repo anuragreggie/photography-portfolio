@@ -25,9 +25,6 @@ export default function About() {
         </motion.div>
 
         <Container size="lg" className={classes.content}>
-          <Text className={classes.description}>
-          </Text>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

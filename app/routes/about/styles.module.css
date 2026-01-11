@@ -31,16 +31,6 @@
   text-align: center;
 }
 
-.description {
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  line-height: 1.7;
-  color: var(--mantine-color-dark-0);
-  max-width: 700px;
-  margin: 0 auto;
-  font-weight: 300;
-  letter-spacing: 0.005em;
-}
-
 .equipmentSection {
   margin-top: 4rem;
   padding-top: 3rem;
