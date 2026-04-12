@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:13:02.764Z",
+  "generatedAt": "2026-04-12T19:20:23.517Z",
   "breakpoints": [
     400,
     800,
@@ -7004,6 +7004,62 @@
           "height": 1920,
           "src": "/images/uk/DSC07625-1920w.webp",
           "size": 74716
+        }
+      ]
+    },
+    "uk/dsc07626.jpg": {
+      "relPath": "uk/DSC07626.jpg",
+      "country": "Uk",
+      "countryFolder": "uk",
+      "filename": "DSC07626.jpg",
+      "title": "Uk 7626",
+      "alt": "Uk 7626",
+      "width": 4128,
+      "height": 6192,
+      "aspectRatio": 0.6666666666666666,
+      "dateTaken": "2026-02-08T17:37:46.000Z",
+      "responsiveSizes": [
+        {
+          "width": 400,
+          "height": 600
+        },
+        {
+          "width": 800,
+          "height": 1200
+        },
+        {
+          "width": 1280,
+          "height": 1920
+        },
+        {
+          "width": 1920,
+          "height": 2880
+        }
+      ],
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/uk/DSC07626-400w.webp",
+          "size": 7538
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/uk/DSC07626-800w.webp",
+          "size": 22408
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/uk/DSC07626-1280w.webp",
+          "size": 46092
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/uk/DSC07626-1920w.webp",
+          "size": 83518
         }
       ]
     },
