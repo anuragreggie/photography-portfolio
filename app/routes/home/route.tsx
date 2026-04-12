@@ -11,10 +11,10 @@ import { BREAKPOINTS, ANIMATION, PHOTO_ALBUM_CONFIG } from '../../constants';
 
 const fixedImagePaths = [
   'united-states/DSC08453.jpg',
-  'japan/shinkansen-driver-v2.jpg',
+  'japan/DSC02897.jpg',
+  'uk/DSC07626.jpg',
   'hong-kong/DSC05828.jpg',
-  'norway/DSC04092.jpg',
-  'norway/DSC04025.jpg',
+  'japan/shinkansen-driver-v2.jpg',
   'switzerland/DSC06483.jpg',
   'japan/tokyo-tower-through-leaves.jpg',
   'norway/DSC03654.jpg',
