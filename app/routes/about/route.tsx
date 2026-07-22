@@ -1,8 +1,8 @@
 import { Container, Title, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 
-import sonyA6700 from '../../assets/images/sony-a6700.png';
-import sigma1850 from '../../assets/images/sigma-18-50mm.png';
+import sonyA6700 from '../../assets/images/sony-a6700.webp';
+import sigma1850 from '../../assets/images/sigma-18-50mm.webp';
 import { ANIMATION } from '../../constants';
 import classes from './styles.module.css';
 

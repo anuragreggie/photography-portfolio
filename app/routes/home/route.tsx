@@ -21,6 +21,11 @@ const fixedImagePaths = [
   'norway/DSC03947.jpg',
 ];
 
+const ABOVE_THE_FOLD_IMAGES = {
+  mobile: 2,
+  desktop: 3,
+} as const;
+
 export function clientLoader() {
   const fixedPhotos = createPhotosByPaths(fixedImagePaths);
   return { fixedPhotos };
@@ -36,6 +41,9 @@ export default function Home() {
   const rowConstraints = isMobile
     ? PHOTO_ALBUM_CONFIG.rowConstraints.mobile
     : PHOTO_ALBUM_CONFIG.rowConstraints.desktop;
+  const eagerPhotoCount = isMobile
+    ? ABOVE_THE_FOLD_IMAGES.mobile
+    : ABOVE_THE_FOLD_IMAGES.desktop;
 
   return (
     <div className={classes.page}>
@@ -66,7 +74,18 @@ export default function Home() {
                 photos={fixedPhotos}
                 rowConstraints={rowConstraints}
                 sizes={PHOTO_ALBUM_CONFIG.sizes}
-                componentsProps={{ image: { loading: 'eager' } }}
+                componentsProps={{
+                  image: ({ index }) => ({
+                    loading: index < eagerPhotoCount ? 'eager' : 'lazy',
+                    fetchPriority:
+                      index === 0
+                        ? 'high'
+                        : index < eagerPhotoCount
+                          ? 'auto'
+                          : 'low',
+                    decoding: 'async',
+                  }),
+                }}
               />
             ) : (
               <Text ta="center" py="xl">
