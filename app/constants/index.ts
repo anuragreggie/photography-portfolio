@@ -1,7 +1,7 @@
+import type { ResponsiveSizes } from 'react-photo-album';
+
 export const BREAKPOINTS = {
   mobile: 768,
-  tablet: 1024,
-  desktop: 1200,
 } as const;
 
 export const ANIMATION = {
@@ -22,7 +22,6 @@ export const ANIMATION = {
     animate: { opacity: 1 },
   },
   duration: {
-    fast: 0.3,
     normal: 0.5,
     slow: 0.8,
   },
@@ -34,10 +33,10 @@ export const PHOTO_ALBUM_CONFIG = {
     desktop: { maxPhotos: 3, singleRowMaxHeight: 600 },
   },
   sizes: {
-    size: "calc(100vw - 40px)",
+    size: 'calc(100vw - 40px)',
     sizes: [
-      { viewport: "(max-width: 768px)", size: "calc(100vw - 32px)" },
-      { viewport: "(min-width: 769px)", size: "calc(100vw - 80px)" },
+      { viewport: '(max-width: 768px)', size: 'calc(100vw - 32px)' },
+      { viewport: '(min-width: 769px)', size: 'calc(100vw - 80px)' },
     ],
-  },
+  } satisfies ResponsiveSizes,
 } as const;

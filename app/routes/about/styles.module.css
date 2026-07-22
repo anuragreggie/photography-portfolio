@@ -92,12 +92,12 @@
 }
 
 /* Make camera image bigger */
-.equipmentMainImage[alt*="Sony"] {
+.equipmentMainImage[alt*='Sony'] {
   max-height: 400px;
 }
 
 /* Make lens image smaller */
-.equipmentMainImage[alt*="Sigma"] {
+.equipmentMainImage[alt*='Sigma'] {
   max-height: 200px;
 }
 
@@ -137,28 +137,28 @@
     margin-top: 3rem;
     padding-top: 2rem;
   }
-  
+
   .sectionTitle {
     margin-bottom: 2rem;
   }
-  
+
   .equipmentImages {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 2rem;
   }
-  
+
   .equipmentCard {
-  padding: 0;
-  min-height: auto;
+    padding: 0;
+    min-height: auto;
   }
-  
+
   /* Mobile sizing adjustments */
-  .equipmentMainImage[alt*="Sony"] {
+  .equipmentMainImage[alt*='Sony'] {
     max-height: 280px;
   }
 
-  .equipmentMainImage[alt*="Sigma"] {
+  .equipmentMainImage[alt*='Sigma'] {
     max-height: 140px;
   }
 }
@@ -167,7 +167,7 @@
   .page {
     padding-top: 1rem;
   }
-  
+
   .header {
     margin-bottom: 2rem;
   }

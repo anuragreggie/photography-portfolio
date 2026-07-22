@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useCallback, useEffect } from 'react';
+import { IconChevronLeft, IconChevronRight, IconX } from '@tabler/icons-react';
 import classes from './Lightbox.module.css';
 
 interface LightboxPhoto {
@@ -14,7 +15,12 @@ interface LightboxProps {
   onNavigate: (index: number) => void;
 }
 
-export function Lightbox({ photos, currentIndex, onClose, onNavigate }: LightboxProps) {
+export function Lightbox({
+  photos,
+  currentIndex,
+  onClose,
+  onNavigate,
+}: LightboxProps) {
   const photo = photos[currentIndex];
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < photos.length - 1;
@@ -58,7 +64,6 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
       className={classes.overlay}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
       onClick={onClose}
     >
       <motion.div
@@ -68,37 +73,36 @@ export function Lightbox({ photos, currentIndex, onClose, onNavigate }: Lightbox
         transition={{ duration: 0.3 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <img
-          src={photo.src}
-          alt={photo.alt || ''}
-          className={classes.image}
-        />
+        <img src={photo.src} alt={photo.alt || ''} className={classes.image} />
 
         <button
+          type="button"
           className={classes.closeButton}
           onClick={onClose}
           aria-label="Close lightbox"
         >
-          ×
+          <IconX size={20} />
         </button>
 
         {hasPrev && (
           <button
+            type="button"
             className={`${classes.navButton} ${classes.prevButton}`}
             onClick={handlePrev}
             aria-label="Previous image"
           >
-            ‹
+            <IconChevronLeft size={20} />
           </button>
         )}
 
         {hasNext && (
           <button
+            type="button"
             className={`${classes.navButton} ${classes.nextButton}`}
             onClick={handleNext}
             aria-label="Next image"
           >
-            ›
+            <IconChevronRight size={20} />
           </button>
         )}
       </motion.div>

@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -19,15 +18,8 @@
     "paths": {
       "~/*": ["./app/*"]
     },
-    "types": ["vite/client"] 
+    "types": ["vite/client"]
   },
-  "include": [
-    "app",
-    "styles",
-    "types"
-  ],
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+  "include": ["app", "styles"],
+  "exclude": ["node_modules", "build"]
 }

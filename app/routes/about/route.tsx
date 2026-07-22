@@ -15,9 +15,12 @@ export default function About() {
           transition={{ duration: ANIMATION.duration.slow }}
           className={classes.header}
         >
-          <Title order={1} className={classes.title}>About</Title>
+          <Title order={1} className={classes.title}>
+            About
+          </Title>
           <Text size="sm" c="dark.0" className={classes.subtitle}>
-            This portfolio is a collection of images I've taken along the way, moments that stood out to me and felt worth remembering.
+            This portfolio is a collection of images I've taken along the way,
+            moments that stood out to me and felt worth remembering.
           </Text>
         </motion.div>
 
@@ -28,7 +31,9 @@ export default function About() {
             transition={{ duration: ANIMATION.duration.slow, delay: 0.2 }}
             className={classes.equipmentSection}
           >
-            <Title order={2} className={classes.sectionTitle}>Equipment</Title>
+            <Title order={2} className={classes.sectionTitle}>
+              Equipment
+            </Title>
 
             <motion.div
               {...ANIMATION.fadeInUp}
@@ -73,8 +78,11 @@ export default function About() {
 
               <div className={classes.equipmentDescription}>
                 <Text className={classes.equipmentText}>
-                  I primarily shoot with a <strong>Sony A6700</strong> paired with a <strong>Sigma 18-50mm F2.8 DC DN</strong> lens.
-                  This combo works great for a variety of photography styles, from portraits to landscapes, while being compact and travel-friendly.
+                  I primarily shoot with a <strong>Sony A6700</strong> paired
+                  with a <strong>Sigma 18-50mm F2.8 DC DN</strong> lens. This
+                  combo works great for a variety of photography styles, from
+                  portraits to landscapes, while being compact and
+                  travel-friendly.
                 </Text>
               </div>
             </motion.div>

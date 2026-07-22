@@ -1,13 +1,34 @@
-import { Outlet } from 'react-router';
-import { AppShell, Group, Text, Container, ActionIcon, Burger } from '@mantine/core';
-import { NavLink } from 'react-router';
+import {
+  AppShell,
+  Group,
+  Text,
+  Container,
+  ActionIcon,
+  Burger,
+} from '@mantine/core';
+import { NavLink, Outlet } from 'react-router';
 import { motion } from 'framer-motion';
-import { IconMail, IconBrandInstagram, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import {
+  IconMail,
+  IconBrandInstagram,
+  IconBrandGithub,
+  IconBrandLinkedin,
+} from '@tabler/icons-react';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './styles.module.css';
 
+const NAV_ITEMS = [
+  { to: '/', label: 'Home' },
+  { to: '/gallery', label: 'Gallery' },
+  { to: '/about', label: 'About' },
+];
+
+function navClassName(baseClass: string, isActive: boolean) {
+  return `${baseClass} ${isActive ? classes.active : ''}`;
+}
+
 export default function MainLayout() {
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle, close }] = useDisclosure();
 
   return (
     <AppShell
@@ -27,38 +48,23 @@ export default function MainLayout() {
               Anurag S
             </Text>
           </NavLink>
-          
-          {/* Desktop Navigation */}
+
           <nav className={classes.desktopNav}>
             <Group gap="2rem">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `${classes.navLink} ${isActive ? classes.active : ''}`
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/gallery"
-                className={({ isActive }) =>
-                  `${classes.navLink} ${isActive ? classes.active : ''}`
-                }
-              >
-                Gallery
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `${classes.navLink} ${isActive ? classes.active : ''}`
-                }
-              >
-                About
-              </NavLink>
+              {NAV_ITEMS.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    navClassName(classes.navLink, isActive)
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
             </Group>
           </nav>
 
-          {/* Mobile Burger Menu */}
           <Burger
             opened={opened}
             onClick={toggle}
@@ -71,33 +77,18 @@ export default function MainLayout() {
 
       <AppShell.Navbar className={classes.navbar}>
         <div className={classes.navbarContent}>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `${classes.mobileNavLink} ${isActive ? classes.active : ''}`
-            }
-            onClick={toggle}
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/gallery"
-            className={({ isActive }) =>
-              `${classes.mobileNavLink} ${isActive ? classes.active : ''}`
-            }
-            onClick={toggle}
-          >
-            Gallery
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `${classes.mobileNavLink} ${isActive ? classes.active : ''}`
-            }
-            onClick={toggle}
-          >
-            About
-          </NavLink>
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                navClassName(classes.mobileNavLink, isActive)
+              }
+              onClick={close}
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </div>
       </AppShell.Navbar>
 
@@ -109,21 +100,21 @@ export default function MainLayout() {
           className={classes.mainContent}
         >
           <Outlet />
-          
-          {/* Footer as scrollable content */}
+
           <footer className={classes.footer}>
             <Container size="xl" className={classes.footerContainer}>
               <div className={classes.footerContent}>
-                <Text className={classes.footerName}>
-                  ANURAG SURESH
-                </Text>
-                <Text className={classes.footerAddress}>
-                  London, UK
-                </Text>
-                <Group gap="lg" justify="center" className={classes.footerIcons}>
+                <Text className={classes.footerName}>ANURAG SURESH</Text>
+                <Text className={classes.footerAddress}>London, UK</Text>
+                <Group
+                  gap="lg"
+                  justify="center"
+                  className={classes.footerIcons}
+                >
                   <ActionIcon
                     component="a"
                     href="mailto:anuragreggie@gmail.com"
+                    aria-label="Email"
                     variant="subtle"
                     size="lg"
                     className={classes.iconButton}
@@ -135,6 +126,7 @@ export default function MainLayout() {
                     href="https://instagram.com/anurag.r_"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Instagram"
                     variant="subtle"
                     size="lg"
                     className={classes.iconButton}
@@ -146,6 +138,7 @@ export default function MainLayout() {
                     href="https://www.linkedin.com/in/anurag-suresh/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                     variant="subtle"
                     size="lg"
                     className={classes.iconButton}
@@ -160,6 +153,7 @@ export default function MainLayout() {
                     href="https://github.com/anuragreggie/photography-portfolio"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="GitHub repository"
                     variant="subtle"
                     size="sm"
                     className={classes.iconButton}

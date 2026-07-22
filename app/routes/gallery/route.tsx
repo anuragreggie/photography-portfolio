@@ -15,7 +15,9 @@ export default function GalleryOverview() {
           transition={{ duration: ANIMATION.duration.slow }}
           className={classes.header}
         >
-          <Title order={1} className={classes.title}>Travel</Title>
+          <Title order={1} className={classes.title}>
+            Travel
+          </Title>
         </motion.div>
 
         <motion.div

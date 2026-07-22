@@ -7,7 +7,7 @@ import globals from 'globals';
 
 export default [
   {
-    ignores: ['build/**'],
+    ignores: ['build/**', '.react-router/**'],
   },
   js.configs.recommended,
   {
@@ -36,6 +36,12 @@ export default [
       'prefer-const': 'warn',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
+    },
+  },
+  {
+    files: ['app/root.tsx', 'app/routes/**/*.tsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
     },
   },
 ];

@@ -20,6 +20,7 @@ app/assets/images/
 ```
 
 **Image requirements:**
+
 - Format: JPG, JPEG, PNG, or WebP
 - Recommended: Pre-resize to 2040px on the long edge (use `npm run images:resize`)
 - Keep original EXIF data for date sorting
@@ -43,8 +44,9 @@ npm run images:manifest
 ```
 
 **What this does:**
+
 - Scans all images in `app/assets/images/*/`
-- Extracts width, height, aspect ratio
+- Extracts width and height
 - Extracts EXIF date for sorting
 - Stores everything in a JSON file so the browser doesn't need to calculate dimensions at runtime
 
@@ -57,6 +59,7 @@ npm run images:optimize
 ```
 
 **What this creates:**
+
 - `public/images/{location}/{filename}-400w.webp` (mobile)
 - `public/images/{location}/{filename}-800w.webp` (tablet)
 - `public/images/{location}/{filename}-1280w.webp` (laptop)
@@ -68,25 +71,26 @@ npm run images:optimize
 npm run build
 ```
 
-The build automatically runs `images:manifest` first.
+The build automatically runs `images:manifest` and `images:optimize` first.
 
 ---
 
 ## Quick Reference
 
-| Command | Purpose |
-|---------|---------|
-| `npm run images:resize` | Resize source images to 2040px |
-| `npm run images:manifest` | Generate dimension metadata |
-| `npm run images:optimize` | Generate responsive WebP variants |
-| `npm run build` | Production build (runs manifest first) |
-| `npm run build:full` | Full build with all image processing |
+| Command                   | Purpose                            |
+| ------------------------- | ---------------------------------- |
+| `npm run images:resize`   | Resize source images to 2040px     |
+| `npm run images:manifest` | Generate dimension metadata        |
+| `npm run images:optimize` | Generate responsive WebP variants  |
+| `npm run build`           | Full production build              |
+| `npm run build:quick`     | App build without image processing |
 
 ---
 
 ## Adding a New Location
 
 1. Create a new folder in `app/assets/images/`:
+
    ```
    app/assets/images/new-location/
    ```
@@ -94,15 +98,14 @@ The build automatically runs `images:manifest` first.
 2. Add your images to the folder
 
 3. Update `app/data/locations.ts`:
-   ```typescript
-   import newLocationHero from '../assets/images/new-location/hero-image.jpg?format=webp&w=800&quality=80';
 
+   ```typescript
    export const locations: Location[] = [
      // ... existing locations
-     { 
-       name: 'New Location', 
+     {
+       name: 'New Location',
        folder: 'new-location',
-       heroImage: newLocationHero
+       heroImage: '/images/new-location/hero-image-800w.webp',
      },
    ];
    ```
@@ -120,6 +123,7 @@ The build automatically runs `images:manifest` first.
 ### Why pre-compute dimensions?
 
 Without pre-computed dimensions, the browser would need to:
+
 1. Download each image
 2. Create a hidden `<img>` element
 3. Wait for it to load
@@ -131,12 +135,12 @@ With the manifest, dimensions are known **instantly** from the JSON file.
 
 ### Why responsive images?
 
-| Device | Image Width | Typical File Size |
-|--------|-------------|-------------------|
-| Mobile | 400px | ~25KB |
-| Tablet | 800px | ~80KB |
-| Laptop | 1280px | ~175KB |
-| Desktop | 1920px | ~330KB |
+| Device  | Image Width | Typical File Size |
+| ------- | ----------- | ----------------- |
+| Mobile  | 400px       | ~25KB             |
+| Tablet  | 800px       | ~80KB             |
+| Laptop  | 1280px      | ~175KB            |
+| Desktop | 1920px      | ~330KB            |
 
 Mobile users download **12x less data** than before!
 
@@ -149,18 +153,23 @@ Google Fonts requires an external HTTP request that blocks rendering. Self-hosti
 ## Troubleshooting
 
 ### Images not appearing
+
 1. Check the image is in `app/assets/images/{location}/`
 2. Run `npm run images:manifest` to update the manifest
 3. Run `npm run images:optimize` to generate WebP variants
 
 ### Gallery showing wrong dimensions
+
 The manifest might be stale. Regenerate it:
+
 ```bash
 npm run images:manifest
 ```
 
 ### Build fails
+
 Make sure Sharp is installed:
+
 ```bash
 npm install
 ```

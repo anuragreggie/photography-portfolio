@@ -2,11 +2,11 @@ import { Container, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useViewportSize } from '@mantine/hooks';
 import { useLoaderData } from 'react-router';
-import { RowsPhotoAlbum } from "react-photo-album";
-import "react-photo-album/rows.css";
+import { RowsPhotoAlbum } from 'react-photo-album';
+import 'react-photo-album/rows.css';
 
 import classes from './styles.module.css';
-import { createPhotosByPaths, type PhotoWithCountry } from '../../data/photos';
+import { createPhotosByPaths, type PortfolioPhoto } from '../../data/photos';
 import { BREAKPOINTS, ANIMATION, PHOTO_ALBUM_CONFIG } from '../../constants';
 
 const fixedImagePaths = [
@@ -21,15 +21,15 @@ const fixedImagePaths = [
   'norway/DSC03947.jpg',
 ];
 
-export async function clientLoader() {
-  const fixedPhotos = await createPhotosByPaths(fixedImagePaths);
+export function clientLoader() {
+  const fixedPhotos = createPhotosByPaths(fixedImagePaths);
   return { fixedPhotos };
 }
 
 clientLoader.hydrate = true as const;
 
 export default function Home() {
-  const { fixedPhotos } = useLoaderData<{ fixedPhotos: PhotoWithCountry[] }>();
+  const { fixedPhotos } = useLoaderData<{ fixedPhotos: PortfolioPhoto[] }>();
   const { width } = useViewportSize();
   const isMobile = width < BREAKPOINTS.mobile;
 
@@ -55,7 +55,11 @@ export default function Home() {
         <Container size="xl">
           <motion.div
             {...ANIMATION.fadeInUpLarge}
-            transition={{ duration: ANIMATION.duration.slow, delay: 0.3, ease: 'easeOut' }}
+            transition={{
+              duration: ANIMATION.duration.slow,
+              delay: 0.3,
+              ease: 'easeOut',
+            }}
           >
             {fixedPhotos.length > 0 ? (
               <RowsPhotoAlbum
@@ -65,7 +69,9 @@ export default function Home() {
                 componentsProps={{ image: { loading: 'eager' } }}
               />
             ) : (
-              <Text ta="center" py="xl">Images coming soon.</Text>
+              <Text ta="center" py="xl">
+                Images coming soon.
+              </Text>
             )}
           </motion.div>
         </Container>

@@ -1,9 +1,9 @@
 /**
  * Image Manifest Generator
- * 
+ *
  * This script pre-computes image dimensions and EXIF data at build time,
  * eliminating the need to load images at runtime just to get their dimensions.
- * 
+ *
  * Run: npm run images:manifest
  */
 
@@ -37,11 +37,14 @@ async function importExifr() {
 }
 
 const IMAGES_DIR = path.resolve(__dirname, '..', 'app', 'assets', 'images');
-const OUTPUT_FILE = path.resolve(__dirname, '..', 'app', 'data', 'image-manifest.json');
+const OUTPUT_FILE = path.resolve(
+  __dirname,
+  '..',
+  'app',
+  'data',
+  'image-manifest.json'
+);
 const EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
-
-// Breakpoints for responsive images
-const BREAKPOINTS = [400, 800, 1280, 1920];
 
 async function* walkImages(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -65,7 +68,7 @@ function capitalizeCountry(folder) {
   // Handle hyphenated names like "hong-kong"
   return folder
     .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(' ');
 }
 
@@ -78,40 +81,45 @@ function formatImageTitle(filename, country) {
 async function processImage(sharp, exifr, filePath) {
   const relativePath = path.relative(IMAGES_DIR, filePath);
   const parts = relativePath.split(path.sep);
-  
+
   // Skip images not in a location folder (e.g., equipment images)
   if (parts.length < 2) {
     return null;
   }
-  
+
   const countryFolder = parts[0];
   const filename = parts[parts.length - 1];
   const country = capitalizeCountry(countryFolder);
   const relPath = `${countryFolder}/${filename}`;
   const title = formatImageTitle(filename, country);
-  
+
   try {
     // Get image metadata using sharp
     const metadata = await sharp(filePath).metadata();
     const { width, height, orientation } = metadata;
-    
+
     if (!width || !height) {
       console.warn(`⚠ Skipping ${relPath}: no dimensions`);
       return null;
     }
-    
+
     // Handle orientation (some images are rotated via EXIF)
     // Orientations 5-8 swap width/height
     const isRotated = orientation && orientation >= 5 && orientation <= 8;
     const finalWidth = isRotated ? height : width;
     const finalHeight = isRotated ? width : height;
-    
+
     // Extract EXIF date
     let dateTaken = null;
     try {
-      const exif = await exifr.parse(filePath, ['DateTimeOriginal', 'CreateDate', 'ModifyDate']);
+      const exif = await exifr.parse(filePath, [
+        'DateTimeOriginal',
+        'CreateDate',
+        'ModifyDate',
+      ]);
       if (exif) {
-        const dateValue = exif.DateTimeOriginal || exif.CreateDate || exif.ModifyDate;
+        const dateValue =
+          exif.DateTimeOriginal || exif.CreateDate || exif.ModifyDate;
         if (dateValue) {
           dateTaken = new Date(dateValue).toISOString();
         }
@@ -119,31 +127,17 @@ async function processImage(sharp, exifr, filePath) {
     } catch {
       // EXIF parsing failed, that's okay
     }
-    
-    // Calculate aspect ratio for responsive sizing
-    const aspectRatio = finalWidth / finalHeight;
-    
-    // Pre-calculate dimensions for each breakpoint
-    const responsiveSizes = BREAKPOINTS.map(bp => {
-      const w = Math.min(bp, finalWidth); // Don't upscale
-      const h = Math.round(w / aspectRatio);
-      return { width: w, height: h };
-    });
-    
+
     console.log(`✓ ${relPath} (${finalWidth}x${finalHeight})`);
-    
+
     return {
       relPath,
-      country,
       countryFolder,
-      filename,
       title,
       alt: title,
       width: finalWidth,
       height: finalHeight,
-      aspectRatio,
       dateTaken,
-      responsiveSizes,
     };
   } catch (err) {
     console.error(`✖ Error processing ${relPath}:`, err.message);
@@ -153,19 +147,17 @@ async function processImage(sharp, exifr, filePath) {
 
 async function main() {
   console.log('📸 Generating image manifest...\n');
-  
+
   const sharp = await importSharp();
   const exifr = await importExifr();
-  
+
   const manifest = {
-    generatedAt: new Date().toISOString(),
-    breakpoints: BREAKPOINTS,
     images: {},
   };
-  
+
   let count = 0;
   let skipped = 0;
-  
+
   for await (const filePath of walkImages(IMAGES_DIR)) {
     const imageData = await processImage(sharp, exifr, filePath);
     if (imageData) {
@@ -175,14 +167,16 @@ async function main() {
       skipped++;
     }
   }
-  
+
   // Write manifest
   await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
-  await fs.writeFile(OUTPUT_FILE, JSON.stringify(manifest, null, 2));
-  
+  await fs.writeFile(OUTPUT_FILE, `${JSON.stringify(manifest, null, 2)}\n`);
+
   console.log(`\n✅ Manifest generated: ${OUTPUT_FILE}`);
   console.log(`   ${count} images processed, ${skipped} skipped`);
-  console.log(`   File size: ${(JSON.stringify(manifest).length / 1024).toFixed(1)} KB`);
+  console.log(
+    `   File size: ${(JSON.stringify(manifest).length / 1024).toFixed(1)} KB`
+  );
 }
 
 main().catch((e) => {
