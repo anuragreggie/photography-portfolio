@@ -75,7 +75,7 @@ export const meta: MetaFunction = () => {
         'Minimalist photography portfolio showcasing artistic vision through elegant imagery',
     },
     { name: 'color-scheme', content: 'light only' },
-    { name: 'theme-color', content: '#fafaf9' },
+    { name: 'theme-color', content: '#ffffff' },
     { name: 'supported-color-schemes', content: 'light' },
   ];
 };

@@ -105,7 +105,6 @@ The build automatically runs `images:manifest` and `images:optimize` first.
      {
        name: 'New Location',
        folder: 'new-location',
-       heroImage: '/images/new-location/hero-image-800w.webp',
      },
    ];
    ```

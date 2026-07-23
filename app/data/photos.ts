@@ -3,6 +3,7 @@ import imageManifest from './image-manifest.json';
 
 export type PortfolioPhoto = Photo & {
   dateTaken?: Date;
+  locationFolder: string;
 };
 
 type ImageManifestEntry = {
@@ -21,22 +22,18 @@ type ImageManifest = {
 };
 
 const manifest = imageManifest as ImageManifest;
-
-function sortPhotosByDate(photos: PortfolioPhoto[]): PortfolioPhoto[] {
-  return photos.sort((a, b) => {
-    const aTime = a.dateTaken?.getTime();
-    const bTime = b.dateTaken?.getTime();
-
-    if (aTime && bTime) return bTime - aTime;
-    if (aTime && !bTime) return -1;
-    if (!aTime && bTime) return 1;
-
-    return a.src.localeCompare(b.src);
-  });
-}
+const FALLBACK_DATE_TAKEN = new Date('2025-06-01T00:00:00.000Z');
 
 function createPhoto(entry: ImageManifestEntry): PortfolioPhoto {
-  const { width, height, title, alt, dateTaken, responsiveVariants } = entry;
+  const {
+    width,
+    height,
+    title,
+    alt,
+    dateTaken,
+    responsiveVariants,
+    countryFolder,
+  } = entry;
   const largest = responsiveVariants.at(-1);
 
   if (!largest) {
@@ -49,7 +46,8 @@ function createPhoto(entry: ImageManifestEntry): PortfolioPhoto {
     height,
     alt,
     title,
-    dateTaken: dateTaken ? new Date(dateTaken) : undefined,
+    locationFolder: countryFolder,
+    dateTaken: dateTaken ? new Date(dateTaken) : FALLBACK_DATE_TAKEN,
     srcSet: responsiveVariants,
   };
 }
@@ -63,14 +61,6 @@ export function createPhotosByPaths(paths: string[]): PortfolioPhoto[] {
     .map(createPhoto);
 }
 
-export function createPhotosByLocation(location: string): PortfolioPhoto[] {
-  const normalizedLocation = location.toLowerCase();
-
-  return sortPhotosByDate(
-    Object.values(manifest.images)
-      .filter(
-        (entry) => entry.countryFolder.toLowerCase() === normalizedLocation
-      )
-      .map(createPhoto)
-  );
+export function createAllPhotos(): PortfolioPhoto[] {
+  return Object.values(manifest.images).map(createPhoto);
 }
