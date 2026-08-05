@@ -651,37 +651,6 @@
         }
       ]
     },
-    "italy/dsc01848.jpg": {
-      "relPath": "italy/DSC01848.jpg",
-      "countryFolder": "italy",
-      "title": "Italy 1848",
-      "alt": "Italy 1848",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-05-04T08:37:22.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/italy/DSC01848-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/italy/DSC01848-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/italy/DSC01848-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/italy/DSC01848-1920w.webp"
-        }
-      ]
-    },
     "italy/dsc01854.jpg": {
       "relPath": "italy/DSC01854.jpg",
       "countryFolder": "italy",
