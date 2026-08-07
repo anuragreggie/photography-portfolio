@@ -620,37 +620,6 @@
         }
       ]
     },
-    "japan/crossing-street-lady.jpg": {
-      "relPath": "japan/crossing-street-lady.jpg",
-      "countryFolder": "japan",
-      "title": "crossing-street-lady",
-      "alt": "crossing-street-lady",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-06-05T02:14:10.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/japan/crossing-street-lady-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/japan/crossing-street-lady-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/japan/crossing-street-lady-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/japan/crossing-street-lady-1920w.webp"
-        }
-      ]
-    },
     "japan/fuji-from-plane.jpg": {
       "relPath": "japan/fuji-from-plane.jpg",
       "countryFolder": "japan",
@@ -710,37 +679,6 @@
           "width": 1280,
           "height": 1920,
           "src": "/images/japan/imperial-palace-1920w.webp"
-        }
-      ]
-    },
-    "japan/me-writing.jpg": {
-      "relPath": "japan/me-writing.jpg",
-      "countryFolder": "japan",
-      "title": "me-writing",
-      "alt": "me-writing",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-06-09T00:24:29.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/japan/me-writing-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/japan/me-writing-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/japan/me-writing-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/japan/me-writing-1920w.webp"
         }
       ]
     },
