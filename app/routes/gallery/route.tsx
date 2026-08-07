@@ -44,7 +44,7 @@ const CHAPTER_HEROES: Record<string, string> = {
   italy: 'DSC01844',
   japan: 'DSC02897',
   norway: 'DSC03947',
-  switzerland: 'DSC06154',
+  switzerland: 'DSC06387',
   uk: 'DSC04453',
   'united-states': 'DSC08701',
 };
