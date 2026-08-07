@@ -46,7 +46,7 @@ const CHAPTER_HEROES: Record<string, string> = {
   norway: 'DSC03947',
   switzerland: 'DSC06387',
   uk: 'DSC04453',
-  'united-states': 'DSC08701',
+  'united-states': 'DSC08675',
 };
 
 const DATE_FORMATTER = new Intl.DateTimeFormat('en-GB', {
