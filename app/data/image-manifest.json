@@ -1922,37 +1922,6 @@
         }
       ]
     },
-    "united-states/dsc08847.jpg": {
-      "relPath": "united-states/DSC08847.jpg",
-      "countryFolder": "united-states",
-      "title": "United States 8847",
-      "alt": "United States 8847",
-      "width": 6192,
-      "height": 4128,
-      "dateTaken": "2026-03-07T15:56:45.000Z",
-      "responsiveVariants": [
-        {
-          "width": 400,
-          "height": 267,
-          "src": "/images/united-states/DSC08847-400w.webp"
-        },
-        {
-          "width": 800,
-          "height": 533,
-          "src": "/images/united-states/DSC08847-800w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 853,
-          "src": "/images/united-states/DSC08847-1280w.webp"
-        },
-        {
-          "width": 1920,
-          "height": 1280,
-          "src": "/images/united-states/DSC08847-1920w.webp"
-        }
-      ]
-    },
     "united-states/dsc09201.jpg": {
       "relPath": "united-states/DSC09201.jpg",
       "countryFolder": "united-states",

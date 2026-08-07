@@ -295,6 +295,8 @@ export default function GalleryOverview() {
           const portraitOnlyRow = albumPhotos.every(
             (photo) => photo.height / photo.width > 1.15
           );
+          const sparsePortraitRow =
+            portraitOnlyRow && albumPhotos.length <= 2;
           const leadIsPortrait =
             leadPhoto.photo.height / leadPhoto.photo.width > 1.15;
 
@@ -335,7 +337,11 @@ export default function GalleryOverview() {
                     photos={albumPhotos}
                     spacing={(containerWidth) => (containerWidth < 700 ? 5 : 9)}
                     targetRowHeight={(containerWidth) =>
-                      portraitOnlyRow
+                      sparsePortraitRow
+                        ? containerWidth < 700
+                          ? 260
+                          : 390
+                        : portraitOnlyRow
                         ? containerWidth < 700
                           ? 170
                           : 220
@@ -350,7 +356,11 @@ export default function GalleryOverview() {
                     rowConstraints={(containerWidth) => ({
                       minPhotos: 1,
                       maxPhotos: 4,
-                      singleRowMaxHeight: portraitOnlyRow
+                      singleRowMaxHeight: sparsePortraitRow
+                        ? containerWidth < 700
+                          ? 300
+                          : 420
+                        : portraitOnlyRow
                         ? containerWidth < 700
                           ? 220
                           : 280
