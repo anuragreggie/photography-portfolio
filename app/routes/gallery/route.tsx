@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import type { CSSProperties } from 'react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { RowsPhotoAlbum } from 'react-photo-album';
+import 'react-photo-album/rows.css';
 import { useLoaderData } from 'react-router';
 
 import { Lightbox } from '../../components/Lightbox';
@@ -15,6 +17,10 @@ type ScenePhoto = {
   index: number;
 };
 
+type AlbumPhoto = PortfolioPhoto & {
+  portfolioIndex: number;
+};
+
 type BookScene = {
   id: string;
   layout: SceneLayout;
@@ -26,11 +32,22 @@ type BookScene = {
 };
 
 type SceneStyle = CSSProperties & {
-  '--columns'?: number;
   '--progress'?: string;
 };
 
 const MAX_PHOTOS_PER_SPREAD = 10;
+
+// A strong opening frame for each chapter. These are intentionally curated
+// rather than inferred from orientation or filename order.
+const CHAPTER_HEROES: Record<string, string> = {
+  'hong-kong': 'DSC05768',
+  italy: 'DSC01844',
+  japan: 'DSC02897',
+  norway: 'DSC03947',
+  switzerland: 'DSC06154',
+  uk: 'DSC04453',
+  'united-states': 'DSC08701',
+};
 
 const DATE_FORMATTER = new Intl.DateTimeFormat('en-GB', {
   month: 'long',
@@ -84,6 +101,30 @@ function spreadCounts(photoCount: number) {
   );
 }
 
+function photoName(photo: PortfolioPhoto) {
+  return (
+    photo.src
+      .split('/')
+      .at(-1)
+      ?.replace(/-\d+w\.webp$/i, '') ?? ''
+  );
+}
+
+function promoteChapterHero(photos: ScenePhoto[], locationFolder: string) {
+  const preferredName = CHAPTER_HEROES[locationFolder];
+  const heroIndex = photos.findIndex(
+    ({ photo }) => photoName(photo) === preferredName
+  );
+
+  if (heroIndex <= 0) return photos;
+
+  return [
+    photos[heroIndex],
+    ...photos.slice(0, heroIndex),
+    ...photos.slice(heroIndex + 1),
+  ];
+}
+
 function selectAnchor(photos: ScenePhoto[]) {
   const landscapeIndex = photos.findIndex(
     ({ photo }) => photo.width / photo.height >= 1.2
@@ -109,11 +150,15 @@ function createScenes(photos: PortfolioPhoto[]): BookScene[] {
 
   return [...trips.entries()].flatMap(
     ([locationFolder, tripPhotos], chapterIndex) => {
-      const counts = spreadCounts(tripPhotos.length);
+      const curatedPhotos = promoteChapterHero(tripPhotos, locationFolder);
+      const counts = spreadCounts(curatedPhotos.length);
       let photoIndex = 0;
 
       return counts.map((count, chapterSpread) => {
-        const spreadPhotos = tripPhotos.slice(photoIndex, photoIndex + count);
+        const spreadPhotos = curatedPhotos.slice(
+          photoIndex,
+          photoIndex + count
+        );
         const layout: SceneLayout =
           chapterSpread === 0
             ? 'feature'
@@ -130,7 +175,9 @@ function createScenes(photos: PortfolioPhoto[]): BookScene[] {
           chapterSpreadCount: counts.length,
           locationName: locationNames.get(locationFolder) ?? locationFolder,
           photos:
-            layout === 'contact' ? spreadPhotos : selectAnchor(spreadPhotos),
+            layout === 'contact' || chapterSpread === 0
+              ? spreadPhotos
+              : selectAnchor(spreadPhotos),
         };
       });
     }
@@ -142,22 +189,8 @@ function formatDate(date?: Date) {
   return DATE_FORMATTER.format(date);
 }
 
-function imageSrcSet(photo: PortfolioPhoto) {
-  return photo.srcSet
-    ?.map((image) => `${image.src} ${image.width}w`)
-    .join(', ');
-}
-
-function imageSizes(layout: SceneLayout, position: number) {
-  if (position === 0 && layout !== 'contact') {
-    return '(max-width: 700px) 92vw, 48vw';
-  }
-
-  if (layout === 'contact') {
-    return '(max-width: 700px) 46vw, 20vw';
-  }
-
-  return '(max-width: 700px) 24vw, 15vw';
+function toAlbumPhoto({ photo, index }: ScenePhoto): AlbumPhoto {
+  return { ...photo, portfolioIndex: index };
 }
 
 export default function GalleryOverview() {
@@ -218,39 +251,31 @@ export default function GalleryOverview() {
     scenes.length > 1 ? (activeScene / (scenes.length - 1)) * 100 : 0;
   const scrubberStyle: SceneStyle = { '--progress': `${progress}%` };
 
-  function renderPhoto(
-    { photo, index }: ScenePhoto,
-    position: number,
-    layout: SceneLayout,
-    sceneIndex: number
-  ) {
+  function renderHero({ photo, index }: ScenePhoto, sceneIndex: number) {
     return (
       <motion.button
         key={photo.src}
         type="button"
-        className={classes.shot}
+        className={classes.heroShot}
         onClick={() => setLightboxIndex(index)}
         aria-label={`Open photograph ${index + 1} of ${photos.length}`}
-        initial={
-          shouldReduceMotion
-            ? false
-            : { opacity: 0, y: position === 0 ? 8 : 14 }
-        }
+        initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{
           duration: shouldReduceMotion ? 0 : 0.55,
-          delay: shouldReduceMotion ? 0 : Math.min(position * 0.035, 0.2),
         }}
       >
         <img
           src={photo.src}
-          srcSet={imageSrcSet(photo)}
-          sizes={imageSizes(layout, position)}
+          srcSet={photo.srcSet
+            ?.map((image) => `${image.src} ${image.width}w`)
+            .join(', ')}
+          sizes="(max-width: 700px) 100vw, 1240px"
           alt={photo.alt || ''}
-          className={classes.photo}
+          className={classes.heroPhoto}
           loading={sceneIndex < 2 ? 'eager' : 'lazy'}
-          fetchPriority={sceneIndex === 0 && position === 0 ? 'high' : 'auto'}
+          fetchPriority={sceneIndex === 0 ? 'high' : 'auto'}
           decoding="async"
         />
       </motion.button>
@@ -262,10 +287,16 @@ export default function GalleryOverview() {
       <main className={classes.book} aria-label="Photography gallery">
         {scenes.map((scene, sceneIndex) => {
           const sceneDate = formatDate(scene.photos[0]?.photo.dateTaken);
-          const columns = Math.ceil(scene.photos.length / 2);
-          const sceneStyle: SceneStyle = { '--columns': columns };
           const leadPhoto = scene.photos[0];
-          const supportingPhotos = scene.photos.slice(1);
+          const hasHero = scene.chapterSpread === 0 && scene.photos.length > 2;
+          const albumPhotos = (
+            hasHero ? scene.photos.slice(1) : scene.photos
+          ).map(toAlbumPhoto);
+          const portraitOnlyRow = albumPhotos.every(
+            (photo) => photo.height / photo.width > 1.15
+          );
+          const leadIsPortrait =
+            leadPhoto.photo.height / leadPhoto.photo.width > 1.15;
 
           return (
             <motion.section
@@ -275,7 +306,7 @@ export default function GalleryOverview() {
                 sceneRefs.current[sceneIndex] = element;
               }}
               data-index={sceneIndex}
-              className={`${classes.scene} ${classes[scene.layout]}`}
+              className={`${classes.scene} ${classes[scene.layout]} ${leadIsPortrait ? classes.leadPortrait : ''}`}
               initial={shouldReduceMotion ? false : { opacity: 0.65 }}
               whileInView={{ opacity: 1 }}
               viewport={{ amount: 0.2 }}
@@ -292,29 +323,70 @@ export default function GalleryOverview() {
                 </span>
               </header>
 
-              {scene.layout === 'contact' ? (
-                <div className={classes.sceneImages} style={sceneStyle}>
-                  {scene.photos.map((scenePhoto, position) =>
-                    renderPhoto(scenePhoto, position, scene.layout, sceneIndex)
-                  )}
-                </div>
-              ) : (
-                <div className={classes.sceneImages}>
-                  <div className={classes.leadPhoto}>
-                    {renderPhoto(leadPhoto, 0, scene.layout, sceneIndex)}
+              <div className={classes.sceneImages}>
+                {hasHero && (
+                  <div className={classes.heroPanel}>
+                    {renderHero(leadPhoto, sceneIndex)}
                   </div>
-                  <div className={classes.supportingPhotos}>
-                    {supportingPhotos.map((scenePhoto, position) =>
-                      renderPhoto(
-                        scenePhoto,
-                        position + 1,
-                        scene.layout,
-                        sceneIndex
-                      )
-                    )}
-                  </div>
-                </div>
-              )}
+                )}
+
+                {albumPhotos.length > 0 && (
+                  <RowsPhotoAlbum
+                    photos={albumPhotos}
+                    spacing={(containerWidth) => (containerWidth < 700 ? 5 : 9)}
+                    targetRowHeight={(containerWidth) =>
+                      portraitOnlyRow
+                        ? containerWidth < 700
+                          ? 170
+                          : 220
+                        : containerWidth < 500
+                          ? 165
+                          : containerWidth < 900
+                            ? 220
+                            : scene.layout === 'film'
+                              ? 290
+                              : 255
+                    }
+                    rowConstraints={(containerWidth) => ({
+                      minPhotos: 1,
+                      maxPhotos: 4,
+                      singleRowMaxHeight: portraitOnlyRow
+                        ? containerWidth < 700
+                          ? 220
+                          : 280
+                        : containerWidth < 700
+                          ? 300
+                          : 380,
+                    })}
+                    sizes={{
+                      size: '1240px',
+                      sizes: [
+                        {
+                          viewport: '(max-width: 1340px)',
+                          size: 'calc(100vw - 120px)',
+                        },
+                        {
+                          viewport: '(max-width: 700px)',
+                          size: 'calc(100vw - 24px)',
+                        },
+                      ],
+                    }}
+                    defaultContainerWidth={1240}
+                    onClick={({ photo }) =>
+                      setLightboxIndex(photo.portfolioIndex)
+                    }
+                    componentsProps={{
+                      container: { className: classes.album },
+                      button: { className: classes.albumButton },
+                      image: {
+                        className: classes.albumPhoto,
+                        loading: sceneIndex < 2 ? 'eager' : 'lazy',
+                        decoding: 'async',
+                      },
+                    }}
+                  />
+                )}
+              </div>
 
               <footer className={classes.sceneMeta}>
                 <span>{scene.locationName}</span>

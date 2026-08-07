@@ -14,11 +14,11 @@
 
 .scene {
   position: relative;
-  min-height: calc(100svh - var(--book-header));
+  min-height: 0;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 1.1rem;
-  padding: 1.2rem clamp(4.5rem, 6vw, 6.5rem) 1.35rem;
+  grid-template-rows: auto auto auto;
+  gap: 0.75rem;
+  padding: 0.9rem clamp(3.75rem, 5vw, 5.5rem) 1rem;
   scroll-margin-top: var(--book-header);
   overflow: hidden;
   color: var(--ink);
@@ -78,88 +78,58 @@
   position: relative;
   z-index: 1;
   width: min(100%, 1240px);
-  height: min(65vh, 680px);
   min-width: 0;
-  min-height: 0;
-  align-self: center;
   justify-self: center;
-}
-
-.leadPhoto,
-.supportingPhotos {
-  min-width: 0;
-  min-height: 0;
-}
-
-.leadPhoto {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.supportingPhotos {
   display: grid;
-  gap: clamp(0.55rem, 1vw, 1rem);
+  gap: 0.55rem;
 }
 
-.shot {
-  position: relative;
+.heroPanel {
   width: 100%;
-  height: 100%;
-  min-width: 0;
-  min-height: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding: clamp(0.35rem, 0.8vw, 0.75rem) 0;
+}
+
+.heroShot,
+.albumButton {
+  display: block;
   padding: 0;
-  overflow: hidden;
+  border: 0;
   color: inherit;
   background: transparent;
   cursor: zoom-in;
 }
 
-.photo {
+.heroShot {
+  width: min(100%, 880px);
+}
+
+.leadPortrait .heroShot {
+  width: min(100%, 340px);
+}
+
+.heroPhoto,
+.albumPhoto {
+  display: block;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background: transparent;
+  height: auto;
   transition: opacity 180ms ease;
 }
 
-.shot:hover .photo {
+.heroPhoto {
+  max-height: min(52svh, 520px);
+  object-fit: contain;
+}
+
+.heroShot:hover .heroPhoto,
+.albumButton:hover .albumPhoto {
   opacity: 0.92;
 }
 
-.feature .sceneImages {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(2.5rem, 5vw, 5.5rem);
-}
-
-.feature .supportingPhotos {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: minmax(0, 1fr);
-}
-
-.contact .sceneImages {
-  display: grid;
-  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: clamp(0.65rem, 1.15vw, 1.15rem);
-}
-
-.film .sceneImages {
-  display: grid;
-  grid-template-rows: minmax(0, 2.1fr) minmax(6.5rem, 0.8fr);
-  gap: clamp(0.65rem, 1.15vw, 1.15rem);
-}
-
-.film .supportingPhotos {
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(0, 1fr);
+.album {
+  width: 100%;
+  margin-inline: auto;
 }
 
 .scrubber {
@@ -279,7 +249,7 @@
 
 @media (max-width: 700px) {
   .scene {
-    min-height: calc(100svh - var(--book-header));
+    min-height: 0;
     gap: 0.7rem;
     padding: 0.85rem 0.75rem calc(4.6rem + env(safe-area-inset-bottom));
   }
@@ -305,48 +275,22 @@
     display: none;
   }
 
-  .sceneImages,
-  .feature .sceneImages,
-  .film .sceneImages {
+  .sceneImages {
     width: min(100%, 34rem);
-    height: min(60vh, 500px);
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(0, 1fr) 6.5rem;
     gap: 0.5rem;
   }
 
-  .feature .supportingPhotos,
-  .film .supportingPhotos {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: none;
-    grid-auto-columns: minmax(4.8rem, 24vw);
-    grid-template-rows: 1fr;
-    gap: 0.45rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scrollbar-width: none;
+  .leadPortrait .heroShot {
+    width: min(64vw, 18rem);
   }
 
-  .feature .supportingPhotos::-webkit-scrollbar,
-  .film .supportingPhotos::-webkit-scrollbar,
-  .contact .sceneImages::-webkit-scrollbar {
-    display: none;
-  }
-
-  .contact .sceneImages {
+  .heroShot {
     width: min(100%, 34rem);
-    height: min(57vh, 470px);
-    display: grid;
-    grid-template-columns: none;
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(8.5rem, 42vw);
-    gap: 0.5rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scrollbar-width: none;
+  }
+
+  .heroPhoto {
+    max-height: 48svh;
   }
 
   .scrubber {
@@ -435,7 +379,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .photo,
+  .heroPhoto,
+  .albumPhoto,
   .scrubber {
     transition: none;
   }
