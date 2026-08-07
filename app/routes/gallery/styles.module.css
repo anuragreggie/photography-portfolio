@@ -132,6 +132,14 @@
   margin-inline: auto;
 }
 
+.portraitAlbum {
+  max-width: 800px;
+}
+
+.mixedAlbum {
+  max-width: 1080px;
+}
+
 .scrubber {
   --progress: 0%;
   position: fixed;

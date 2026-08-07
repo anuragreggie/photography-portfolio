@@ -297,6 +297,7 @@ export default function GalleryOverview() {
           );
           const sparsePortraitRow =
             portraitOnlyRow && albumPhotos.length <= 2;
+          const albumMaxWidth = portraitOnlyRow ? 800 : 1080;
           const leadIsPortrait =
             leadPhoto.photo.height / leadPhoto.photo.width > 1.15;
 
@@ -355,25 +356,19 @@ export default function GalleryOverview() {
                     }
                     rowConstraints={(containerWidth) => ({
                       minPhotos: 1,
-                      maxPhotos: 4,
+                      maxPhotos: containerWidth < 700 ? 4 : 5,
                       singleRowMaxHeight: sparsePortraitRow
                         ? containerWidth < 700
                           ? 300
                           : 420
-                        : portraitOnlyRow
-                        ? containerWidth < 700
-                          ? 220
-                          : 280
-                        : containerWidth < 700
-                          ? 300
-                          : 380,
+                        : undefined,
                     })}
                     sizes={{
-                      size: '1240px',
+                      size: `${albumMaxWidth}px`,
                       sizes: [
                         {
                           viewport: '(max-width: 1340px)',
-                          size: 'calc(100vw - 120px)',
+                          size: `min(calc(100vw - 120px), ${albumMaxWidth}px)`,
                         },
                         {
                           viewport: '(max-width: 700px)',
@@ -381,12 +376,18 @@ export default function GalleryOverview() {
                         },
                       ],
                     }}
-                    defaultContainerWidth={1240}
+                    defaultContainerWidth={albumMaxWidth}
                     onClick={({ photo }) =>
                       setLightboxIndex(photo.portfolioIndex)
                     }
                     componentsProps={{
-                      container: { className: classes.album },
+                      container: {
+                        className: `${classes.album} ${
+                          portraitOnlyRow
+                            ? classes.portraitAlbum
+                            : classes.mixedAlbum
+                        }`,
+                      },
                       button: { className: classes.albumButton },
                       image: {
                         className: classes.albumPhoto,
