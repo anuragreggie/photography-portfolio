@@ -37,8 +37,8 @@ type SceneStyle = CSSProperties & {
 
 const MAX_PHOTOS_PER_SPREAD = 10;
 
-// A strong opening frame for each chapter. These are intentionally curated
-// rather than inferred from orientation or filename order.
+// Preferred opening frames for each chapter. Portrait preferences fall back
+// to the first landscape frame so chapter heroes stay consistently wide.
 const CHAPTER_HEROES: Record<string, string> = {
   'hong-kong': 'DSC05768',
   italy: 'DSC01844',
@@ -110,11 +110,19 @@ function photoName(photo: PortfolioPhoto) {
   );
 }
 
+function isLandscape(photo: PortfolioPhoto) {
+  return photo.width > photo.height;
+}
+
 function promoteChapterHero(photos: ScenePhoto[], locationFolder: string) {
   const preferredName = CHAPTER_HEROES[locationFolder];
-  const heroIndex = photos.findIndex(
-    ({ photo }) => photoName(photo) === preferredName
+  const preferredIndex = photos.findIndex(
+    ({ photo }) => photoName(photo) === preferredName && isLandscape(photo)
   );
+  const heroIndex =
+    preferredIndex >= 0
+      ? preferredIndex
+      : photos.findIndex(({ photo }) => isLandscape(photo));
 
   if (heroIndex <= 0) return photos;
 
@@ -288,7 +296,10 @@ export default function GalleryOverview() {
         {scenes.map((scene, sceneIndex) => {
           const sceneDate = formatDate(scene.photos[0]?.photo.dateTaken);
           const leadPhoto = scene.photos[0];
-          const hasHero = scene.chapterSpread === 0 && scene.photos.length > 2;
+          const hasHero =
+            scene.chapterSpread === 0 &&
+            scene.photos.length > 2 &&
+            isLandscape(leadPhoto.photo);
           const albumPhotos = (
             hasHero ? scene.photos.slice(1) : scene.photos
           ).map(toAlbumPhoto);
