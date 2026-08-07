@@ -1116,68 +1116,6 @@
         }
       ]
     },
-    "norway/dsc04073.jpg": {
-      "relPath": "norway/DSC04073.jpg",
-      "countryFolder": "norway",
-      "title": "Norway 4073",
-      "alt": "Norway 4073",
-      "width": 2040,
-      "height": 1360,
-      "dateTaken": "2025-08-25T10:01:19.000Z",
-      "responsiveVariants": [
-        {
-          "width": 400,
-          "height": 267,
-          "src": "/images/norway/DSC04073-400w.webp"
-        },
-        {
-          "width": 800,
-          "height": 533,
-          "src": "/images/norway/DSC04073-800w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 853,
-          "src": "/images/norway/DSC04073-1280w.webp"
-        },
-        {
-          "width": 1920,
-          "height": 1280,
-          "src": "/images/norway/DSC04073-1920w.webp"
-        }
-      ]
-    },
-    "norway/dsc04092.jpg": {
-      "relPath": "norway/DSC04092.jpg",
-      "countryFolder": "norway",
-      "title": "Norway 4092",
-      "alt": "Norway 4092",
-      "width": 2040,
-      "height": 1360,
-      "dateTaken": "2025-08-25T10:07:03.000Z",
-      "responsiveVariants": [
-        {
-          "width": 400,
-          "height": 267,
-          "src": "/images/norway/DSC04092-400w.webp"
-        },
-        {
-          "width": 800,
-          "height": 533,
-          "src": "/images/norway/DSC04092-800w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 853,
-          "src": "/images/norway/DSC04092-1280w.webp"
-        },
-        {
-          "width": 1920,
-          "height": 1280,
-          "src": "/images/norway/DSC04092-1920w.webp"
-        }
-      ]
-    },
     "switzerland/dsc06232.jpg": {
       "relPath": "switzerland/DSC06232.jpg",
       "countryFolder": "switzerland",
@@ -1426,37 +1364,6 @@
         }
       ]
     },
-    "uk/dsc04234.jpg": {
-      "relPath": "uk/DSC04234.jpg",
-      "countryFolder": "uk",
-      "title": "Uk 4234",
-      "alt": "Uk 4234",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-09-26T14:11:02.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/uk/DSC04234-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/uk/DSC04234-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/uk/DSC04234-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/uk/DSC04234-1920w.webp"
-        }
-      ]
-    },
     "uk/dsc04354.jpg": {
       "relPath": "uk/DSC04354.jpg",
       "countryFolder": "uk",
@@ -1547,37 +1454,6 @@
           "width": 1920,
           "height": 1280,
           "src": "/images/uk/DSC04453-1920w.webp"
-        }
-      ]
-    },
-    "uk/dsc04481.jpg": {
-      "relPath": "uk/DSC04481.jpg",
-      "countryFolder": "uk",
-      "title": "Uk 4481",
-      "alt": "Uk 4481",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-11-01T12:13:40.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/uk/DSC04481-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/uk/DSC04481-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/uk/DSC04481-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/uk/DSC04481-1920w.webp"
         }
       ]
     },
@@ -1826,37 +1702,6 @@
           "width": 1280,
           "height": 1920,
           "src": "/images/united-states/DSC08453-1920w.webp"
-        }
-      ]
-    },
-    "united-states/dsc08528.jpg": {
-      "relPath": "united-states/DSC08528.jpg",
-      "countryFolder": "united-states",
-      "title": "United States 8528",
-      "alt": "United States 8528",
-      "width": 4128,
-      "height": 6192,
-      "dateTaken": "2026-03-01T20:33:38.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/united-states/DSC08528-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/united-states/DSC08528-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/united-states/DSC08528-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/united-states/DSC08528-1920w.webp"
         }
       ]
     },
