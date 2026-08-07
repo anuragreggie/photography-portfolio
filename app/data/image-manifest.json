@@ -124,37 +124,6 @@
         }
       ]
     },
-    "hong-kong/dsc05030.jpg": {
-      "relPath": "hong-kong/DSC05030.jpg",
-      "countryFolder": "hong-kong",
-      "title": "Hong Kong 5030",
-      "alt": "Hong Kong 5030",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-12-02T03:02:26.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/hong-kong/DSC05030-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/hong-kong/DSC05030-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/hong-kong/DSC05030-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/hong-kong/DSC05030-1920w.webp"
-        }
-      ]
-    },
     "hong-kong/dsc05311.jpg": {
       "relPath": "hong-kong/DSC05311.jpg",
       "countryFolder": "hong-kong",
@@ -214,37 +183,6 @@
           "width": 1280,
           "height": 1920,
           "src": "/images/hong-kong/DSC05565-1920w.webp"
-        }
-      ]
-    },
-    "hong-kong/dsc05596.jpg": {
-      "relPath": "hong-kong/DSC05596.jpg",
-      "countryFolder": "hong-kong",
-      "title": "Hong Kong 5596",
-      "alt": "Hong Kong 5596",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-12-03T12:39:52.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/hong-kong/DSC05596-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/hong-kong/DSC05596-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/hong-kong/DSC05596-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/hong-kong/DSC05596-1920w.webp"
         }
       ]
     },
@@ -958,37 +896,6 @@
           "width": 1920,
           "height": 1280,
           "src": "/images/norway/DSC03654-1920w.webp"
-        }
-      ]
-    },
-    "norway/dsc03664.jpg": {
-      "relPath": "norway/DSC03664.jpg",
-      "countryFolder": "norway",
-      "title": "Norway 3664",
-      "alt": "Norway 3664",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-08-21T16:03:12.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/norway/DSC03664-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/norway/DSC03664-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/norway/DSC03664-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/norway/DSC03664-1920w.webp"
         }
       ]
     },
