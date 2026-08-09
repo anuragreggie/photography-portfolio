@@ -49,13 +49,9 @@ export default function Home() {
     <div className={classes.page}>
       <section className={classes.header}>
         <Container size="xl">
-          <motion.div
-            {...ANIMATION.fadeInUp}
-            transition={{ duration: ANIMATION.duration.slow }}
-            className={classes.headerContent}
-          >
+          <div className={classes.headerContent}>
             <Text className={classes.pageTitle}>Life Through Optics</Text>
-          </motion.div>
+          </div>
         </Container>
       </section>
 

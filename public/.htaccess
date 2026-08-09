@@ -11,3 +11,14 @@
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Preserve real assets and directories, but serve the SPA shell for routes
+  # such as /gallery and /about when they are opened or refreshed directly.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !\.[A-Za-z0-9]+$
+  RewriteRule ^ index.html [L]
+</IfModule>
