@@ -24,6 +24,7 @@ type AlbumPhoto = PortfolioPhoto & {
 type BookScene = {
   id: string;
   layout: SceneLayout;
+  hasHero: boolean;
   chapterIndex: number;
   chapterSpread: number;
   chapterSpreadCount: number;
@@ -37,16 +38,19 @@ type SceneStyle = CSSProperties & {
 
 const MAX_PHOTOS_PER_SPREAD = 10;
 
-// Preferred opening frames for each chapter. Portrait preferences fall back
-// to the first landscape frame so chapter heroes stay consistently wide.
-const CHAPTER_HEROES: Record<string, string> = {
-  'hong-kong': 'DSC05768',
-  italy: 'DSC01844',
-  japan: 'DSC02897',
-  norway: 'DSC03947',
-  switzerland: 'DSC06387',
-  uk: 'DSC04453',
-  'united-states': 'DSC08675',
+// Preferred feature frames by chapter spread. Opening portrait preferences
+// fall back to the first landscape frame so chapter heroes stay wide.
+const CHAPTER_HEROES: Record<string, readonly string[]> = {
+  copenhagen: ['DSCF9347'],
+  france: ['20260426-DSC00432'],
+  'hong-kong': ['DSC05768'],
+  italy: ['DSC01844'],
+  japan: ['DSC02897'],
+  malaysia: ['20260616-DSC01021', 'DSC01996'],
+  norway: ['DSC03947'],
+  switzerland: ['DSC06387'],
+  uk: ['DSC04453'],
+  'united-states': ['DSC08675'],
 };
 
 const DATE_FORMATTER = new Intl.DateTimeFormat('en-GB', {
@@ -115,7 +119,7 @@ function isLandscape(photo: PortfolioPhoto) {
 }
 
 function promoteChapterHero(photos: ScenePhoto[], locationFolder: string) {
-  const preferredName = CHAPTER_HEROES[locationFolder];
+  const preferredName = CHAPTER_HEROES[locationFolder]?.[0];
   const preferredIndex = photos.findIndex(
     ({ photo }) => photoName(photo) === preferredName && isLandscape(photo)
   );
@@ -123,6 +127,22 @@ function promoteChapterHero(photos: ScenePhoto[], locationFolder: string) {
     preferredIndex >= 0
       ? preferredIndex
       : photos.findIndex(({ photo }) => isLandscape(photo));
+
+  if (heroIndex <= 0) return photos;
+
+  return [
+    photos[heroIndex],
+    ...photos.slice(0, heroIndex),
+    ...photos.slice(heroIndex + 1),
+  ];
+}
+
+function promoteSpreadHero(photos: ScenePhoto[], preferredName?: string) {
+  if (!preferredName) return photos;
+
+  const heroIndex = photos.findIndex(
+    ({ photo }) => photoName(photo) === preferredName && isLandscape(photo)
+  );
 
   if (heroIndex <= 0) return photos;
 
@@ -163,10 +183,21 @@ function createScenes(photos: PortfolioPhoto[]): BookScene[] {
       let photoIndex = 0;
 
       return counts.map((count, chapterSpread) => {
-        const spreadPhotos = curatedPhotos.slice(
+        let spreadPhotos = curatedPhotos.slice(
           photoIndex,
           photoIndex + count
         );
+        const preferredHero = CHAPTER_HEROES[locationFolder]?.[chapterSpread];
+
+        if (chapterSpread > 0) {
+          spreadPhotos = promoteSpreadHero(spreadPhotos, preferredHero);
+        }
+
+        const hasHero =
+          spreadPhotos.length > 2 &&
+          isLandscape(spreadPhotos[0].photo) &&
+          (chapterSpread === 0 ||
+            photoName(spreadPhotos[0].photo) === preferredHero);
         const layout: SceneLayout =
           chapterSpread === 0
             ? 'feature'
@@ -178,6 +209,7 @@ function createScenes(photos: PortfolioPhoto[]): BookScene[] {
         return {
           id: `chapter-${chapterIndex + 1}-spread-${chapterSpread + 1}`,
           layout,
+          hasHero,
           chapterIndex,
           chapterSpread,
           chapterSpreadCount: counts.length,
@@ -296,10 +328,7 @@ export default function GalleryOverview() {
         {scenes.map((scene, sceneIndex) => {
           const sceneDate = formatDate(scene.photos[0]?.photo.dateTaken);
           const leadPhoto = scene.photos[0];
-          const hasHero =
-            scene.chapterSpread === 0 &&
-            scene.photos.length > 2 &&
-            isLandscape(leadPhoto.photo);
+          const hasHero = scene.hasHero;
           const albumPhotos = (
             hasHero ? scene.photos.slice(1) : scene.photos
           ).map(toAlbumPhoto);
