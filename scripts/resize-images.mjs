@@ -18,6 +18,7 @@ async function importSharp() {
 
 const IMAGES_DIR = path.resolve(__dirname, '..', 'app', 'assets', 'images');
 const TARGET_LONG_EDGE = 2040;
+const requestedFolders = process.argv.slice(2);
 
 const exts = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 
@@ -108,13 +109,29 @@ async function processImage(sharp, file) {
 
 async function main() {
   const sharp = await importSharp();
-  console.log(`Resizing images under: ${IMAGES_DIR}`);
+  const targetDirectories =
+    requestedFolders.length > 0
+      ? requestedFolders.map((folder) => {
+          const directory = path.resolve(IMAGES_DIR, folder);
+          const relative = path.relative(IMAGES_DIR, directory);
+
+          if (relative.startsWith('..') || path.isAbsolute(relative)) {
+            throw new Error(`Image folder must be inside ${IMAGES_DIR}: ${folder}`);
+          }
+
+          return directory;
+        })
+      : [IMAGES_DIR];
+
+  console.log(`Resizing images under: ${targetDirectories.join(', ')}`);
   let count = 0;
   let skipped = 0;
-  for await (const file of walk(IMAGES_DIR)) {
-    const res = await processImage(sharp, file);
-    count += 1;
-    if (res.skipped) skipped += 1;
+  for (const directory of targetDirectories) {
+    for await (const file of walk(directory)) {
+      const res = await processImage(sharp, file);
+      count += 1;
+      if (res.skipped) skipped += 1;
+    }
   }
   console.log(`\nProcessed ${count} files. Skipped ${skipped}.`);
 }

@@ -1,5 +1,563 @@
 {
   "images": {
+    "copenhagen/20260327-dsc09349.jpg": {
+      "relPath": "copenhagen/20260327-DSC09349.jpg",
+      "countryFolder": "copenhagen",
+      "title": "20260327-Copenhagen 9349",
+      "alt": "20260327-Copenhagen 9349",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-27T10:03:00.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/20260327-DSC09349-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/20260327-DSC09349-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/20260327-DSC09349-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/20260327-DSC09349-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/20260327-dsc09414.jpg": {
+      "relPath": "copenhagen/20260327-DSC09414.jpg",
+      "countryFolder": "copenhagen",
+      "title": "20260327-Copenhagen 9414",
+      "alt": "20260327-Copenhagen 9414",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-27T10:28:20.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/20260327-DSC09414-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/20260327-DSC09414-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/20260327-DSC09414-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/20260327-DSC09414-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/20260327-dsc09474.jpg": {
+      "relPath": "copenhagen/20260327-DSC09474.jpg",
+      "countryFolder": "copenhagen",
+      "title": "20260327-Copenhagen 9474",
+      "alt": "20260327-Copenhagen 9474",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-27T10:54:42.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/20260327-DSC09474-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/20260327-DSC09474-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/20260327-DSC09474-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/20260327-DSC09474-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/20260329-dsc09725.jpg": {
+      "relPath": "copenhagen/20260329-DSC09725.jpg",
+      "countryFolder": "copenhagen",
+      "title": "20260329-Copenhagen 9725",
+      "alt": "20260329-Copenhagen 9725",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-03-29T08:36:51.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/copenhagen/20260329-DSC09725-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/copenhagen/20260329-DSC09725-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/copenhagen/20260329-DSC09725-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/copenhagen/20260329-DSC09725-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/20260329-dsc09749.jpg": {
+      "relPath": "copenhagen/20260329-DSC09749.jpg",
+      "countryFolder": "copenhagen",
+      "title": "20260329-Copenhagen 9749",
+      "alt": "20260329-Copenhagen 9749",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-29T11:12:21.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/20260329-DSC09749-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/20260329-DSC09749-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/20260329-DSC09749-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/20260329-DSC09749-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/dscf9316.jpg": {
+      "relPath": "copenhagen/DSCF9316.jpg",
+      "countryFolder": "copenhagen",
+      "title": "Copenhagen F9316",
+      "alt": "Copenhagen F9316",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-27T04:58:05.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/DSCF9316-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/DSCF9316-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/DSCF9316-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/DSCF9316-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/dscf9347.jpg": {
+      "relPath": "copenhagen/DSCF9347.jpg",
+      "countryFolder": "copenhagen",
+      "title": "Copenhagen F9347",
+      "alt": "Copenhagen F9347",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-27T05:35:11.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/DSCF9347-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/DSCF9347-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/DSCF9347-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/DSCF9347-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/dscf9391.jpg": {
+      "relPath": "copenhagen/DSCF9391.jpg",
+      "countryFolder": "copenhagen",
+      "title": "Copenhagen F9391",
+      "alt": "Copenhagen F9391",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-27T05:58:24.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/DSCF9391-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/DSCF9391-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/DSCF9391-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/DSCF9391-1920w.webp"
+        }
+      ]
+    },
+    "copenhagen/dscf9472.jpg": {
+      "relPath": "copenhagen/DSCF9472.jpg",
+      "countryFolder": "copenhagen",
+      "title": "Copenhagen F9472",
+      "alt": "Copenhagen F9472",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-03-28T10:37:27.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/copenhagen/DSCF9472-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/copenhagen/DSCF9472-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/copenhagen/DSCF9472-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/copenhagen/DSCF9472-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc00136.jpg": {
+      "relPath": "france/20260424-DSC00136.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 136",
+      "alt": "20260424-France 136",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-04-24T13:48:49.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/20260424-DSC00136-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/20260424-DSC00136-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC00136-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/20260424-DSC00136-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc00254.jpg": {
+      "relPath": "france/20260424-DSC00254.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 254",
+      "alt": "20260424-France 254",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-24T20:43:50.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260424-DSC00254-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260424-DSC00254-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260424-DSC00254-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC00254-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc09802-2.jpg": {
+      "relPath": "france/20260424-DSC09802-2.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 9802-2",
+      "alt": "20260424-France 9802-2",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-04-24T07:30:59.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/france/20260424-DSC09802-2-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/france/20260424-DSC09802-2-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC09802-2-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/france/20260424-DSC09802-2-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc09820.jpg": {
+      "relPath": "france/20260424-DSC09820.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 9820",
+      "alt": "20260424-France 9820",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-24T07:41:57.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260424-DSC09820-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260424-DSC09820-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260424-DSC09820-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC09820-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc09877.jpg": {
+      "relPath": "france/20260424-DSC09877.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 9877",
+      "alt": "20260424-France 9877",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-24T08:05:40.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260424-DSC09877-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260424-DSC09877-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260424-DSC09877-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC09877-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc09881.jpg": {
+      "relPath": "france/20260424-DSC09881.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 9881",
+      "alt": "20260424-France 9881",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-24T08:07:51.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260424-DSC09881-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260424-DSC09881-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260424-DSC09881-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC09881-1920w.webp"
+        }
+      ]
+    },
+    "france/20260424-dsc09966.jpg": {
+      "relPath": "france/20260424-DSC09966.jpg",
+      "countryFolder": "france",
+      "title": "20260424-France 9966",
+      "alt": "20260424-France 9966",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-24T12:34:07.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260424-DSC09966-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260424-DSC09966-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260424-DSC09966-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260424-DSC09966-1920w.webp"
+        }
+      ]
+    },
+    "france/20260426-dsc00432.jpg": {
+      "relPath": "france/20260426-DSC00432.jpg",
+      "countryFolder": "france",
+      "title": "20260426-France 432",
+      "alt": "20260426-France 432",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-26T07:39:13.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260426-DSC00432-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260426-DSC00432-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260426-DSC00432-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260426-DSC00432-1920w.webp"
+        }
+      ]
+    },
+    "france/20260426-dsc00434.jpg": {
+      "relPath": "france/20260426-DSC00434.jpg",
+      "countryFolder": "france",
+      "title": "20260426-France 434",
+      "alt": "20260426-France 434",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-04-26T08:49:32.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/france/20260426-DSC00434-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/france/20260426-DSC00434-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/france/20260426-DSC00434-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/france/20260426-DSC00434-1920w.webp"
+        }
+      ]
+    },
     "hong-kong/dsc04823.jpg": {
       "relPath": "hong-kong/DSC04823.jpg",
       "countryFolder": "hong-kong",
@@ -834,6 +1392,781 @@
           "width": 1280,
           "height": 1920,
           "src": "/images/japan/train-tracks-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260614-dsc00529.jpg": {
+      "relPath": "malaysia/20260614-DSC00529.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260614-Malaysia 529",
+      "alt": "20260614-Malaysia 529",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-14T08:02:06.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260614-DSC00529-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260614-DSC00529-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260614-DSC00529-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260614-DSC00529-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260614-dsc00679.jpg": {
+      "relPath": "malaysia/20260614-DSC00679.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260614-Malaysia 679",
+      "alt": "20260614-Malaysia 679",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-14T22:21:07.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260614-DSC00679-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260614-DSC00679-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260614-DSC00679-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260614-DSC00679-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260614-dsc00783.jpg": {
+      "relPath": "malaysia/20260614-DSC00783.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260614-Malaysia 783",
+      "alt": "20260614-Malaysia 783",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-06-14T22:45:51.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/malaysia/20260614-DSC00783-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/malaysia/20260614-DSC00783-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/malaysia/20260614-DSC00783-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/malaysia/20260614-DSC00783-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260614-dsc00793.jpg": {
+      "relPath": "malaysia/20260614-DSC00793.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260614-Malaysia 793",
+      "alt": "20260614-Malaysia 793",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-14T22:48:48.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260614-DSC00793-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260614-DSC00793-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260614-DSC00793-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260614-DSC00793-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260614-dsc00822.jpg": {
+      "relPath": "malaysia/20260614-DSC00822.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260614-Malaysia 822",
+      "alt": "20260614-Malaysia 822",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-14T22:55:33.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260614-DSC00822-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260614-DSC00822-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260614-DSC00822-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260614-DSC00822-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260615-dsc00873.jpg": {
+      "relPath": "malaysia/20260615-DSC00873.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260615-Malaysia 873",
+      "alt": "20260615-Malaysia 873",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-06-15T12:43:36.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/malaysia/20260615-DSC00873-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/malaysia/20260615-DSC00873-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/malaysia/20260615-DSC00873-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/malaysia/20260615-DSC00873-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260615-dsc00916.jpg": {
+      "relPath": "malaysia/20260615-DSC00916.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260615-Malaysia 916",
+      "alt": "20260615-Malaysia 916",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-06-15T12:57:25.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/malaysia/20260615-DSC00916-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/malaysia/20260615-DSC00916-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/malaysia/20260615-DSC00916-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/malaysia/20260615-DSC00916-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260615-dsc00926.jpg": {
+      "relPath": "malaysia/20260615-DSC00926.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260615-Malaysia 926",
+      "alt": "20260615-Malaysia 926",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-15T13:05:35.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260615-DSC00926-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260615-DSC00926-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260615-DSC00926-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260615-DSC00926-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260616-dsc01004.jpg": {
+      "relPath": "malaysia/20260616-DSC01004.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260616-Malaysia 1004",
+      "alt": "20260616-Malaysia 1004",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-16T21:03:31.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260616-DSC01004-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260616-DSC01004-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260616-DSC01004-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260616-DSC01004-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260616-dsc01021.jpg": {
+      "relPath": "malaysia/20260616-DSC01021.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260616-Malaysia 1021",
+      "alt": "20260616-Malaysia 1021",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-16T21:06:22.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260616-DSC01021-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260616-DSC01021-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260616-DSC01021-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260616-DSC01021-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260616-dsc01024.jpg": {
+      "relPath": "malaysia/20260616-DSC01024.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260616-Malaysia 1024",
+      "alt": "20260616-Malaysia 1024",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-06-16T21:06:31.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/malaysia/20260616-DSC01024-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/malaysia/20260616-DSC01024-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/malaysia/20260616-DSC01024-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/malaysia/20260616-DSC01024-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260616-dsc01028.jpg": {
+      "relPath": "malaysia/20260616-DSC01028.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260616-Malaysia 1028",
+      "alt": "20260616-Malaysia 1028",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-16T21:07:03.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260616-DSC01028-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260616-DSC01028-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260616-DSC01028-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260616-DSC01028-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01140.jpg": {
+      "relPath": "malaysia/20260620-DSC01140.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1140",
+      "alt": "20260620-Malaysia 1140",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T00:20:38.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01140-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01140-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01140-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01140-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01144.jpg": {
+      "relPath": "malaysia/20260620-DSC01144.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1144",
+      "alt": "20260620-Malaysia 1144",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T00:29:41.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01144-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01144-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01144-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01144-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01147.jpg": {
+      "relPath": "malaysia/20260620-DSC01147.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1147",
+      "alt": "20260620-Malaysia 1147",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T00:30:38.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01147-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01147-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01147-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01147-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01150.jpg": {
+      "relPath": "malaysia/20260620-DSC01150.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1150",
+      "alt": "20260620-Malaysia 1150",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T00:31:26.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01150-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01150-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01150-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01150-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01186.jpg": {
+      "relPath": "malaysia/20260620-DSC01186.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1186",
+      "alt": "20260620-Malaysia 1186",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T00:55:36.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01186-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01186-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01186-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01186-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01190.jpg": {
+      "relPath": "malaysia/20260620-DSC01190.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1190",
+      "alt": "20260620-Malaysia 1190",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T00:58:42.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01190-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01190-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01190-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01190-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01233.jpg": {
+      "relPath": "malaysia/20260620-DSC01233.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1233",
+      "alt": "20260620-Malaysia 1233",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T03:00:23.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01233-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01233-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01233-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01233-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01246.jpg": {
+      "relPath": "malaysia/20260620-DSC01246.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1246",
+      "alt": "20260620-Malaysia 1246",
+      "width": 1360,
+      "height": 2040,
+      "dateTaken": "2026-06-20T03:50:14.000Z",
+      "responsiveVariants": [
+        {
+          "width": 267,
+          "height": 400,
+          "src": "/images/malaysia/20260620-DSC01246-400w.webp"
+        },
+        {
+          "width": 533,
+          "height": 800,
+          "src": "/images/malaysia/20260620-DSC01246-800w.webp"
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01246-1280w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 1920,
+          "src": "/images/malaysia/20260620-DSC01246-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260620-dsc01261.jpg": {
+      "relPath": "malaysia/20260620-DSC01261.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260620-Malaysia 1261",
+      "alt": "20260620-Malaysia 1261",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-20T03:54:52.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260620-DSC01261-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260620-DSC01261-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260620-DSC01261-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260620-DSC01261-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260621-dsc01287.jpg": {
+      "relPath": "malaysia/20260621-DSC01287.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260621-Malaysia 1287",
+      "alt": "20260621-Malaysia 1287",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-21T01:26:03.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260621-DSC01287-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260621-DSC01287-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260621-DSC01287-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260621-DSC01287-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/20260621-dsc01324.jpg": {
+      "relPath": "malaysia/20260621-DSC01324.jpg",
+      "countryFolder": "malaysia",
+      "title": "20260621-Malaysia 1324",
+      "alt": "20260621-Malaysia 1324",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-21T01:44:32.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/20260621-DSC01324-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/20260621-DSC01324-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/20260621-DSC01324-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/20260621-DSC01324-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/dsc01996.jpg": {
+      "relPath": "malaysia/DSC01996.jpg",
+      "countryFolder": "malaysia",
+      "title": "Malaysia 1996",
+      "alt": "Malaysia 1996",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-17T09:44:43.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/DSC01996-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/DSC01996-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/DSC01996-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/DSC01996-1920w.webp"
+        }
+      ]
+    },
+    "malaysia/dsc02003.jpg": {
+      "relPath": "malaysia/DSC02003.jpg",
+      "countryFolder": "malaysia",
+      "title": "Malaysia 2003",
+      "alt": "Malaysia 2003",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2026-06-17T09:45:10.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/malaysia/DSC02003-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/malaysia/DSC02003-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/malaysia/DSC02003-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/malaysia/DSC02003-1920w.webp"
         }
       ]
     },

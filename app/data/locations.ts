@@ -6,6 +6,10 @@ export interface Location {
 // Note: keep sorted
 export const locations: Location[] = [
   {
+    name: 'Copenhagen',
+    folder: 'copenhagen',
+  },
+  {
     name: 'France',
     folder: 'france',
   },
@@ -20,6 +24,10 @@ export const locations: Location[] = [
   {
     name: 'Japan',
     folder: 'japan',
+  },
+  {
+    name: 'Malaysia',
+    folder: 'malaysia',
   },
   {
     name: 'Norway',
