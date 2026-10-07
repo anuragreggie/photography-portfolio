@@ -122,9 +122,11 @@
   object-fit: contain;
 }
 
-.heroShot:hover .heroPhoto,
-.albumButton:hover .albumPhoto {
-  opacity: 0.92;
+@media (hover: hover) and (pointer: fine) {
+  .heroShot:hover .heroPhoto,
+  .albumButton:hover .albumPhoto {
+    opacity: 0.92;
+  }
 }
 
 .album {

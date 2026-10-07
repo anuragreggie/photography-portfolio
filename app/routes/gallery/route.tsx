@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { useReducedMotion } from 'framer-motion';
 import type { CSSProperties } from 'react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { RowsPhotoAlbum } from 'react-photo-album';
@@ -290,18 +290,12 @@ export default function GalleryOverview() {
 
   function renderHero({ photo, index }: ScenePhoto, sceneIndex: number) {
     return (
-      <motion.button
+      <button
         key={photo.src}
         type="button"
         className={classes.heroShot}
         onClick={() => setLightboxIndex(index)}
         aria-label={`Open photograph ${index + 1} of ${photos.length}`}
-        initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.15 }}
-        transition={{
-          duration: shouldReduceMotion ? 0 : 0.55,
-        }}
       >
         <img
           src={photo.src}
@@ -321,7 +315,7 @@ export default function GalleryOverview() {
           fetchPriority={sceneIndex === 0 ? 'high' : 'auto'}
           decoding="async"
         />
-      </motion.button>
+      </button>
     );
   }
 
@@ -344,7 +338,7 @@ export default function GalleryOverview() {
             leadPhoto.photo.height / leadPhoto.photo.width > 1.15;
 
           return (
-            <motion.section
+            <section
               key={scene.id}
               id={scene.id}
               ref={(element) => {
@@ -352,10 +346,6 @@ export default function GalleryOverview() {
               }}
               data-index={sceneIndex}
               className={`${classes.scene} ${classes[scene.layout]} ${leadIsPortrait ? classes.leadPortrait : ''}`}
-              initial={shouldReduceMotion ? false : { opacity: 0.65 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ amount: 0.2 }}
-              transition={{ duration: shouldReduceMotion ? 0 : 0.65 }}
               aria-label={`${scene.locationName}, ${sceneDate}`}
             >
               <header className={classes.sceneHeader}>
@@ -449,7 +439,7 @@ export default function GalleryOverview() {
                   {String(scenes.length).padStart(2, '0')}
                 </span>
               </footer>
-            </motion.section>
+            </section>
           );
         })}
       </section>
