@@ -17,8 +17,17 @@ import './fonts.css';
 import '@mantine/core/styles.css';
 
 export const links: LinksFunction = () => [
-  { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
-  { rel: 'apple-touch-icon', href: '/apple-touch-icon.svg' },
+  {
+    rel: 'icon',
+    href: '/favicon.ico?v=portrait-1',
+    type: 'image/x-icon',
+    sizes: '16x16 32x32 48x48',
+  },
+  {
+    rel: 'apple-touch-icon',
+    href: '/apple-touch-portrait.png',
+    sizes: '180x180',
+  },
   {
     rel: 'preload',
     href: '/fonts/lora-latin-400.woff2',
