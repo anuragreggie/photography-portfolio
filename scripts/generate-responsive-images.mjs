@@ -323,9 +323,10 @@ async function main() {
 
   // Save updated manifest
   await fs.writeFile(
-    MANIFEST_FILE,
+    `${MANIFEST_FILE}.tmp`,
     `${JSON.stringify(existingManifest, null, 2)}\n`
   );
+  await fs.rename(`${MANIFEST_FILE}.tmp`, MANIFEST_FILE);
 
   console.log(
     `\n✅ Processed ${processedCount + skippedCount} images (${skippedCount} cached, ${processedCount} regenerated)`

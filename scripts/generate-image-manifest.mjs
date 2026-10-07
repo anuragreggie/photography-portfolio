@@ -48,7 +48,7 @@ const EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp']);
 
 async function* walkImages(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
-  for (const entry of entries) {
+  for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       // Skip hidden directories and non-location folders
@@ -99,8 +99,7 @@ async function processImage(sharp, exifr, filePath) {
     const { width, height, orientation } = metadata;
 
     if (!width || !height) {
-      console.warn(`⚠ Skipping ${relPath}: no dimensions`);
-      return null;
+      throw new Error(`No dimensions for ${relPath}`);
     }
 
     // Handle orientation (some images are rotated via EXIF)
@@ -140,8 +139,9 @@ async function processImage(sharp, exifr, filePath) {
       dateTaken,
     };
   } catch (err) {
-    console.error(`✖ Error processing ${relPath}:`, err.message);
-    return null;
+    throw new Error(`Cannot process ${relPath}: ${err.message}`, {
+      cause: err,
+    });
   }
 }
 
@@ -155,13 +155,35 @@ async function main() {
     images: {},
   };
 
+  let previousImages = {};
+  try {
+    previousImages = JSON.parse(await fs.readFile(OUTPUT_FILE, 'utf8')).images;
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  const outputNames = new Set();
   let count = 0;
   let skipped = 0;
 
   for await (const filePath of walkImages(IMAGES_DIR)) {
     const imageData = await processImage(sharp, exifr, filePath);
     if (imageData) {
-      manifest.images[imageData.relPath.toLowerCase()] = imageData;
+      const key = imageData.relPath.toLowerCase();
+      const outputName = key.replace(/\.(jpg|jpeg|png|webp)$/i, '');
+      if (outputNames.has(outputName)) {
+        throw new Error(
+          `Images would overwrite the same variants: ${outputName}`
+        );
+      }
+      outputNames.add(outputName);
+      const previous = previousImages[key];
+      if (
+        previous?.width === imageData.width &&
+        previous?.height === imageData.height
+      ) {
+        imageData.responsiveVariants = previous.responsiveVariants;
+      }
+      manifest.images[key] = imageData;
       count++;
     } else {
       skipped++;
@@ -170,7 +192,11 @@ async function main() {
 
   // Write manifest
   await fs.mkdir(path.dirname(OUTPUT_FILE), { recursive: true });
-  await fs.writeFile(OUTPUT_FILE, `${JSON.stringify(manifest, null, 2)}\n`);
+  await fs.writeFile(
+    `${OUTPUT_FILE}.tmp`,
+    `${JSON.stringify(manifest, null, 2)}\n`
+  );
+  await fs.rename(`${OUTPUT_FILE}.tmp`, OUTPUT_FILE);
 
   console.log(`\n✅ Manifest generated: ${OUTPUT_FILE}`);
   console.log(`   ${count} images processed, ${skipped} skipped`);

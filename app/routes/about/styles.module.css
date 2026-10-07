@@ -72,11 +72,6 @@
   min-height: auto;
 }
 
-.equipmentCard:hover {
-  transform: none;
-  box-shadow: none;
-}
-
 .equipmentImageWrapper {
   display: flex;
   flex-direction: column;
@@ -101,8 +96,6 @@
 .equipmentMainImage[alt*='Sigma'] {
   max-height: 200px;
 }
-
-/* Removed image hover scaling */
 
 .imageLabel {
   font-size: 1.2rem;
@@ -162,9 +155,7 @@
   .equipmentMainImage[alt*='Sigma'] {
     max-height: 140px;
   }
-}
 
-@media (max-width: 768px) {
   .page {
     padding-top: 1rem;
   }

@@ -56,11 +56,16 @@ async function processImage(sharp, file) {
 
     const ext = path.extname(file).toLowerCase();
 
-    // Prepare transformer: always target 2040 on long edge
+    // Leave smaller sources untouched to avoid upscaling and repeated lossy encoding.
+    if (Math.max(meta.width, meta.height) <= TARGET_LONG_EDGE) {
+      return { skipped: true };
+    }
+
+    // Reduce oversized sources while preserving metadata.
     let pipeline = input
       .resize(TARGET_LONG_EDGE, TARGET_LONG_EDGE, {
         fit: 'inside',
-        withoutEnlargement: false, // allow upscaling to exactly 2040 long edge
+        withoutEnlargement: true,
         fastShrinkOnLoad: true,
       })
       .withMetadata(); // preserve EXIF/ICC so capture date stays available
@@ -77,7 +82,7 @@ async function processImage(sharp, file) {
       pipeline = pipeline.webp({ quality: 90, effort: 4 });
     }
 
-    const before = meta.size ?? 0;
+    const before = (await fs.stat(file)).size;
     const outputBuf = await pipeline.toBuffer();
     const outMeta = await sharp(outputBuf).metadata();
 
@@ -116,7 +121,9 @@ async function main() {
           const relative = path.relative(IMAGES_DIR, directory);
 
           if (relative.startsWith('..') || path.isAbsolute(relative)) {
-            throw new Error(`Image folder must be inside ${IMAGES_DIR}: ${folder}`);
+            throw new Error(
+              `Image folder must be inside ${IMAGES_DIR}: ${folder}`
+            );
           }
 
           return directory;
@@ -126,14 +133,17 @@ async function main() {
   console.log(`Resizing images under: ${targetDirectories.join(', ')}`);
   let count = 0;
   let skipped = 0;
+  let failed = 0;
   for (const directory of targetDirectories) {
     for await (const file of walk(directory)) {
       const res = await processImage(sharp, file);
       count += 1;
       if (res.skipped) skipped += 1;
+      if (res.error) failed += 1;
     }
   }
   console.log(`\nProcessed ${count} files. Skipped ${skipped}.`);
+  if (failed) throw new Error(`Failed to resize ${failed} images`);
 }
 
 main().catch((e) => {

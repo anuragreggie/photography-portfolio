@@ -22,7 +22,6 @@ type ImageManifest = {
 };
 
 const manifest = imageManifest as ImageManifest;
-const FALLBACK_DATE_TAKEN = new Date('2025-06-01T00:00:00.000Z');
 
 function createPhoto(entry: ImageManifestEntry): PortfolioPhoto {
   const {
@@ -40,6 +39,8 @@ function createPhoto(entry: ImageManifestEntry): PortfolioPhoto {
     throw new Error(`No responsive variants found for ${entry.relPath}`);
   }
 
+  const captureDate = dateTaken ? new Date(dateTaken) : undefined;
+
   return {
     src: largest.src,
     width,
@@ -47,8 +48,15 @@ function createPhoto(entry: ImageManifestEntry): PortfolioPhoto {
     alt,
     title,
     locationFolder: countryFolder,
-    dateTaken: dateTaken ? new Date(dateTaken) : FALLBACK_DATE_TAKEN,
-    srcSet: responsiveVariants,
+    dateTaken:
+      captureDate && Number.isFinite(captureDate.getTime())
+        ? captureDate
+        : undefined,
+    srcSet: responsiveVariants.filter(
+      (variant, index, variants) =>
+        variants.findIndex((candidate) => candidate.width === variant.width) ===
+        index
+    ),
   };
 }
 

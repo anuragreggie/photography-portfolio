@@ -9,20 +9,11 @@ export const ANIMATION = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
   },
-  fadeInUpLarge: {
-    initial: { opacity: 0, y: 40 },
-    animate: { opacity: 1, y: 0 },
-  },
   fadeInUpHero: {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
   },
-  fadeIn: {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-  },
   duration: {
-    normal: 0.5,
     slow: 0.8,
   },
 } as const;

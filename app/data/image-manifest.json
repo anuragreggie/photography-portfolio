@@ -2573,6 +2573,37 @@
         }
       ]
     },
+    "uk/bridge-open.jpg": {
+      "relPath": "uk/bridge-open.jpg",
+      "countryFolder": "uk",
+      "title": "bridge-open",
+      "alt": "bridge-open",
+      "width": 2040,
+      "height": 1360,
+      "dateTaken": "2025-09-26T13:45:50.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/uk/bridge-open-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/uk/bridge-open-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/uk/bridge-open-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/uk/bridge-open-1920w.webp"
+        }
+      ]
+    },
     "uk/dsc04177.jpg": {
       "relPath": "uk/DSC04177.jpg",
       "countryFolder": "uk",
@@ -2818,37 +2849,6 @@
           "width": 1280,
           "height": 1920,
           "src": "/images/uk/DSC07626-1920w.webp"
-        }
-      ]
-    },
-    "uk/bridge-open.jpg": {
-      "relPath": "uk/bridge-open.jpg",
-      "countryFolder": "uk",
-      "title": "bridge-open",
-      "alt": "bridge-open",
-      "width": 2040,
-      "height": 1360,
-      "dateTaken": "2025-09-26T13:45:50.000Z",
-      "responsiveVariants": [
-        {
-          "width": 400,
-          "height": 267,
-          "src": "/images/uk/bridge-open-400w.webp"
-        },
-        {
-          "width": 800,
-          "height": 533,
-          "src": "/images/uk/bridge-open-800w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 853,
-          "src": "/images/uk/bridge-open-1280w.webp"
-        },
-        {
-          "width": 1920,
-          "height": 1280,
-          "src": "/images/uk/bridge-open-1920w.webp"
         }
       ]
     },

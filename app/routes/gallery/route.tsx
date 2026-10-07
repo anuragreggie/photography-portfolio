@@ -222,7 +222,7 @@ function createScenes(photos: PortfolioPhoto[]): BookScene[] {
 }
 
 function formatDate(date?: Date) {
-  if (!date || Number.isNaN(date.getTime())) return 'June 2025';
+  if (!date || Number.isNaN(date.getTime())) return 'Date unavailable';
   return DATE_FORMATTER.format(date);
 }
 
@@ -345,7 +345,7 @@ export default function GalleryOverview() {
                 sceneRefs.current[sceneIndex] = element;
               }}
               data-index={sceneIndex}
-              className={`${classes.scene} ${classes[scene.layout]} ${leadIsPortrait ? classes.leadPortrait : ''}`}
+              className={`${classes.scene} ${leadIsPortrait ? classes.leadPortrait : ''}`}
               aria-label={`${scene.locationName}, ${sceneDate}`}
             >
               <header className={classes.sceneHeader}>

@@ -1,205 +1,37 @@
-# Photography Portfolio - Image Management Guide
+# Image management
 
-## Adding New Images
+## Add photographs
 
-When you add new photos to your portfolio, follow these steps:
+1. Put JPG, JPEG, PNG, or WebP files in `app/assets/images/{location}/`. Keep EXIF capture dates for chronological sorting. Equipment images live directly under `app/assets/images` and are excluded from the gallery.
+2. Optionally reduce oversized sources with `npm run images:resize -- japan` (substitute the location folder). This **overwrites source files**: keep your originals elsewhere. It preserves metadata, limits the long edge to 2040px, and leaves already-small images unchanged. Omitting the folder scans all source images.
+3. Run `npm run build` to regenerate metadata and responsive variants, then build the site.
+4. Review and commit the source photos, `app/data/image-manifest.json`, and generated files under `public/images` together.
 
-### 1. Add your image files
+Each photo needs a unique filename stem within its location: `photo.jpg` and `photo.png` would otherwise overwrite the same WebP outputs. Manifest generation rejects such collisions and fails on unreadable gallery images before replacing the previous manifest.
 
-Place your images in the appropriate location folder:
+## Add a location
 
-```
-app/assets/images/
-├── france/
-├── hong-kong/
-├── italy/
-├── japan/
-├── norway/
-├── switzerland/
-└── uk/
-```
+Create its folder under `app/assets/images`, then add its display name and folder to the sorted list in `app/data/locations.ts`. The gallery groups photos by location and sorts trips by capture date. Missing dates are displayed as unavailable.
 
-**Image requirements:**
+Optional featured-photo preferences are in `CHAPTER_HEROES` in `app/routes/gallery/route.tsx`. The home-page selection is in `fixedImagePaths` in `app/routes/home/route.tsx`.
 
-- Format: JPG, JPEG, PNG, or WebP
-- Recommended: Pre-resize to 2040px on the long edge (use `npm run images:resize`)
-- Keep original EXIF data for date sorting
+## Commands
 
-### 2. Resize images (optional but recommended)
+- `npm run images:resize -- japan`: reduce oversized source photographs in one location.
+- `npm run images:manifest`: extract dimensions and EXIF metadata; preserve existing responsive variants when dimensions match.
+- `npm run images:optimize`: generate responsive WebP variants and remove obsolete variants after successful processing.
+- `npm run build`: run both generation steps and build the app.
+- `npm run build:quick`: build with existing generated images and metadata.
+- `npm run icons:generate`: regenerate the portrait favicon and Apple touch icon.
 
-If your images are larger than 2040px, resize them:
+When adding photos or changing dimensions, run both manifest generation and optimization before opening the app. New photos cannot render until their responsive variants exist.
 
-```bash
-npm run images:resize
-```
+## Responsive variants
 
-This resizes all images to 2040px on the long edge while preserving EXIF data.
+Generated files use the suffixes `-400w.webp`, `-800w.webp`, `-1280w.webp`, and `-1920w.webp`. These numbers describe the **maximum long edge**, not necessarily the actual width. Portrait images have narrower widths; small sources are never enlarged. The manifest records actual output dimensions for browser `srcset` selection.
 
-### 3. Generate the image manifest
-
-This creates `app/data/image-manifest.json` with pre-computed dimensions:
-
-```bash
-npm run images:manifest
-```
-
-**What this does:**
-
-- Scans all images in `app/assets/images/*/`
-- Extracts width and height
-- Extracts EXIF date for sorting
-- Stores everything in a JSON file so the browser doesn't need to calculate dimensions at runtime
-
-### 4. Generate responsive variants
-
-This creates optimized WebP images at multiple sizes:
-
-```bash
-npm run images:optimize
-```
-
-**What this creates:**
-
-- `public/images/{location}/{filename}-400w.webp` (mobile)
-- `public/images/{location}/{filename}-800w.webp` (tablet)
-- `public/images/{location}/{filename}-1280w.webp` (laptop)
-- `public/images/{location}/{filename}-1920w.webp` (desktop)
-
-### 5. Build and deploy
-
-```bash
-npm run build
-```
-
-The build automatically runs `images:manifest` and `images:optimize` first.
-
----
-
-## Quick Reference
-
-| Command                   | Purpose                            |
-| ------------------------- | ---------------------------------- |
-| `npm run images:resize`   | Resize source images to 2040px     |
-| `npm run images:manifest` | Generate dimension metadata        |
-| `npm run images:optimize` | Generate responsive WebP variants  |
-| `npm run build`           | Full production build              |
-| `npm run build:quick`     | App build without image processing |
-
----
-
-## Adding a New Location
-
-1. Create a new folder in `app/assets/images/`:
-
-   ```
-   app/assets/images/new-location/
-   ```
-
-2. Add your images to the folder
-
-3. Update `app/data/locations.ts`:
-
-   ```typescript
-   export const locations: Location[] = [
-     // ... existing locations
-     {
-       name: 'New Location',
-       folder: 'new-location',
-     },
-   ];
-   ```
-
-4. Run the image processing:
-   ```bash
-   npm run images:manifest
-   npm run images:optimize
-   ```
-
----
-
-## How It Works
-
-### Why pre-compute dimensions?
-
-Without pre-computed dimensions, the browser would need to:
-
-1. Download each image
-2. Create a hidden `<img>` element
-3. Wait for it to load
-4. Read `naturalWidth` and `naturalHeight`
-
-This causes a 2-5 second delay before the gallery can render.
-
-With the manifest, dimensions are known **instantly** from the JSON file.
-
-### Why responsive images?
-
-| Device  | Image Width | Typical File Size |
-| ------- | ----------- | ----------------- |
-| Mobile  | 400px       | ~25KB             |
-| Tablet  | 800px       | ~80KB             |
-| Laptop  | 1280px      | ~175KB            |
-| Desktop | 1920px      | ~330KB            |
-
-Mobile users download **12x less data** than before!
-
-### Why self-hosted fonts?
-
-Google Fonts requires an external HTTP request that blocks rendering. Self-hosting eliminates this ~200-500ms delay.
-
----
+The optimizer reuses variants newer than their source. If you change encoding settings, remove the affected generated variants and run optimization to regenerate them.
 
 ## Troubleshooting
 
-### Images not appearing
-
-1. Check the image is in `app/assets/images/{location}/`
-2. Run `npm run images:manifest` to update the manifest
-3. Run `npm run images:optimize` to generate WebP variants
-
-### Gallery showing wrong dimensions
-
-The manifest might be stale. Regenerate it:
-
-```bash
-npm run images:manifest
-```
-
-### Build fails
-
-Make sure Sharp is installed:
-
-```bash
-npm install
-```
-
----
-
-## File Structure
-
-```
-photography-portfolio/
-├── app/
-│   ├── assets/images/          # Source images (JPG/PNG)
-│   │   ├── japan/
-│   │   ├── france/
-│   │   └── ...
-│   ├── data/
-│   │   ├── image-manifest.json # Pre-computed dimensions (generated)
-│   │   ├── locations.ts        # Location configuration
-│   │   └── photos.ts           # Photo loading logic
-│   └── fonts.css               # Self-hosted font definitions
-├── public/
-│   ├── fonts/                  # Self-hosted Lora font files
-│   └── images/                 # Responsive WebP variants (generated)
-│       ├── japan/
-│       │   ├── photo-400w.webp
-│       │   ├── photo-800w.webp
-│       │   ├── photo-1280w.webp
-│       │   └── photo-1920w.webp
-│       └── ...
-└── scripts/
-    ├── generate-image-manifest.mjs   # Dimension extraction
-    ├── generate-responsive-images.mjs # WebP variant generation
-    └── resize-images.mjs             # Source image resizing
-```
+For missing photos or incorrect dimensions, run `npm run images:manifest` followed by `npm run images:optimize`, and check for reported errors. Preserve source EXIF metadata when exporting photos if dates matter. Run `npm run check` and a full build before deployment.

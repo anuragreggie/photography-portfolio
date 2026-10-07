@@ -7,6 +7,11 @@
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
 
+  # Icons use stable filenames and must pick up regenerated artwork.
+  <FilesMatch "^(?:favicon\.ico|apple-touch-portrait\.png)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
   <FilesMatch "\.html$">
     Header set Cache-Control "no-cache"
   </FilesMatch>

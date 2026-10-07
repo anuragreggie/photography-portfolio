@@ -1,3 +1,4 @@
+import { FocusTrap, Portal } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { useCallback, useEffect } from 'react';
 import { IconChevronLeft, IconChevronRight, IconX } from '@tabler/icons-react';
@@ -8,11 +9,11 @@ interface LightboxPhoto {
   alt?: string;
   width?: number;
   height?: number;
-  srcSet?: { src: string; width: number }[];
+  srcSet?: readonly { src: string; width: number }[];
 }
 
 interface LightboxProps {
-  photos: LightboxPhoto[];
+  photos: readonly LightboxPhoto[];
   currentIndex: number;
   onClose: () => void;
   onNavigate: (index: number) => void;
@@ -24,6 +25,17 @@ export function Lightbox({
   onClose,
   onNavigate,
 }: LightboxProps) {
+  useEffect(() => {
+    const previouslyFocused = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      if (previouslyFocused instanceof HTMLElement) {
+        previouslyFocused.focus({ preventScroll: true });
+      }
+    };
+  }, []);
   const photo = photos[currentIndex];
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < photos.length - 1;
@@ -40,86 +52,94 @@ export function Lightbox({
     const handleKeyDown = (e: KeyboardEvent) => {
       switch (e.key) {
         case 'Escape':
+          e.preventDefault();
           onClose();
           break;
         case 'ArrowLeft':
+          e.preventDefault();
           handlePrev();
           break;
         case 'ArrowRight':
+          e.preventDefault();
           handleNext();
           break;
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = previousOverflow;
     };
   }, [onClose, handlePrev, handleNext]);
 
   if (!photo) return null;
 
   return (
-    <motion.div
-      className={classes.overlay}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      onClick={onClose}
-    >
-      <motion.div
-        className={classes.content}
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.3 }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <img
-          src={photo.src}
-          srcSet={photo.srcSet
-            ?.map((image) => `${image.src} ${image.width}w`)
-            .join(', ')}
-          sizes="(max-width: 768px) calc(100vw - 40px), 80vw"
-          width={photo.width}
-          height={photo.height}
-          alt={photo.alt || ''}
-          className={classes.image}
-        />
-
-        <button
-          type="button"
-          className={classes.closeButton}
+    <Portal>
+      <FocusTrap active>
+        <motion.div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Photograph ${currentIndex + 1} of ${photos.length}`}
+          className={classes.overlay}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           onClick={onClose}
-          aria-label="Close lightbox"
         >
-          <IconX size={20} />
-        </button>
-
-        {hasPrev && (
-          <button
-            type="button"
-            className={`${classes.navButton} ${classes.prevButton}`}
-            onClick={handlePrev}
-            aria-label="Previous image"
+          <motion.div
+            className={classes.content}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            onClick={(e) => e.stopPropagation()}
           >
-            <IconChevronLeft size={20} />
-          </button>
-        )}
+            <img
+              src={photo.src}
+              srcSet={photo.srcSet
+                ?.map((image) => `${image.src} ${image.width}w`)
+                .join(', ')}
+              sizes="(max-width: 768px) calc(100vw - 40px), 80vw"
+              width={photo.width}
+              height={photo.height}
+              alt={photo.alt || ''}
+              className={classes.image}
+            />
 
-        {hasNext && (
-          <button
-            type="button"
-            className={`${classes.navButton} ${classes.nextButton}`}
-            onClick={handleNext}
-            aria-label="Next image"
-          >
-            <IconChevronRight size={20} />
-          </button>
-        )}
-      </motion.div>
-    </motion.div>
+            <button
+              type="button"
+              className={classes.closeButton}
+              onClick={onClose}
+              aria-label="Close lightbox"
+              data-autofocus
+            >
+              <IconX size={20} />
+            </button>
+
+            {hasPrev && (
+              <button
+                type="button"
+                className={`${classes.navButton} ${classes.prevButton}`}
+                onClick={handlePrev}
+                aria-label="Previous image"
+              >
+                <IconChevronLeft size={20} />
+              </button>
+            )}
+
+            {hasNext && (
+              <button
+                type="button"
+                className={`${classes.navButton} ${classes.nextButton}`}
+                onClick={handleNext}
+                aria-label="Next image"
+              >
+                <IconChevronRight size={20} />
+              </button>
+            )}
+          </motion.div>
+        </motion.div>
+      </FocusTrap>
+    </Portal>
   );
 }

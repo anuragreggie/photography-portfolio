@@ -6,7 +6,8 @@ import {
   ActionIcon,
   Burger,
 } from '@mantine/core';
-import { NavLink, Outlet } from 'react-router';
+import { useEffect } from 'react';
+import { NavLink, Outlet, useLocation } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   IconMail,
@@ -14,7 +15,7 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
 } from '@tabler/icons-react';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useHotkeys, useMediaQuery } from '@mantine/hooks';
 import classes from './styles.module.css';
 
 const NAV_ITEMS = [
@@ -29,6 +30,22 @@ function navClassName(baseClass: string, isActive: boolean) {
 
 export default function MainLayout() {
   const [opened, { toggle, close }] = useDisclosure();
+  const location = useLocation();
+  const isDesktop = useMediaQuery('(min-width: 48em)');
+  useEffect(() => {
+    if (!opened || isDesktop) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [opened, isDesktop]);
+  useHotkeys([['Escape', close]]);
+
+  // History navigation and breakpoint changes should dismiss the mobile menu.
+  useEffect(() => {
+    close();
+  }, [location.key, isDesktop, close]);
 
   return (
     <AppShell
@@ -49,7 +66,7 @@ export default function MainLayout() {
             </Text>
           </NavLink>
 
-          <nav className={classes.desktopNav}>
+          <nav aria-label="Main navigation" className={classes.desktopNav}>
             <Group gap="2rem">
               {NAV_ITEMS.map((item) => (
                 <NavLink
@@ -78,7 +95,12 @@ export default function MainLayout() {
         </div>
       </AppShell.Header>
 
-      <AppShell.Navbar id="mobile-navigation" className={classes.navbar}>
+      <AppShell.Navbar
+        component="nav"
+        aria-label="Mobile navigation"
+        id="mobile-navigation"
+        className={classes.navbar}
+      >
         <div className={classes.navbarContent}>
           {NAV_ITEMS.map((item) => (
             <NavLink
