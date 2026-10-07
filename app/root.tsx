@@ -9,37 +9,12 @@ import {
 } from 'react-router';
 import type { LinksFunction, MetaFunction } from 'react-router';
 import { MantineProvider, Center, Loader, Text } from '@mantine/core';
+import { MotionConfig } from 'framer-motion';
 import { theme } from '../styles/theme';
 
 import './app.css';
 import './fonts.css';
 import '@mantine/core/styles.css';
-
-const HOME_GALLERY_PRELOADS = [
-  '/images/united-states/DSC08453',
-  '/images/japan/DSC02897',
-  '/images/uk/DSC07626',
-] as const;
-
-function imagePreload(
-  path: (typeof HOME_GALLERY_PRELOADS)[number],
-  widths: number[],
-  fallbackWidth: number,
-  imageSizes: string,
-  media: string
-) {
-  return {
-    rel: 'preload',
-    href: `${path}-${fallbackWidth}w.webp`,
-    as: 'image',
-    type: 'image/webp',
-    media,
-    imageSrcSet: widths
-      .map((width) => `${path}-${width}w.webp ${width}w`)
-      .join(', '),
-    imageSizes,
-  };
-}
 
 export const links: LinksFunction = () => [
   { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
@@ -58,12 +33,6 @@ export const links: LinksFunction = () => [
     type: 'font/woff2',
     crossOrigin: 'anonymous',
   },
-  ...HOME_GALLERY_PRELOADS.slice(0, 2).map((path) =>
-    imagePreload(path, [400, 800], 800, '50vw', '(max-width: 767px)')
-  ),
-  ...HOME_GALLERY_PRELOADS.map((path) =>
-    imagePreload(path, [800, 1280, 1920], 1280, '33vw', '(min-width: 768px)')
-  ),
 ];
 
 export const meta: MetaFunction = () => {
@@ -91,7 +60,7 @@ export function Layout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <MantineProvider theme={theme} forceColorScheme="light">
-          {children}
+          <MotionConfig reducedMotion="user">{children}</MotionConfig>
         </MantineProvider>
         <ScrollRestoration />
         <Scripts />

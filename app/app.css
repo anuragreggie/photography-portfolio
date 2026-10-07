@@ -89,3 +89,9 @@ p {
   color: var(--mantine-color-dark-0);
   line-height: 1.7;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

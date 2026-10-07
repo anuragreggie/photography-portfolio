@@ -183,10 +183,7 @@ function createScenes(photos: PortfolioPhoto[]): BookScene[] {
       let photoIndex = 0;
 
       return counts.map((count, chapterSpread) => {
-        let spreadPhotos = curatedPhotos.slice(
-          photoIndex,
-          photoIndex + count
-        );
+        let spreadPhotos = curatedPhotos.slice(photoIndex, photoIndex + count);
         const preferredHero = CHAPTER_HEROES[locationFolder]?.[chapterSpread];
 
         if (chapterSpread > 0) {
@@ -311,10 +308,16 @@ export default function GalleryOverview() {
           srcSet={photo.srcSet
             ?.map((image) => `${image.src} ${image.width}w`)
             .join(', ')}
-          sizes="(max-width: 700px) 100vw, 1240px"
+          width={photo.width}
+          height={photo.height}
+          sizes={
+            photo.height > photo.width
+              ? '(max-width: 700px) min(64vw, 288px), 340px'
+              : '(max-width: 700px) min(calc(100vw - 24px), 544px), min(calc(100vw - 120px), 880px)'
+          }
           alt={photo.alt || ''}
           className={classes.heroPhoto}
-          loading={sceneIndex < 2 ? 'eager' : 'lazy'}
+          loading={sceneIndex === 0 ? 'eager' : 'lazy'}
           fetchPriority={sceneIndex === 0 ? 'high' : 'auto'}
           decoding="async"
         />
@@ -324,7 +327,7 @@ export default function GalleryOverview() {
 
   return (
     <div className={classes.page} ref={bookRef}>
-      <main className={classes.book} aria-label="Photography gallery">
+      <section className={classes.book} aria-label="Photography gallery">
         {scenes.map((scene, sceneIndex) => {
           const sceneDate = formatDate(scene.photos[0]?.photo.dateTaken);
           const leadPhoto = scene.photos[0];
@@ -335,8 +338,7 @@ export default function GalleryOverview() {
           const portraitOnlyRow = albumPhotos.every(
             (photo) => photo.height / photo.width > 1.15
           );
-          const sparsePortraitRow =
-            portraitOnlyRow && albumPhotos.length <= 2;
+          const sparsePortraitRow = portraitOnlyRow && albumPhotos.length <= 2;
           const albumMaxWidth = portraitOnlyRow ? 800 : 1080;
           const leadIsPortrait =
             leadPhoto.photo.height / leadPhoto.photo.width > 1.15;
@@ -383,16 +385,16 @@ export default function GalleryOverview() {
                           ? 260
                           : 390
                         : portraitOnlyRow
-                        ? containerWidth < 700
-                          ? 170
-                          : 220
-                        : containerWidth < 500
-                          ? 165
-                          : containerWidth < 900
-                            ? 220
-                            : scene.layout === 'film'
-                              ? 290
-                              : 255
+                          ? containerWidth < 700
+                            ? 170
+                            : 220
+                          : containerWidth < 500
+                            ? 165
+                            : containerWidth < 900
+                              ? 220
+                              : scene.layout === 'film'
+                                ? 290
+                                : 255
                     }
                     rowConstraints={(containerWidth) => ({
                       minPhotos: 1,
@@ -407,16 +409,15 @@ export default function GalleryOverview() {
                       size: `${albumMaxWidth}px`,
                       sizes: [
                         {
-                          viewport: '(max-width: 1340px)',
-                          size: `min(calc(100vw - 120px), ${albumMaxWidth}px)`,
+                          viewport: '(max-width: 700px)',
+                          size: 'min(calc(100vw - 24px), 544px)',
                         },
                         {
-                          viewport: '(max-width: 700px)',
-                          size: 'calc(100vw - 24px)',
+                          viewport: '(max-width: 1340px)',
+                          size: `min(calc(100vw - max(120px, 10vw)), ${albumMaxWidth}px)`,
                         },
                       ],
                     }}
-                    defaultContainerWidth={albumMaxWidth}
                     onClick={({ photo }) =>
                       setLightboxIndex(photo.portfolioIndex)
                     }
@@ -429,11 +430,12 @@ export default function GalleryOverview() {
                         }`,
                       },
                       button: { className: classes.albumButton },
-                      image: {
+                      image: ({ index }) => ({
                         className: classes.albumPhoto,
-                        loading: sceneIndex < 2 ? 'eager' : 'lazy',
+                        loading:
+                          sceneIndex === 0 && index < 2 ? 'eager' : 'lazy',
                         decoding: 'async',
-                      },
+                      }),
                     }}
                   />
                 )}
@@ -450,7 +452,7 @@ export default function GalleryOverview() {
             </motion.section>
           );
         })}
-      </main>
+      </section>
 
       <aside
         className={`${classes.scrubber} ${bookVisible ? classes.scrubberVisible : ''}`}

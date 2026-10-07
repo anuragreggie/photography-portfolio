@@ -6,6 +6,9 @@ import classes from './Lightbox.module.css';
 interface LightboxPhoto {
   src: string;
   alt?: string;
+  width?: number;
+  height?: number;
+  srcSet?: { src: string; width: number }[];
 }
 
 interface LightboxProps {
@@ -49,11 +52,12 @@ export function Lightbox({
     };
 
     document.addEventListener('keydown', handleKeyDown);
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
+      document.body.style.overflow = previousOverflow;
     };
   }, [onClose, handlePrev, handleNext]);
 
@@ -73,7 +77,17 @@ export function Lightbox({
         transition={{ duration: 0.3 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <img src={photo.src} alt={photo.alt || ''} className={classes.image} />
+        <img
+          src={photo.src}
+          srcSet={photo.srcSet
+            ?.map((image) => `${image.src} ${image.width}w`)
+            .join(', ')}
+          sizes="(max-width: 768px) calc(100vw - 40px), 80vw"
+          width={photo.width}
+          height={photo.height}
+          alt={photo.alt || ''}
+          className={classes.image}
+        />
 
         <button
           type="button"

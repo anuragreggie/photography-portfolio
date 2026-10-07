@@ -33,10 +33,7 @@ export const PHOTO_ALBUM_CONFIG = {
     desktop: { maxPhotos: 3, singleRowMaxHeight: 600 },
   },
   sizes: {
-    size: 'calc(100vw - 40px)',
-    sizes: [
-      { viewport: '(max-width: 768px)', size: 'calc(100vw - 32px)' },
-      { viewport: '(min-width: 769px)', size: 'calc(100vw - 80px)' },
-    ],
+    // Mantine's xl container is capped at 1320px, including 16px gutters.
+    size: 'min(calc(100vw - 32px), 1288px)',
   } satisfies ResponsiveSizes,
 } as const;

@@ -1,8 +1,8 @@
 import { Container, Title, Text } from '@mantine/core';
 import { motion } from 'framer-motion';
 
-import sonyA6700 from '../../assets/images/sony-a6700.webp';
-import sigma1850 from '../../assets/images/sigma-18-50mm.webp';
+import sonyA6700 from '../../assets/images/sony-a6700-1200w.webp';
+import sigma1850 from '../../assets/images/sigma-18-50mm-640w.webp';
 import { ANIMATION } from '../../constants';
 import classes from './styles.module.css';
 
@@ -24,7 +24,7 @@ export default function About() {
           </Text>
         </motion.div>
 
-        <Container size="lg" className={classes.content}>
+        <div className={classes.content}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,6 +50,8 @@ export default function About() {
                   <div className={classes.equipmentImageWrapper}>
                     <img
                       src={sonyA6700}
+                      width={1200}
+                      height={849}
                       alt="Sony A6700 Mirrorless Camera"
                       className={classes.equipmentMainImage}
                       loading="lazy"
@@ -67,6 +69,8 @@ export default function About() {
                   <div className={classes.equipmentImageWrapper}>
                     <img
                       src={sigma1850}
+                      width={640}
+                      height={483}
                       alt="Sigma 18-50mm F2.8 DC DN Contemporary Lens"
                       className={classes.equipmentMainImage}
                       loading="lazy"
@@ -87,7 +91,7 @@ export default function About() {
               </div>
             </motion.div>
           </motion.div>
-        </Container>
+        </div>
       </Container>
     </div>
   );

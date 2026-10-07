@@ -1,13 +1,12 @@
 import { Container, Text } from '@mantine/core';
-import { motion } from 'framer-motion';
-import { useViewportSize } from '@mantine/hooks';
+import { useMediaQuery } from '@mantine/hooks';
 import { useLoaderData } from 'react-router';
 import { RowsPhotoAlbum } from 'react-photo-album';
 import 'react-photo-album/rows.css';
 
 import classes from './styles.module.css';
 import { createPhotosByPaths, type PortfolioPhoto } from '../../data/photos';
-import { BREAKPOINTS, ANIMATION, PHOTO_ALBUM_CONFIG } from '../../constants';
+import { BREAKPOINTS, PHOTO_ALBUM_CONFIG } from '../../constants';
 
 const fixedImagePaths = [
   'united-states/DSC08453.jpg',
@@ -35,8 +34,11 @@ clientLoader.hydrate = true as const;
 
 export default function Home() {
   const { fixedPhotos } = useLoaderData<{ fixedPhotos: PortfolioPhoto[] }>();
-  const { width } = useViewportSize();
-  const isMobile = width < BREAKPOINTS.mobile;
+  const isMobile = useMediaQuery(
+    `(max-width: ${BREAKPOINTS.mobile - 1}px)`,
+    false,
+    { getInitialValueInEffect: false }
+  );
 
   const rowConstraints = isMobile
     ? PHOTO_ALBUM_CONFIG.rowConstraints.mobile
@@ -59,38 +61,29 @@ export default function Home() {
 
       <section className={classes.gallery}>
         <Container size="xl">
-          <motion.div
-            {...ANIMATION.fadeInUpLarge}
-            transition={{
-              duration: ANIMATION.duration.slow,
-              delay: 0.3,
-              ease: 'easeOut',
-            }}
-          >
-            {fixedPhotos.length > 0 ? (
-              <RowsPhotoAlbum
-                photos={fixedPhotos}
-                rowConstraints={rowConstraints}
-                sizes={PHOTO_ALBUM_CONFIG.sizes}
-                componentsProps={{
-                  image: ({ index }) => ({
-                    loading: index < eagerPhotoCount ? 'eager' : 'lazy',
-                    fetchPriority:
-                      index === 0
-                        ? 'high'
-                        : index < eagerPhotoCount
-                          ? 'auto'
-                          : 'low',
-                    decoding: 'async',
-                  }),
-                }}
-              />
-            ) : (
-              <Text ta="center" py="xl">
-                Images coming soon.
-              </Text>
-            )}
-          </motion.div>
+          {fixedPhotos.length > 0 ? (
+            <RowsPhotoAlbum
+              photos={fixedPhotos}
+              rowConstraints={rowConstraints}
+              sizes={PHOTO_ALBUM_CONFIG.sizes}
+              componentsProps={{
+                image: ({ index }) => ({
+                  loading: index < eagerPhotoCount ? 'eager' : 'lazy',
+                  fetchPriority:
+                    index === 0
+                      ? 'high'
+                      : index < eagerPhotoCount
+                        ? 'auto'
+                        : 'low',
+                  decoding: 'async',
+                }),
+              }}
+            />
+          ) : (
+            <Text ta="center" py="xl">
+              Images coming soon.
+            </Text>
+          )}
         </Container>
       </section>
     </div>

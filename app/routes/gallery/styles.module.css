@@ -161,6 +161,11 @@
     transform 300ms ease;
 }
 
+.scrubberControl:focus-within {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 .scrubberVisible {
   opacity: 1;
   transform: translateX(0);
