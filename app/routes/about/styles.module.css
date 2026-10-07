@@ -1,5 +1,5 @@
 .page {
-  min-height: 100vh;
+  flex: 1;
   padding-top: 2rem;
   background: var(--mantine-color-dark-9);
 }
@@ -54,7 +54,7 @@
 
 .equipmentImages {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 3rem;
   margin-bottom: 3rem;
   align-items: stretch;
@@ -88,6 +88,7 @@
 .equipmentMainImage {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
   border-radius: 0;
 }
 

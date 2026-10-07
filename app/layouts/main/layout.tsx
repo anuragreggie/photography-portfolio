@@ -66,6 +66,9 @@ export default function MainLayout() {
           </nav>
 
           <Burger
+            aria-label={opened ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={opened}
+            aria-controls="mobile-navigation"
             opened={opened}
             onClick={toggle}
             hiddenFrom="sm"
@@ -75,7 +78,7 @@ export default function MainLayout() {
         </div>
       </AppShell.Header>
 
-      <AppShell.Navbar className={classes.navbar}>
+      <AppShell.Navbar id="mobile-navigation" className={classes.navbar}>
         <div className={classes.navbarContent}>
           {NAV_ITEMS.map((item) => (
             <NavLink

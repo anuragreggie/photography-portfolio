@@ -1,10 +1,10 @@
 .page {
-  min-height: 100vh;
+  flex: 1;
   background: var(--mantine-color-dark-9);
 }
 
 .header {
-  padding: 4rem 0 2rem 0;
+  padding: clamp(3rem, 6vw, 5rem) 0 2rem;
   background: var(--mantine-color-dark-9);
 }
 
@@ -25,10 +25,6 @@
 }
 
 @media (max-width: 768px) {
-  .header {
-    padding: 3rem 0 1.5rem 0;
-  }
-
   .gallery {
     padding: 1.5rem 0 3rem 0;
   }
@@ -36,7 +32,7 @@
 
 @media (max-width: 480px) {
   .header {
-    padding: 2rem 0 1rem 0;
+    padding-bottom: 1rem;
   }
 
   .gallery {

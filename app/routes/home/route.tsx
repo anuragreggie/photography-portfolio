@@ -50,7 +50,9 @@ export default function Home() {
       <section className={classes.header}>
         <Container size="xl">
           <div className={classes.headerContent}>
-            <Text className={classes.pageTitle}>Life Through Optics</Text>
+            <Text component="h1" className={classes.pageTitle}>
+              Life Through Optics
+            </Text>
           </div>
         </Container>
       </section>

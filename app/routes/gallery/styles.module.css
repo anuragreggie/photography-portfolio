@@ -1,5 +1,5 @@
 .page {
-  --book-header: 80px;
+  --book-header: var(--app-shell-header-height);
   --paper: #ffffff;
   --ink: #1d1d1a;
   --muted: #737373;
