@@ -19,8 +19,7 @@ export default function About() {
             About
           </Title>
           <Text size="sm" c="dark.0" className={classes.subtitle}>
-            This portfolio is a collection of images I've taken along the way,
-            moments that stood out to me and felt worth remembering.
+            I'm Anurag, based in London.
           </Text>
         </motion.div>
 
@@ -82,11 +81,8 @@ export default function About() {
 
               <div className={classes.equipmentDescription}>
                 <Text className={classes.equipmentText}>
-                  I primarily shoot with a <strong>Sony A6700</strong> paired
-                  with a <strong>Sigma 18-50mm F2.8 DC DN</strong> lens. This
-                  combo works great for a variety of photography styles, from
-                  portraits to landscapes, while being compact and
-                  travel-friendly.
+                  I shoot with a <strong>Sony A6700</strong> and a{' '}
+                  <strong>Sigma 18–50mm f/2.8</strong>.
                 </Text>
               </div>
             </motion.div>
