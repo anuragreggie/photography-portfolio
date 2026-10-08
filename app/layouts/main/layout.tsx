@@ -21,7 +21,6 @@ import classes from './styles.module.css';
 const NAV_ITEMS = [
   { to: '/', label: 'Home' },
   { to: '/gallery', label: 'Gallery' },
-  { to: '/about', label: 'About' },
 ];
 
 function navClassName(baseClass: string, isActive: boolean) {
