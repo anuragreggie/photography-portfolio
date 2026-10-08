@@ -1,8 +1,9 @@
 import { FocusTrap, Portal } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { IconChevronLeft, IconChevronRight, IconX } from '@tabler/icons-react';
 import classes from './Lightbox.module.css';
+import { SwipeGesture } from './swipe';
 
 interface LightboxPhoto {
   src: string;
@@ -36,6 +37,10 @@ export function Lightbox({
       }
     };
   }, []);
+  const swipe = useRef(new SwipeGesture());
+  useEffect(() => {
+    swipe.current.cancel();
+  }, [currentIndex]);
   const photo = photos[currentIndex];
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < photos.length - 1;
@@ -81,11 +86,14 @@ export function Lightbox({
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label={`Photograph ${currentIndex + 1} of ${photos.length}`}
+          aria-label="Photo viewer"
           className={classes.overlay}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           onClick={onClose}
+          onTouchStartCapture={(event) => {
+            if (event.touches.length > 1) swipe.current.cancel();
+          }}
         >
           <motion.div
             className={classes.content}
@@ -104,6 +112,31 @@ export function Lightbox({
               height={photo.height}
               alt={photo.alt || ''}
               className={classes.image}
+              draggable={false}
+              onTouchStart={(event) => {
+                swipe.current.start(
+                  Array.from(event.touches),
+                  event.timeStamp,
+                  window.visualViewport?.scale ?? 1
+                );
+              }}
+              onTouchMove={(event) => {
+                swipe.current.move(
+                  Array.from(event.touches),
+                  window.visualViewport?.scale ?? 1
+                );
+              }}
+              onTouchEnd={(event) => {
+                const direction = swipe.current.end(
+                  Array.from(event.changedTouches),
+                  event.touches.length,
+                  event.timeStamp,
+                  window.visualViewport?.scale ?? 1
+                );
+                if (direction === 'next') handleNext();
+                if (direction === 'previous') handlePrev();
+              }}
+              onTouchCancel={() => swipe.current.cancel()}
             />
 
             <button
@@ -138,6 +171,15 @@ export function Lightbox({
               </button>
             )}
           </motion.div>
+          <div
+            className={classes.counter}
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            onClick={(event) => event.stopPropagation()}
+          >
+            {currentIndex + 1} of {photos.length}
+          </div>
         </motion.div>
       </FocusTrap>
     </Portal>
