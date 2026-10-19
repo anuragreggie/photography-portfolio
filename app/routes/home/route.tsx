@@ -11,9 +11,9 @@ import { BREAKPOINTS, PHOTO_ALBUM_CONFIG } from '../../constants';
 const fixedImagePaths = [
   'united-states/DSC08453.jpg',
   'japan/DSC02897.jpg',
-  'uk/DSC07626.jpg',
+  'malaysia/20260615-DSC00873.jpg',
   'hong-kong/DSC05828.jpg',
-  'japan/shinkansen-driver-v2.jpg',
+  'italy-2026/20260830-DSC03236.jpg',
   'switzerland/DSC06483.jpg',
   'japan/tokyo-tower-through-leaves.jpg',
   'norway/DSC03654.jpg',

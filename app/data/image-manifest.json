@@ -1023,65 +1023,406 @@
         }
       ]
     },
-    "italy/dsc01844.jpg": {
-      "relPath": "italy/DSC01844.jpg",
-      "countryFolder": "italy",
-      "title": "Italy 1844",
-      "alt": "Italy 1844",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-05-04T08:34:09.000Z",
+    "italy-2026/20260828-dsc02262.jpg": {
+      "relPath": "italy-2026/20260828-DSC02262.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2262",
+      "alt": "20260828-Italy 2026 2262",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-28T09:42:57.000Z",
       "responsiveVariants": [
         {
-          "width": 267,
-          "height": 400,
-          "src": "/images/italy/DSC01844-400w.webp"
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260828-DSC02262-400w.webp"
         },
         {
-          "width": 533,
-          "height": 800,
-          "src": "/images/italy/DSC01844-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/italy/DSC01844-1280w.webp"
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260828-DSC02262-800w.webp"
         },
         {
           "width": 1280,
-          "height": 1920,
-          "src": "/images/italy/DSC01844-1920w.webp"
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02262-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02262-1920w.webp"
         }
       ]
     },
-    "italy/dsc01854.jpg": {
-      "relPath": "italy/DSC01854.jpg",
-      "countryFolder": "italy",
-      "title": "Italy 1854",
-      "alt": "Italy 1854",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2025-05-04T08:50:09.000Z",
+    "italy-2026/20260828-dsc02373.jpg": {
+      "relPath": "italy-2026/20260828-DSC02373.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2373",
+      "alt": "20260828-Italy 2026 2373",
+      "width": 5947,
+      "height": 3965,
+      "dateTaken": "2026-08-28T10:34:18.000Z",
       "responsiveVariants": [
         {
-          "width": 267,
-          "height": 400,
-          "src": "/images/italy/DSC01854-400w.webp"
+          "width": 400,
+          "height": 266,
+          "src": "/images/italy-2026/20260828-DSC02373-400w.webp"
         },
         {
-          "width": 533,
-          "height": 800,
-          "src": "/images/italy/DSC01854-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/italy/DSC01854-1280w.webp"
+          "width": 800,
+          "height": 534,
+          "src": "/images/italy-2026/20260828-DSC02373-800w.webp"
         },
         {
           "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02373-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02373-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260828-dsc02384.jpg": {
+      "relPath": "italy-2026/20260828-DSC02384.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2384",
+      "alt": "20260828-Italy 2026 2384",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-28T11:45:39.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260828-DSC02384-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260828-DSC02384-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02384-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02384-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260828-dsc02394.jpg": {
+      "relPath": "italy-2026/20260828-DSC02394.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2394",
+      "alt": "20260828-Italy 2026 2394",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-28T11:50:14.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260828-DSC02394-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260828-DSC02394-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02394-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02394-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260828-dsc02436.jpg": {
+      "relPath": "italy-2026/20260828-DSC02436.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2436",
+      "alt": "20260828-Italy 2026 2436",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-28T12:06:38.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260828-DSC02436-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260828-DSC02436-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02436-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02436-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260828-dsc02498.jpg": {
+      "relPath": "italy-2026/20260828-DSC02498.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2498",
+      "alt": "20260828-Italy 2026 2498",
+      "width": 5544,
+      "height": 3696,
+      "dateTaken": "2026-08-28T13:04:08.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260828-DSC02498-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260828-DSC02498-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02498-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02498-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260828-dsc02503.jpg": {
+      "relPath": "italy-2026/20260828-DSC02503.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260828-Italy 2026 2503",
+      "alt": "20260828-Italy 2026 2503",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-28T13:19:44.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260828-DSC02503-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260828-DSC02503-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260828-DSC02503-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260828-DSC02503-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260829-dsc02579.jpg": {
+      "relPath": "italy-2026/20260829-DSC02579.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260829-Italy 2026 2579",
+      "alt": "20260829-Italy 2026 2579",
+      "width": 5633,
+      "height": 3755,
+      "dateTaken": "2026-08-29T07:31:54.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 266,
+          "src": "/images/italy-2026/20260829-DSC02579-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260829-DSC02579-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260829-DSC02579-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260829-DSC02579-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260829-dsc02589.jpg": {
+      "relPath": "italy-2026/20260829-DSC02589.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260829-Italy 2026 2589",
+      "alt": "20260829-Italy 2026 2589",
+      "width": 4039,
+      "height": 5618,
+      "dateTaken": "2026-08-29T09:28:07.000Z",
+      "responsiveVariants": [
+        {
+          "width": 287,
+          "height": 400,
+          "src": "/images/italy-2026/20260829-DSC02589-400w.webp"
+        },
+        {
+          "width": 575,
+          "height": 800,
+          "src": "/images/italy-2026/20260829-DSC02589-800w.webp"
+        },
+        {
+          "width": 920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260829-DSC02589-1280w.webp"
+        },
+        {
+          "width": 1380,
           "height": 1920,
-          "src": "/images/italy/DSC01854-1920w.webp"
+          "src": "/images/italy-2026/20260829-DSC02589-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260829-dsc02866.jpg": {
+      "relPath": "italy-2026/20260829-DSC02866.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260829-Italy 2026 2866",
+      "alt": "20260829-Italy 2026 2866",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-29T13:58:24.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260829-DSC02866-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260829-DSC02866-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260829-DSC02866-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260829-DSC02866-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260829-dsc02923.jpg": {
+      "relPath": "italy-2026/20260829-DSC02923.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260829-Italy 2026 2923",
+      "alt": "20260829-Italy 2026 2923",
+      "width": 5446,
+      "height": 3631,
+      "dateTaken": "2026-08-29T14:14:30.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 266,
+          "src": "/images/italy-2026/20260829-DSC02923-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260829-DSC02923-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260829-DSC02923-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260829-DSC02923-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260830-dsc02974.jpg": {
+      "relPath": "italy-2026/20260830-DSC02974.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260830-Italy 2026 2974",
+      "alt": "20260830-Italy 2026 2974",
+      "width": 6192,
+      "height": 4128,
+      "dateTaken": "2026-08-30T08:37:04.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260830-DSC02974-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260830-DSC02974-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260830-DSC02974-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260830-DSC02974-1920w.webp"
+        }
+      ]
+    },
+    "italy-2026/20260830-dsc03236.jpg": {
+      "relPath": "italy-2026/20260830-DSC03236.jpg",
+      "countryFolder": "italy-2026",
+      "title": "20260830-Italy 2026 3236",
+      "alt": "20260830-Italy 2026 3236",
+      "width": 5666,
+      "height": 3777,
+      "dateTaken": "2026-08-30T14:46:31.000Z",
+      "responsiveVariants": [
+        {
+          "width": 400,
+          "height": 267,
+          "src": "/images/italy-2026/20260830-DSC03236-400w.webp"
+        },
+        {
+          "width": 800,
+          "height": 533,
+          "src": "/images/italy-2026/20260830-DSC03236-800w.webp"
+        },
+        {
+          "width": 1280,
+          "height": 853,
+          "src": "/images/italy-2026/20260830-DSC03236-1280w.webp"
+        },
+        {
+          "width": 1920,
+          "height": 1280,
+          "src": "/images/italy-2026/20260830-DSC03236-1920w.webp"
         }
       ]
     },

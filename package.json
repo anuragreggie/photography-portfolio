@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npm run images:manifest && npm run images:optimize && react-router build",
     "build:quick": "react-router build",
-    "dev": "react-router dev",
+    "dev": "CHOKIDAR_USEPOLLING=true react-router dev",
     "start": "vite preview --outDir build/client",
     "typecheck": "react-router typegen && tsc",
     "lint": "eslint .",

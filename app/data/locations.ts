@@ -18,8 +18,8 @@ export const locations: Location[] = [
     folder: 'hong-kong',
   },
   {
-    name: 'Italy',
-    folder: 'italy',
+    name: 'Italy · August 2026',
+    folder: 'italy-2026',
   },
   {
     name: 'Japan',

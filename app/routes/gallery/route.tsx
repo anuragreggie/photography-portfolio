@@ -44,7 +44,7 @@ const CHAPTER_HEROES: Record<string, readonly string[]> = {
   copenhagen: ['DSCF9347'],
   france: ['20260426-DSC00432'],
   'hong-kong': ['DSC05768'],
-  italy: ['DSC01844'],
+  'italy-2026': ['20260828-DSC02503', '20260830-DSC03236'],
   japan: ['DSC02897'],
   malaysia: ['20260616-DSC01021', 'DSC01996'],
   norway: ['DSC03947'],
