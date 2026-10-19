@@ -93,37 +93,6 @@
         }
       ]
     },
-    "copenhagen/20260329-dsc09725.jpg": {
-      "relPath": "copenhagen/20260329-DSC09725.jpg",
-      "countryFolder": "copenhagen",
-      "title": "20260329-Copenhagen 9725",
-      "alt": "20260329-Copenhagen 9725",
-      "width": 1360,
-      "height": 2040,
-      "dateTaken": "2026-03-29T08:36:51.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/copenhagen/20260329-DSC09725-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/copenhagen/20260329-DSC09725-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/copenhagen/20260329-DSC09725-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/copenhagen/20260329-DSC09725-1920w.webp"
-        }
-      ]
-    },
     "copenhagen/20260329-dsc09749.jpg": {
       "relPath": "copenhagen/20260329-DSC09749.jpg",
       "countryFolder": "copenhagen",
@@ -214,68 +183,6 @@
           "width": 1920,
           "height": 1280,
           "src": "/images/copenhagen/DSCF9347-1920w.webp"
-        }
-      ]
-    },
-    "copenhagen/dscf9391.jpg": {
-      "relPath": "copenhagen/DSCF9391.jpg",
-      "countryFolder": "copenhagen",
-      "title": "Copenhagen F9391",
-      "alt": "Copenhagen F9391",
-      "width": 2040,
-      "height": 1360,
-      "dateTaken": "2026-03-27T05:58:24.000Z",
-      "responsiveVariants": [
-        {
-          "width": 400,
-          "height": 267,
-          "src": "/images/copenhagen/DSCF9391-400w.webp"
-        },
-        {
-          "width": 800,
-          "height": 533,
-          "src": "/images/copenhagen/DSCF9391-800w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 853,
-          "src": "/images/copenhagen/DSCF9391-1280w.webp"
-        },
-        {
-          "width": 1920,
-          "height": 1280,
-          "src": "/images/copenhagen/DSCF9391-1920w.webp"
-        }
-      ]
-    },
-    "copenhagen/dscf9472.jpg": {
-      "relPath": "copenhagen/DSCF9472.jpg",
-      "countryFolder": "copenhagen",
-      "title": "Copenhagen F9472",
-      "alt": "Copenhagen F9472",
-      "width": 2040,
-      "height": 1360,
-      "dateTaken": "2026-03-28T10:37:27.000Z",
-      "responsiveVariants": [
-        {
-          "width": 400,
-          "height": 267,
-          "src": "/images/copenhagen/DSCF9472-400w.webp"
-        },
-        {
-          "width": 800,
-          "height": 533,
-          "src": "/images/copenhagen/DSCF9472-800w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 853,
-          "src": "/images/copenhagen/DSCF9472-1280w.webp"
-        },
-        {
-          "width": 1920,
-          "height": 1280,
-          "src": "/images/copenhagen/DSCF9472-1920w.webp"
         }
       ]
     },
@@ -3066,37 +2973,6 @@
           "width": 1920,
           "height": 1280,
           "src": "/images/uk/DSC04453-1920w.webp"
-        }
-      ]
-    },
-    "uk/dsc07120.jpg": {
-      "relPath": "uk/DSC07120.jpg",
-      "countryFolder": "uk",
-      "title": "Uk 7120",
-      "alt": "Uk 7120",
-      "width": 4009,
-      "height": 6013,
-      "dateTaken": "2026-01-24T15:19:06.000Z",
-      "responsiveVariants": [
-        {
-          "width": 267,
-          "height": 400,
-          "src": "/images/uk/DSC07120-400w.webp"
-        },
-        {
-          "width": 533,
-          "height": 800,
-          "src": "/images/uk/DSC07120-800w.webp"
-        },
-        {
-          "width": 853,
-          "height": 1280,
-          "src": "/images/uk/DSC07120-1280w.webp"
-        },
-        {
-          "width": 1280,
-          "height": 1920,
-          "src": "/images/uk/DSC07120-1920w.webp"
         }
       ]
     },
