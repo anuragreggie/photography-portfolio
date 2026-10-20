@@ -368,7 +368,9 @@ export default function GalleryOverview() {
                 {albumPhotos.length > 0 && (
                   <RowsPhotoAlbum
                     photos={albumPhotos}
-                    spacing={(containerWidth) => (containerWidth < 700 ? 5 : 9)}
+                    spacing={(containerWidth) =>
+                      containerWidth < 700 ? 8 : 16
+                    }
                     targetRowHeight={(containerWidth) =>
                       sparsePortraitRow
                         ? containerWidth < 700

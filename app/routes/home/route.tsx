@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { Lightbox } from '../../components/Lightbox';
 import { Container, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { useLoaderData } from 'react-router';
@@ -34,6 +36,7 @@ clientLoader.hydrate = true as const;
 
 export default function Home() {
   const { fixedPhotos } = useLoaderData<{ fixedPhotos: PortfolioPhoto[] }>();
+  const [lightboxIndex, setLightboxIndex] = useState(-1);
   const isMobile = useMediaQuery(
     `(max-width: ${BREAKPOINTS.mobile - 1}px)`,
     false,
@@ -64,9 +67,15 @@ export default function Home() {
           {fixedPhotos.length > 0 ? (
             <RowsPhotoAlbum
               photos={fixedPhotos}
+              spacing={isMobile ? 8 : 16}
+              onClick={({ index }) => setLightboxIndex(index)}
               rowConstraints={rowConstraints}
               sizes={PHOTO_ALBUM_CONFIG.sizes}
               componentsProps={{
+                button: ({ photo }) => ({
+                  className: classes.photoButton,
+                  'aria-label': `Open photograph: ${photo.alt || photo.title || 'Untitled'}`,
+                }),
                 image: ({ index }) => ({
                   loading: index < eagerPhotoCount ? 'eager' : 'lazy',
                   fetchPriority:
@@ -86,6 +95,14 @@ export default function Home() {
           )}
         </Container>
       </section>
+      {lightboxIndex >= 0 && (
+        <Lightbox
+          photos={fixedPhotos}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(-1)}
+          onNavigate={setLightboxIndex}
+        />
+      )}
     </div>
   );
 }

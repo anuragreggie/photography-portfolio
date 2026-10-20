@@ -97,7 +97,7 @@ export function Lightbox({
         >
           <motion.div
             className={classes.content}
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={{ scale: 0.98, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.3 }}
             onClick={(e) => e.stopPropagation()}
