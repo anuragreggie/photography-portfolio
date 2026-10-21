@@ -1,5 +1,4 @@
 import { FocusTrap, Portal } from '@mantine/core';
-import { motion } from 'framer-motion';
 import { useCallback, useEffect, useRef } from 'react';
 import { IconChevronLeft, IconChevronRight, IconX } from '@tabler/icons-react';
 import classes from './Lightbox.module.css';
@@ -83,25 +82,17 @@ export function Lightbox({
   return (
     <Portal>
       <FocusTrap active>
-        <motion.div
+        <div
           role="dialog"
           aria-modal="true"
           aria-label="Photo viewer"
           className={classes.overlay}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
           onClick={onClose}
           onTouchStartCapture={(event) => {
             if (event.touches.length > 1) swipe.current.cancel();
           }}
         >
-          <motion.div
-            className={classes.content}
-            initial={{ scale: 0.98, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className={classes.content} onClick={(e) => e.stopPropagation()}>
             <img
               src={photo.src}
               srcSet={photo.srcSet
@@ -170,7 +161,7 @@ export function Lightbox({
                 <IconChevronRight size={20} />
               </button>
             )}
-          </motion.div>
+          </div>
           <div
             className={classes.counter}
             role="status"
@@ -180,7 +171,7 @@ export function Lightbox({
           >
             {currentIndex + 1} of {photos.length}
           </div>
-        </motion.div>
+        </div>
       </FocusTrap>
     </Portal>
   );

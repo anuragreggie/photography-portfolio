@@ -9,7 +9,6 @@ import {
 } from 'react-router';
 import type { LinksFunction, MetaFunction } from 'react-router';
 import { MantineProvider, Center, Loader, Text } from '@mantine/core';
-import { MotionConfig } from 'framer-motion';
 import { theme } from '../styles/theme';
 
 import './app.css';
@@ -31,13 +30,6 @@ export const links: LinksFunction = () => [
   {
     rel: 'preload',
     href: '/fonts/lora-latin-400.woff2',
-    as: 'font',
-    type: 'font/woff2',
-    crossOrigin: 'anonymous',
-  },
-  {
-    rel: 'preload',
-    href: '/fonts/lora-latin-600.woff2',
     as: 'font',
     type: 'font/woff2',
     crossOrigin: 'anonymous',
@@ -69,7 +61,7 @@ export function Layout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <MantineProvider theme={theme} forceColorScheme="light">
-          <MotionConfig reducedMotion="user">{children}</MotionConfig>
+          {children}
         </MantineProvider>
         <ScrollRestoration />
         <Scripts />

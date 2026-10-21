@@ -8,7 +8,6 @@ import {
 } from '@mantine/core';
 import { useEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router';
-import { motion } from 'framer-motion';
 import {
   IconMail,
   IconBrandInstagram,
@@ -117,12 +116,7 @@ export default function MainLayout() {
       </AppShell.Navbar>
 
       <AppShell.Main>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className={classes.mainContent}
-        >
+        <div className={classes.mainContent}>
           <Outlet />
 
           <footer className={classes.footer}>
@@ -189,7 +183,7 @@ export default function MainLayout() {
               </div>
             </Container>
           </footer>
-        </motion.div>
+        </div>
       </AppShell.Main>
     </AppShell>
   );
