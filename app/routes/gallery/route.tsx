@@ -9,6 +9,7 @@ import { Lightbox } from '../../components/Lightbox';
 import { locations } from '../../data/locations';
 import { createAllPhotos, type PortfolioPhoto } from '../../data/photos';
 import classes from './styles.module.css';
+import { observeGalleryReveals } from '../../utils/gallery-reveals';
 
 type SceneLayout = 'feature' | 'contact' | 'film';
 
@@ -241,6 +242,16 @@ export default function GalleryOverview() {
   const scenes = useMemo(() => createScenes(photos), [photos]);
 
   useEffect(() => {
+    if (shouldReduceMotion || !bookRef.current) return;
+    return observeGalleryReveals(
+      Array.from(
+        bookRef.current.querySelectorAll<HTMLElement>('[data-gallery-reveal]')
+      ),
+      bookRef.current
+    );
+  }, [scenes, shouldReduceMotion]);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -294,6 +305,7 @@ export default function GalleryOverview() {
         key={photo.src}
         type="button"
         className={classes.heroShot}
+        data-gallery-reveal=""
         onClick={() => setLightboxIndex(index)}
         aria-label={`Open photograph ${index + 1} of ${photos.length}`}
       >
@@ -421,7 +433,10 @@ export default function GalleryOverview() {
                             : classes.mixedAlbum
                         }`,
                       },
-                      button: { className: classes.albumButton },
+                      button: () => ({
+                        className: classes.albumButton,
+                        'data-gallery-reveal': '',
+                      }),
                       image: ({ index }) => ({
                         className: classes.albumPhoto,
                         loading:
