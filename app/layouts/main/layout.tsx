@@ -32,10 +32,10 @@ export default function MainLayout() {
   const isDesktop = useMediaQuery('(min-width: 48em)');
   useEffect(() => {
     if (!opened || isDesktop) return;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    const previousOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.documentElement.style.overflow = previousOverflow;
     };
   }, [opened, isDesktop]);
   useHotkeys([['Escape', close]]);

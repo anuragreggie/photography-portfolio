@@ -27,10 +27,10 @@ export function Lightbox({
 }: LightboxProps) {
   useEffect(() => {
     const previouslyFocused = document.activeElement;
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    const previousOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.documentElement.style.overflow = previousOverflow;
       if (previouslyFocused instanceof HTMLElement) {
         previouslyFocused.focus({ preventScroll: true });
       }
